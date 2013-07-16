@@ -1,0 +1,5443 @@
+Library {
+  Name			  "PortLib"
+  Version		  7.6
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "UTF-8"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  MaxMDLFileLineLength	  120
+  Created		  "Wed Jan 16 08:53:53 2013"
+  Creator		  "Haus"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "sendobry"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Thu Jan 24 10:36:08 2013"
+  RTWModifiedTimeStamp	  280924517
+  ModelVersionFormat	  "1.%<AutoIncrement:106>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  RecordCoverage	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.10.0"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.10.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  ConcurrentTasks	  off
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.10.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.10.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.10.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.10.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.10.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    7
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "GenerateSLWebview"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateSLWebview	  off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		21
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTCodeCoverageTool     "None"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  12
+	  Version		  "1.10.0"
+	  Description		  "HDL Coder custom configuration component"
+	  Name			  "HDL Coder"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    ""
+	    PropName		    "HDLConfigFile"
+	  }
+	  HDLCActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    " [ 280, 135, 1160, 765 ] "
+    }
+    PropName		    "ConfigurationSets"
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Logic
+      Operator		      "AND"
+      Inputs		      "2"
+      IconShape		      "rectangular"
+      AllPortsSameDT	      on
+      OutDataTypeStr	      "Inherit: Logical (see Configuration Parameters: Optimization)"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      Selector
+      NumberOfDimensions      "1"
+      IndexMode		      "One-based"
+      InputPortWidth	      "-1"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+    }
+  }
+  System {
+    Name		    "PortLib"
+    Location		    [1682, 74, 3598, 1059]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "365"
+    Block {
+      BlockType		      SubSystem
+      Name		      "airspeed"
+      SID		      "27"
+      Ports		      [0, 2]
+      Position		      [80, 594, 205, 641]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"airspeed"
+	Location		[439, 199, 1000, 700]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector"
+	  SID			  "188"
+	  Ports			  [1, 1]
+	  Position		  [195, 36, 240, 84]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "3"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[0 1]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector1"
+	  SID			  "189"
+	  Ports			  [1, 1]
+	  Position		  [195, 106, 240, 154]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "3"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[2]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "airspeed"
+	  SID			  "190"
+	  Ports			  [0, 1]
+	  Position		  [25, 107, 140, 153]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/InputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,3)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "191"
+	  Position		  [380, 53, 410, 67]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "airspeed1"
+	  SID			  "192"
+	  Position		  [380, 123, 410, 137]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Selector"
+	  SrcPort		  1
+	  DstBlock		  "header\n(seq, stamp)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "airspeed"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    DstBlock		    "Selector1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -70]
+	    DstBlock		    "Selector"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Selector1"
+	  SrcPort		  1
+	  DstBlock		  "airspeed1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "altimeter"
+      SID		      "25"
+      Ports		      [0, 4]
+      Position		      [80, 430, 205, 495]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"altimeter"
+	Location		[439, 199, 1000, 700]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector"
+	  SID			  "174"
+	  Ports			  [1, 1]
+	  Position		  [195, 36, 240, 84]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "5"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[0 1]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector1"
+	  SID			  "175"
+	  Ports			  [1, 1]
+	  Position		  [195, 106, 240, 154]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "5"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[2]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector2"
+	  SID			  "176"
+	  Ports			  [1, 1]
+	  Position		  [195, 176, 240, 224]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "5"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[3]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector3"
+	  SID			  "177"
+	  Ports			  [1, 1]
+	  Position		  [195, 246, 240, 294]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "5"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[4]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "altimeter"
+	  SID			  "178"
+	  Ports			  [0, 1]
+	  Position		  [20, 147, 135, 193]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/InputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,5)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "179"
+	  Position		  [380, 53, 410, 67]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "altitude"
+	  SID			  "180"
+	  Position		  [380, 123, 410, 137]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pressure"
+	  SID			  "181"
+	  Position		  [380, 193, 410, 207]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "qnh"
+	  SID			  "182"
+	  Position		  [380, 263, 410, 277]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Selector"
+	  SrcPort		  1
+	  DstBlock		  "header\n(seq, stamp)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "altimeter"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  Branch {
+	    Points		    [0, -40]
+	    Branch {
+	      DstBlock		      "Selector1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, -70]
+	      DstBlock		      "Selector"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Points		    [0, 30]
+	    Branch {
+	      DstBlock		      "Selector2"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 70]
+	      DstBlock		      "Selector3"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Selector2"
+	  SrcPort		  1
+	  DstBlock		  "pressure"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector1"
+	  SrcPort		  1
+	  DstBlock		  "altitude"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector3"
+	  SrcPort		  1
+	  DstBlock		  "qnh"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "attitude_command"
+      SID		      "33"
+      Ports		      [0, 2]
+      Position		      [280, 288, 405, 332]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"attitude_command"
+	Location		[439, 199, 1000, 700]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector"
+	  SID			  "215"
+	  Ports			  [1, 1]
+	  Position		  [195, 36, 240, 84]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "4"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[0 1]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector1"
+	  SID			  "216"
+	  Ports			  [1, 1]
+	  Position		  [195, 106, 240, 154]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "4"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[2 3]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "attitude_command"
+	  SID			  "217"
+	  Ports			  [0, 1]
+	  Position		  [25, 107, 140, 153]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/InputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,4)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "218"
+	  Position		  [380, 53, 410, 67]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "data\n(roll, pitch)"
+	  SID			  "219"
+	  Position		  [380, 123, 410, 137]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Selector"
+	  SrcPort		  1
+	  DstBlock		  "header\n(seq, stamp)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "attitude_command"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    DstBlock		    "Selector1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -70]
+	    DstBlock		    "Selector"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Selector1"
+	  SrcPort		  1
+	  DstBlock		  "data\n(roll, pitch)"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "ba_output"
+      SID		      "85"
+      Ports		      [2]
+      Position		      [980, 535, 1105, 615]
+      LibraryVersion	      "1.78"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"ba_output"
+	Location		[462, 222, 1218, 827]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "86"
+	  Position		  [80, 73, 110, 87]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "bias.accelerometer (x, y, z)"
+	  SID			  "87"
+	  Position		  [80, 148, 110, 162]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  SID			  "91"
+	  Ports			  [2, 1]
+	  Position		  [295, 40, 300, 195]
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "linear_acceleration_bias"
+	  SID			  "92"
+	  Ports			  [1]
+	  Position		  [450, 97, 565, 143]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/OutputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,5)"
+	}
+	Line {
+	  SrcBlock		  "header\n(seq, stamp)"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "bias.accelerometer (x, y, z)"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "linear_acceleration_bias"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "bw_output"
+      SID		      "112"
+      Ports		      [2]
+      Position		      [980, 640, 1105, 720]
+      LibraryVersion	      "1.85"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"bw_output"
+	Location		[462, 222, 1218, 827]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "113"
+	  Position		  [80, 73, 110, 87]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "bias.gyroscope (x, y, z)"
+	  SID			  "114"
+	  Position		  [80, 148, 110, 162]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  SID			  "115"
+	  Ports			  [2, 1]
+	  Position		  [295, 40, 300, 195]
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "angular_velocity_bias"
+	  SID			  "116"
+	  Ports			  [1]
+	  Position		  [450, 97, 565, 143]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/OutputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,5)"
+	}
+	Line {
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "angular_velocity_bias"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "bias.gyroscope (x, y, z)"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "header\n(seq, stamp)"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "control_mode"
+      SID		      "42"
+      Ports		      [6]
+      Position		      [975, 217, 1105, 308]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"control_mode"
+	Location		[723, 265, 1267, 710]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "motors"
+	  SID			  "290"
+	  Position		  [85, 68, 115, 82]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "attitude"
+	  SID			  "291"
+	  Position		  [85, 128, 115, 142]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "velocity"
+	  SID			  "292"
+	  Position		  [85, 188, 115, 202]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "position"
+	  SID			  "293"
+	  Position		  [85, 248, 115, 262]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "heading"
+	  SID			  "294"
+	  Position		  [85, 308, 115, 322]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "height"
+	  SID			  "295"
+	  Position		  [85, 368, 115, 382]
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Bit Set"
+	  SID			  "296"
+	  Ports			  [1, 1]
+	  Position		  [160, 55, 200, 95]
+	  LibraryVersion	  "1.260"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Bit Set"
+	  SourceType		  "Bit Set"
+	  iBit			  "0"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Bit Set1"
+	  SID			  "297"
+	  Ports			  [1, 1]
+	  Position		  [160, 115, 200, 155]
+	  LibraryVersion	  "1.260"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Bit Set"
+	  SourceType		  "Bit Set"
+	  iBit			  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Bit Set2"
+	  SID			  "298"
+	  Ports			  [1, 1]
+	  Position		  [160, 175, 200, 215]
+	  LibraryVersion	  "1.260"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Bit Set"
+	  SourceType		  "Bit Set"
+	  iBit			  "2"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Bit Set3"
+	  SID			  "299"
+	  Ports			  [1, 1]
+	  Position		  [160, 235, 200, 275]
+	  LibraryVersion	  "1.260"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Bit Set"
+	  SourceType		  "Bit Set"
+	  iBit			  "3"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Bit Set4"
+	  SID			  "300"
+	  Ports			  [1, 1]
+	  Position		  [160, 295, 200, 335]
+	  LibraryVersion	  "1.260"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Bit Set"
+	  SourceType		  "Bit Set"
+	  iBit			  "4"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Bit Set5"
+	  SID			  "301"
+	  Ports			  [1, 1]
+	  Position		  [160, 355, 200, 395]
+	  LibraryVersion	  "1.260"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Bit Set"
+	  SourceType		  "Bit Set"
+	  iBit			  "5"
+	}
+	Block {
+	  BlockType		  Logic
+	  Name			  "Logical\nOperator"
+	  SID			  "302"
+	  Ports			  [6, 1]
+	  Position		  [285, 38, 315, 417]
+	  Operator		  "OR"
+	  Inputs		  "6"
+	  AllPortsSameDT	  off
+	  OutDataTypeStr	  "boolean"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "control_mode"
+	  SID			  "303"
+	  Ports			  [1]
+	  Position		  [370, 202, 485, 248]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/OutputPort<int>"
+	  SourceType		  "DataPort"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "int32(0)"
+	}
+	Line {
+	  SrcBlock		  "Logical\nOperator"
+	  SrcPort		  1
+	  DstBlock		  "control_mode"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "motors"
+	  SrcPort		  1
+	  DstBlock		  "Bit Set"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Bit Set"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Bit Set1"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Bit Set2"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Bit Set3"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Bit Set4"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "heading"
+	  SrcPort		  1
+	  DstBlock		  "Bit Set4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "position"
+	  SrcPort		  1
+	  DstBlock		  "Bit Set3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "velocity"
+	  SrcPort		  1
+	  DstBlock		  "Bit Set2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "attitude"
+	  SrcPort		  1
+	  DstBlock		  "Bit Set1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "height"
+	  SrcPort		  1
+	  DstBlock		  "Bit Set5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Bit Set5"
+	  SrcPort		  1
+	  DstBlock		  "Logical\nOperator"
+	  DstPort		  6
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "controller_state"
+      SID		      "309"
+      Ports		      [0, 4]
+      Position		      [480, 491, 610, 584]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"controller_state"
+	Location		[1606, 233, 2454, 718]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Reference
+	  Name			  "Bitwise\nOperator"
+	  SID			  "346"
+	  Ports			  [1, 1]
+	  Position		  [395, 178, 435, 202]
+	  ShowName		  off
+	  LibraryVersion	  "1.260"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Bitwise\nOperator"
+	  SourceType		  "Bitwise Operator"
+	  ZOrder		  -3
+	  logicop		  "AND"
+	  UseBitMask		  on
+	  NumInputPorts		  "1"
+	  BitMask		  "1"
+	  BitMaskRealWorld	  "Stored Integer"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Bitwise\nOperator1"
+	  SID			  "347"
+	  Ports			  [1, 1]
+	  Position		  [395, 203, 435, 227]
+	  ShowName		  off
+	  LibraryVersion	  "1.260"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Bitwise\nOperator"
+	  SourceType		  "Bitwise Operator"
+	  ZOrder		  -3
+	  logicop		  "AND"
+	  UseBitMask		  on
+	  NumInputPorts		  "1"
+	  BitMask		  "2"
+	  BitMaskRealWorld	  "Stored Integer"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Bitwise\nOperator2"
+	  SID			  "349"
+	  Ports			  [1, 1]
+	  Position		  [395, 228, 435, 252]
+	  ShowName		  off
+	  LibraryVersion	  "1.260"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Bitwise\nOperator"
+	  SourceType		  "Bitwise Operator"
+	  ZOrder		  -3
+	  logicop		  "AND"
+	  UseBitMask		  on
+	  NumInputPorts		  "1"
+	  BitMask		  "4"
+	  BitMaskRealWorld	  "Stored Integer"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Bitwise\nOperator3"
+	  SID			  "351"
+	  Ports			  [1, 1]
+	  Position		  [395, 253, 435, 277]
+	  ShowName		  off
+	  LibraryVersion	  "1.260"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Bitwise\nOperator"
+	  SourceType		  "Bitwise Operator"
+	  ZOrder		  -3
+	  logicop		  "AND"
+	  UseBitMask		  on
+	  NumInputPorts		  "1"
+	  BitMask		  "8"
+	  BitMaskRealWorld	  "Stored Integer"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Bitwise\nOperator4"
+	  SID			  "353"
+	  Ports			  [1, 1]
+	  Position		  [395, 278, 435, 302]
+	  ShowName		  off
+	  LibraryVersion	  "1.260"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Bitwise\nOperator"
+	  SourceType		  "Bitwise Operator"
+	  ZOrder		  -3
+	  logicop		  "AND"
+	  UseBitMask		  on
+	  NumInputPorts		  "1"
+	  BitMask		  "16"
+	  BitMaskRealWorld	  "Stored Integer"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Bitwise\nOperator5"
+	  SID			  "355"
+	  Ports			  [1, 1]
+	  Position		  [395, 303, 435, 327]
+	  ShowName		  off
+	  LibraryVersion	  "1.260"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Bitwise\nOperator"
+	  SourceType		  "Bitwise Operator"
+	  ZOrder		  -3
+	  logicop		  "AND"
+	  UseBitMask		  on
+	  NumInputPorts		  "1"
+	  BitMask		  "32"
+	  BitMaskRealWorld	  "Stored Integer"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Bitwise\nOperator6"
+	  SID			  "357"
+	  Ports			  [1, 1]
+	  Position		  [395, 373, 435, 397]
+	  ShowName		  off
+	  LibraryVersion	  "1.260"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Bitwise\nOperator"
+	  SourceType		  "Bitwise Operator"
+	  ZOrder		  -3
+	  logicop		  "AND"
+	  UseBitMask		  on
+	  NumInputPorts		  "1"
+	  BitMask		  "1"
+	  BitMaskRealWorld	  "Stored Integer"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Bitwise\nOperator7"
+	  SID			  "358"
+	  Ports			  [1, 1]
+	  Position		  [395, 403, 435, 427]
+	  ShowName		  off
+	  LibraryVersion	  "1.260"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Bitwise\nOperator"
+	  SourceType		  "Bitwise Operator"
+	  ZOrder		  -3
+	  logicop		  "AND"
+	  UseBitMask		  on
+	  NumInputPorts		  "1"
+	  BitMask		  "2"
+	  BitMaskRealWorld	  "Stored Integer"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Compare\nTo Zero"
+	  SID			  "344"
+	  Ports			  [1, 1]
+	  Position		  [470, 181, 500, 199]
+	  ShowName		  off
+	  LibraryVersion	  "1.260"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
+	  SourceType		  "Compare To Zero"
+	  ZOrder		  -6
+	  relop			  ">="
+	  OutDataTypeStr	  "boolean"
+	  ZeroCross		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Compare\nTo Zero1"
+	  SID			  "348"
+	  Ports			  [1, 1]
+	  Position		  [470, 206, 500, 224]
+	  ShowName		  off
+	  LibraryVersion	  "1.260"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
+	  SourceType		  "Compare To Zero"
+	  ZOrder		  -6
+	  relop			  ">="
+	  OutDataTypeStr	  "boolean"
+	  ZeroCross		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Compare\nTo Zero2"
+	  SID			  "350"
+	  Ports			  [1, 1]
+	  Position		  [470, 231, 500, 249]
+	  ShowName		  off
+	  LibraryVersion	  "1.260"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
+	  SourceType		  "Compare To Zero"
+	  ZOrder		  -6
+	  relop			  ">="
+	  OutDataTypeStr	  "boolean"
+	  ZeroCross		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Compare\nTo Zero3"
+	  SID			  "352"
+	  Ports			  [1, 1]
+	  Position		  [470, 256, 500, 274]
+	  ShowName		  off
+	  LibraryVersion	  "1.260"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
+	  SourceType		  "Compare To Zero"
+	  ZOrder		  -6
+	  relop			  ">="
+	  OutDataTypeStr	  "boolean"
+	  ZeroCross		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Compare\nTo Zero4"
+	  SID			  "354"
+	  Ports			  [1, 1]
+	  Position		  [470, 281, 500, 299]
+	  ShowName		  off
+	  LibraryVersion	  "1.260"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
+	  SourceType		  "Compare To Zero"
+	  ZOrder		  -6
+	  relop			  ">="
+	  OutDataTypeStr	  "boolean"
+	  ZeroCross		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Compare\nTo Zero5"
+	  SID			  "356"
+	  Ports			  [1, 1]
+	  Position		  [470, 306, 500, 324]
+	  ShowName		  off
+	  LibraryVersion	  "1.260"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
+	  SourceType		  "Compare To Zero"
+	  ZOrder		  -6
+	  relop			  ">="
+	  OutDataTypeStr	  "boolean"
+	  ZeroCross		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Compare\nTo Zero6"
+	  SID			  "359"
+	  Ports			  [1, 1]
+	  Position		  [470, 376, 500, 394]
+	  ShowName		  off
+	  LibraryVersion	  "1.260"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
+	  SourceType		  "Compare To Zero"
+	  ZOrder		  -6
+	  relop			  ">="
+	  OutDataTypeStr	  "boolean"
+	  ZeroCross		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Compare\nTo Zero7"
+	  SID			  "360"
+	  Ports			  [1, 1]
+	  Position		  [470, 406, 500, 424]
+	  ShowName		  off
+	  LibraryVersion	  "1.260"
+	  SourceBlock		  "simulink/Logic and Bit\nOperations/Compare\nTo Zero"
+	  SourceType		  "Compare To Zero"
+	  ZOrder		  -6
+	  relop			  ">="
+	  OutDataTypeStr	  "boolean"
+	  ZeroCross		  on
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  SID			  "333"
+	  Ports			  [6, 1]
+	  Position		  [540, 180, 545, 325]
+	  ShowName		  off
+	  Inputs		  "6"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  SID			  "334"
+	  Ports			  [2, 1]
+	  Position		  [540, 369, 545, 431]
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector"
+	  SID			  "329"
+	  Ports			  [1, 1]
+	  Position		  [250, 51, 295, 99]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "5"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[0 1]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector1"
+	  SID			  "332"
+	  Ports			  [1, 1]
+	  Position		  [250, 131, 295, 179]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "5"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "2"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector2"
+	  SID			  "335"
+	  Ports			  [1, 1]
+	  Position		  [250, 231, 295, 279]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "5"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "3"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector3"
+	  SID			  "336"
+	  Ports			  [1, 1]
+	  Position		  [250, 376, 295, 424]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "5"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "4"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "controller_state"
+	  SID			  "327"
+	  Ports			  [0, 1]
+	  Position		  [80, 232, 195, 278]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  FunctionName		  "sfun_vinputport"
+	  Parameters		  "dpdesc,dpvalue"
+	  EnableBusSupport	  off
+	  MaskType		  "DataPort<array>"
+	  MaskDescription	  "A TaskContext's Vector DataPort holds a name, a description and an array of reals. It is used fo"
+	  "r inter-component data exchange. It translates to the C++ class RTT::DataPort< std::vector<double> >."
+	  MaskPromptString	  "Description|Initial Value (array)"
+	  MaskStyleString	  "edit,edit"
+	  MaskVariables		  "dpdesc=&1;dpvalue=@2;"
+	  MaskTunableValueString  "off,off"
+	  MaskCallbackString	  "|"
+	  MaskEnableString	  "on,on"
+	  MaskVisibilityString	  "on,on"
+	  MaskToolTipString	  "on,on"
+	  MaskDisplay		  "fprintf('InputPort<array>')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "port"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "Port's Description|zeros(1,5)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "330"
+	  Position		  [600, 68, 630, 82]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "source"
+	  SID			  "324"
+	  Position		  [600, 148, 630, 162]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "mode\n(motors, alltitude, ..)"
+	  SID			  "325"
+	  Position		  [600, 248, 630, 262]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "state\n(running, airborne)"
+	  SID			  "326"
+	  Position		  [605, 393, 635, 407]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Selector"
+	  SrcPort		  1
+	  DstBlock		  "header\n(seq, stamp)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector1"
+	  SrcPort		  1
+	  DstBlock		  "source"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "state\n(running, airborne)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "mode\n(motors, alltitude, ..)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "controller_state"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, 0]
+	  Branch {
+	    Points		    [0, 0]
+	    DstBlock		    "Selector2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 145]
+	    DstBlock		    "Selector3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -100]
+	    Branch {
+	      Points		      [0, -80]
+	      DstBlock		      "Selector"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "Selector1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Compare\nTo Zero"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Bitwise\nOperator"
+	  SrcPort		  1
+	  DstBlock		  "Compare\nTo Zero"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Bitwise\nOperator1"
+	  SrcPort		  1
+	  DstBlock		  "Compare\nTo Zero1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Bitwise\nOperator2"
+	  SrcPort		  1
+	  DstBlock		  "Compare\nTo Zero2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Bitwise\nOperator3"
+	  SrcPort		  1
+	  DstBlock		  "Compare\nTo Zero3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Bitwise\nOperator4"
+	  SrcPort		  1
+	  DstBlock		  "Compare\nTo Zero4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Bitwise\nOperator5"
+	  SrcPort		  1
+	  DstBlock		  "Compare\nTo Zero5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Compare\nTo Zero1"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Compare\nTo Zero2"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Compare\nTo Zero3"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Compare\nTo Zero4"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "Compare\nTo Zero5"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  6
+	}
+	Line {
+	  SrcBlock		  "Selector2"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  Branch {
+	    Points		    [0, -15]
+	    Branch {
+	      Points		      [0, -25]
+	      Branch {
+		Points			[0, -25]
+		DstBlock		"Bitwise\nOperator"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"Bitwise\nOperator1"
+		DstPort			1
+	      }
+	    }
+	    Branch {
+	      DstBlock		      "Bitwise\nOperator2"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Points		    [0, 5]
+	    Branch {
+	      Points		      [0, 5]
+	      DstBlock		      "Bitwise\nOperator3"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 30]
+	      Branch {
+		DstBlock		"Bitwise\nOperator4"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 25]
+		DstBlock		"Bitwise\nOperator5"
+		DstPort			1
+	      }
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Compare\nTo Zero6"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Bitwise\nOperator6"
+	  SrcPort		  1
+	  DstBlock		  "Compare\nTo Zero6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Bitwise\nOperator7"
+	  SrcPort		  1
+	  DstBlock		  "Compare\nTo Zero7"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Compare\nTo Zero7"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Selector3"
+	  SrcPort		  1
+	  Points		  [40, 0; 0, -5]
+	  Branch {
+	    Points		    [0, -10]
+	    DstBlock		    "Bitwise\nOperator6"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "Bitwise\nOperator7"
+	    DstPort		    1
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "fix"
+      SID		      "28"
+      Ports		      [0, 3]
+      Position		      [80, 663, 205, 727]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"fix"
+	Location		[439, 199, 1000, 700]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector"
+	  SID			  "193"
+	  Ports			  [1, 1]
+	  Position		  [195, 36, 240, 84]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "7"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[0 1]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector1"
+	  SID			  "194"
+	  Ports			  [1, 1]
+	  Position		  [195, 106, 240, 154]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "7"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[2 3]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector2"
+	  SID			  "195"
+	  Ports			  [1, 1]
+	  Position		  [195, 176, 240, 224]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "7"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[4, 5, 6]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "fix"
+	  SID			  "196"
+	  Ports			  [0, 1]
+	  Position		  [25, 147, 140, 193]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/InputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,7)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "197"
+	  Position		  [380, 53, 410, 67]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "status\n(status, service)"
+	  SID			  "198"
+	  Position		  [380, 123, 410, 137]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "geodetic position\n(lat, lon, alt)"
+	  SID			  "199"
+	  Position		  [380, 193, 410, 207]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Selector"
+	  SrcPort		  1
+	  DstBlock		  "header\n(seq, stamp)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "fix"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, 30]
+	    DstBlock		    "Selector2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -40]
+	    Branch {
+	      DstBlock		      "Selector1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, -70]
+	      DstBlock		      "Selector"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Selector2"
+	  SrcPort		  1
+	  DstBlock		  "geodetic position\n(lat, lon, alt)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector1"
+	  SrcPort		  1
+	  DstBlock		  "status\n(status, service)"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "fix_velocity"
+      SID		      "30"
+      Ports		      [0, 2]
+      Position		      [280, 58, 405, 102]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"fix_velocity"
+	Location		[439, 199, 1000, 700]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector"
+	  SID			  "205"
+	  Ports			  [1, 1]
+	  Position		  [195, 36, 240, 84]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "5"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[0 1]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector1"
+	  SID			  "206"
+	  Ports			  [1, 1]
+	  Position		  [195, 106, 240, 154]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "5"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[2 3 4]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "fix_velocity"
+	  SID			  "207"
+	  Ports			  [0, 1]
+	  Position		  [25, 107, 140, 153]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/InputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,5)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "208"
+	  Position		  [380, 53, 410, 67]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "vector\n(x, y, z)"
+	  SID			  "209"
+	  Position		  [380, 123, 410, 137]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Selector1"
+	  SrcPort		  1
+	  DstBlock		  "vector\n(x, y, z)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "fix_velocity"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, -70]
+	    DstBlock		    "Selector"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Selector1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Selector"
+	  SrcPort		  1
+	  DstBlock		  "header\n(seq, stamp)"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "heading_command"
+      SID		      "34"
+      Ports		      [0, 2]
+      Position		      [280, 358, 405, 402]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"heading_command"
+	Location		[439, 199, 1000, 700]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector"
+	  SID			  "220"
+	  Ports			  [1, 1]
+	  Position		  [195, 36, 240, 84]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "3"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[0 1]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector1"
+	  SID			  "221"
+	  Ports			  [1, 1]
+	  Position		  [195, 106, 240, 154]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "3"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[2]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "heading_command"
+	  SID			  "222"
+	  Ports			  [0, 1]
+	  Position		  [25, 107, 140, 153]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/InputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,3)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "223"
+	  Position		  [380, 53, 410, 67]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "data\n(heading)"
+	  SID			  "224"
+	  Position		  [380, 123, 410, 137]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Selector1"
+	  SrcPort		  1
+	  DstBlock		  "data\n(heading)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "heading_command"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, -70]
+	    DstBlock		    "Selector"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Selector1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Selector"
+	  SrcPort		  1
+	  DstBlock		  "header\n(seq, stamp)"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "height"
+      SID		      "38"
+      Ports		      [0, 6]
+      Position		      [280, 652, 405, 743]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"height"
+	Location		[439, 199, 1000, 700]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector"
+	  SID			  "240"
+	  Ports			  [1, 1]
+	  Position		  [195, 36, 240, 84]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "7"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[0 1]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector1"
+	  SID			  "241"
+	  Ports			  [1, 1]
+	  Position		  [195, 106, 240, 154]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "7"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[2]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector2"
+	  SID			  "242"
+	  Ports			  [1, 1]
+	  Position		  [195, 176, 240, 224]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "7"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[3]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector3"
+	  SID			  "243"
+	  Ports			  [1, 1]
+	  Position		  [195, 251, 240, 299]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "7"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[4]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector4"
+	  SID			  "244"
+	  Ports			  [1, 1]
+	  Position		  [195, 321, 240, 369]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "7"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[5]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector5"
+	  SID			  "245"
+	  Ports			  [1, 1]
+	  Position		  [195, 391, 240, 439]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "7"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[6]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "height"
+	  SID			  "246"
+	  Ports			  [0, 1]
+	  Position		  [25, 147, 140, 193]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/InputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,7)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "247"
+	  Position		  [380, 53, 410, 67]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "mode"
+	  SID			  "248"
+	  Position		  [380, 123, 410, 137]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Height"
+	  SID			  "249"
+	  Position		  [380, 193, 410, 207]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "elevation"
+	  SID			  "250"
+	  Position		  [380, 268, 410, 282]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "vertical_speed"
+	  SID			  "251"
+	  Position		  [380, 338, 410, 352]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "height_above_ground"
+	  SID			  "252"
+	  Position		  [380, 408, 410, 422]
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Selector1"
+	  SrcPort		  1
+	  DstBlock		  "mode"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector2"
+	  SrcPort		  1
+	  DstBlock		  "Height"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "height"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, -40]
+	    Branch {
+	      Points		      [0, -70]
+	      DstBlock		      "Selector"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "Selector1"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Points		    [0, 30]
+	    Branch {
+	      DstBlock		      "Selector2"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 75]
+	      Branch {
+		DstBlock		"Selector3"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 70]
+		Branch {
+		  DstBlock		  "Selector4"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, 70]
+		  DstBlock		  "Selector5"
+		  DstPort		  1
+		}
+	      }
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Selector"
+	  SrcPort		  1
+	  DstBlock		  "header\n(seq, stamp)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector3"
+	  SrcPort		  1
+	  DstBlock		  "elevation"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector4"
+	  SrcPort		  1
+	  DstBlock		  "vertical_speed"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector5"
+	  SrcPort		  1
+	  DstBlock		  "height_above_ground"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "height_command"
+      SID		      "35"
+      Ports		      [0, 2]
+      Position		      [280, 428, 405, 472]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"height_command"
+	Location		[439, 199, 1000, 700]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector"
+	  SID			  "225"
+	  Ports			  [1, 1]
+	  Position		  [195, 36, 240, 84]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "3"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[0 1]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector1"
+	  SID			  "226"
+	  Ports			  [1, 1]
+	  Position		  [195, 106, 240, 154]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "3"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[2]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "height_command"
+	  SID			  "227"
+	  Ports			  [0, 1]
+	  Position		  [25, 107, 140, 153]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/InputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,3)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "228"
+	  Position		  [380, 53, 410, 67]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "data\n(height)"
+	  SID			  "229"
+	  Position		  [380, 123, 410, 137]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Selector"
+	  SrcPort		  1
+	  DstBlock		  "header\n(seq, stamp)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "height_command"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    DstBlock		    "Selector1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -70]
+	    DstBlock		    "Selector"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Selector1"
+	  SrcPort		  1
+	  DstBlock		  "data\n(height)"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "imu"
+      SID		      "3"
+      Ports		      [0, 4]
+      Position		      [80, 54, 205, 136]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"imu"
+	Location		[439, 279, 1000, 620]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector"
+	  SID			  "17"
+	  Ports			  [1, 1]
+	  Position		  [195, 36, 240, 84]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "12"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[0 1]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector1"
+	  SID			  "18"
+	  Ports			  [1, 1]
+	  Position		  [195, 106, 240, 154]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "12"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[2 3 4 5]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector2"
+	  SID			  "19"
+	  Ports			  [1, 1]
+	  Position		  [195, 176, 240, 224]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "12"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[6 7 8]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector3"
+	  SID			  "20"
+	  Ports			  [1, 1]
+	  Position		  [195, 246, 240, 294]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "12"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[9 10 11]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "imu"
+	  SID			  "1"
+	  Ports			  [0, 1]
+	  Position		  [25, 147, 140, 193]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/InputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,12)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "4"
+	  Position		  [380, 53, 410, 67]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "orientation\n(x, y, z, w)"
+	  SID			  "5"
+	  Position		  [380, 123, 410, 137]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "angular_velocity\n(x, y, z)"
+	  SID			  "6"
+	  Position		  [380, 193, 410, 207]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "linear_acceleration\n(x, y, z)"
+	  SID			  "7"
+	  Position		  [380, 263, 410, 277]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Selector1"
+	  SrcPort		  1
+	  DstBlock		  "orientation\n(x, y, z, w)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector2"
+	  SrcPort		  1
+	  DstBlock		  "angular_velocity\n(x, y, z)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector3"
+	  SrcPort		  1
+	  DstBlock		  "linear_acceleration\n(x, y, z)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "imu"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, -40]
+	    Branch {
+	      Points		      [0, -70]
+	      DstBlock		      "Selector"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "Selector1"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Points		    [0, 30]
+	    Branch {
+	      DstBlock		      "Selector2"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 70]
+	      DstBlock		      "Selector3"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Selector"
+	  SrcPort		  1
+	  DstBlock		  "header\n(seq, stamp)"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "imu_output"
+      SID		      "138"
+      Ports		      [4]
+      Position		      [840, 409, 965, 491]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"imu_output"
+	Location		[2322, 269, 3038, 611]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "265"
+	  Position		  [60, 63, 90, 77]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "orientation\n(w, x, y, z)"
+	  SID			  "266"
+	  Position		  [60, 123, 90, 137]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "angular_velocity\n(x, y, z)"
+	  SID			  "267"
+	  Position		  [60, 183, 90, 197]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "linear_acceleration\n(x, y, z)"
+	  SID			  "268"
+	  Position		  [60, 243, 90, 257]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  SID			  "269"
+	  Ports			  [4, 1]
+	  Position		  [425, 40, 430, 280]
+	  ShowName		  off
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector10"
+	  SID			  "363"
+	  Ports			  [1, 1]
+	  Position		  [210, 111, 250, 149]
+	  InputPortWidth	  "4"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[2 3 4 1]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "imu"
+	  SID			  "270"
+	  Ports			  [1]
+	  Position		  [575, 137, 690, 183]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/OutputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,12)"
+	}
+	Line {
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "imu"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "header\n(seq, stamp)"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "orientation\n(w, x, y, z)"
+	  SrcPort		  1
+	  DstBlock		  "Selector10"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "angular_velocity\n(x, y, z)"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "linear_acceleration\n(x, y, z)"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Selector10"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "log"
+      SID		      "93"
+      Ports		      [2]
+      Position		      [980, 756, 1105, 809]
+      LibraryVersion	      "1.79"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"log"
+	Location		[2059, 303, 2815, 908]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "94"
+	  Position		  [80, 63, 110, 77]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "data"
+	  SID			  "95"
+	  Position		  [80, 143, 110, 157]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  SID			  "97"
+	  Ports			  [2, 1]
+	  Position		  [295, 31, 300, 189]
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "log"
+	  SID			  "98"
+	  Ports			  [1]
+	  Position		  [450, 87, 565, 133]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/OutputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,2)"
+	}
+	Line {
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "log"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "data"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "header\n(seq, stamp)"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "magnetic"
+      SID		      "29"
+      Ports		      [0, 2]
+      Position		      [80, 753, 205, 797]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"magnetic"
+	Location		[439, 199, 1000, 700]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector"
+	  SID			  "200"
+	  Ports			  [1, 1]
+	  Position		  [195, 36, 240, 84]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "5"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[0 1]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector1"
+	  SID			  "201"
+	  Ports			  [1, 1]
+	  Position		  [195, 106, 240, 154]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "5"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[2 3 4]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "magnetic"
+	  SID			  "202"
+	  Ports			  [0, 1]
+	  Position		  [25, 107, 140, 153]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/InputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,5)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "203"
+	  Position		  [380, 53, 410, 67]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "vector\n(x, y, z)"
+	  SID			  "204"
+	  Position		  [380, 123, 410, 137]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Selector"
+	  SrcPort		  1
+	  DstBlock		  "header\n(seq, stamp)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "magnetic"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    DstBlock		    "Selector1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -70]
+	    DstBlock		    "Selector"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Selector1"
+	  SrcPort		  1
+	  DstBlock		  "vector\n(x, y, z)"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "motor_output"
+      SID		      "39"
+      Ports		      [2]
+      Position		      [980, 58, 1105, 102]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"motor_output"
+	Location		[439, 306, 1000, 594]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "282"
+	  Position		  [135, 63, 165, 77]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pwm\n(1, 2, 3, 4)"
+	  SID			  "283"
+	  Position		  [135, 118, 165, 132]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  SID			  "284"
+	  Ports			  [2, 1]
+	  Position		  [235, 44, 240, 151]
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "motor_output"
+	  SID			  "285"
+	  Ports			  [1]
+	  Position		  [330, 72, 445, 118]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/OutputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,6)"
+	}
+	Line {
+	  SrcBlock		  "header\n(seq, stamp)"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "pwm\n(1, 2, 3, 4)"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "motor_output"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "motor_pwm"
+      SID		      "64"
+      Ports		      [0, 2]
+      Position		      [480, 274, 610, 321]
+      LibraryVersion	      "1.72"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"motor_pwm"
+	Location		[746, 262, 1307, 763]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector"
+	  SID			  "65"
+	  Ports			  [1, 1]
+	  Position		  [195, 36, 240, 84]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "6"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[0 1]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector1"
+	  SID			  "76"
+	  Ports			  [1, 1]
+	  Position		  [190, 141, 235, 189]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "6"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[2:5]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "motor_pwm"
+	  SID			  "70"
+	  Ports			  [0, 1]
+	  Position		  [25, 107, 140, 153]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/InputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,6)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "71"
+	  Position		  [380, 53, 410, 67]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pwm (1, 2, 3, 4)"
+	  SID			  "75"
+	  Position		  [380, 158, 410, 172]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Selector"
+	  SrcPort		  1
+	  DstBlock		  "header\n(seq, stamp)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "motor_pwm"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, -70]
+	    DstBlock		    "Selector"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 35]
+	    DstBlock		    "Selector1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Selector1"
+	  SrcPort		  1
+	  DstBlock		  "pwm (1, 2, 3, 4)"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "motor_status"
+      SID		      "44"
+      Ports		      [0, 6]
+      Position		      [480, 76, 610, 204]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"motor_status"
+	Location		[2501, 225, 3062, 726]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector"
+	  SID			  "45"
+	  Ports			  [1, 1]
+	  Position		  [195, 36, 240, 84]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "16"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[0 1]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector1"
+	  SID			  "46"
+	  Ports			  [1, 1]
+	  Position		  [195, 106, 240, 154]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "16"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[2]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector2"
+	  SID			  "50"
+	  Ports			  [1, 1]
+	  Position		  [195, 171, 240, 219]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "16"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "3"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector3"
+	  SID			  "51"
+	  Ports			  [1, 1]
+	  Position		  [195, 301, 240, 349]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "16"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[8:11]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector4"
+	  SID			  "54"
+	  Ports			  [1, 1]
+	  Position		  [195, 366, 240, 414]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "16"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[12:15]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector5"
+	  SID			  "364"
+	  Ports			  [1, 1]
+	  Position		  [195, 236, 240, 284]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "16"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  " [4:7]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "motor_status"
+	  SID			  "47"
+	  Ports			  [0, 1]
+	  Position		  [25, 107, 140, 153]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/InputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,12)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "48"
+	  Position		  [380, 53, 410, 67]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "on"
+	  SID			  "49"
+	  Position		  [380, 123, 410, 137]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "running"
+	  SID			  "52"
+	  Position		  [380, 188, 410, 202]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "voltage (1, 2, 3, 4)"
+	  SID			  "365"
+	  Position		  [380, 253, 410, 267]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "frequency (1, 2, 3, 4)"
+	  SID			  "53"
+	  Position		  [380, 318, 410, 332]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "current (1, 2, 3, 4)"
+	  SID			  "55"
+	  Position		  [380, 383, 410, 397]
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "motor_status"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, -70]
+	    DstBlock		    "Selector"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Selector1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 65]
+	    Branch {
+	      DstBlock		      "Selector2"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 65]
+	      Branch {
+		DstBlock		"Selector5"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 65]
+		Branch {
+		  DstBlock		  "Selector3"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, 65]
+		  DstBlock		  "Selector4"
+		  DstPort		  1
+		}
+	      }
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Selector"
+	  SrcPort		  1
+	  DstBlock		  "header\n(seq, stamp)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector1"
+	  SrcPort		  1
+	  DstBlock		  "on"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector2"
+	  SrcPort		  1
+	  DstBlock		  "running"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector3"
+	  SrcPort		  1
+	  DstBlock		  "frequency (1, 2, 3, 4)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector4"
+	  SrcPort		  1
+	  DstBlock		  "current (1, 2, 3, 4)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector5"
+	  SrcPort		  1
+	  DstBlock		  "voltage (1, 2, 3, 4)"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "position_command"
+      SID		      "31"
+      Ports		      [0, 2]
+      Position		      [280, 138, 405, 182]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"position_command"
+	Location		[439, 199, 1000, 700]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector"
+	  SID			  "210"
+	  Ports			  [1, 1]
+	  Position		  [195, 36, 240, 84]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "4"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[0 1]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector1"
+	  SID			  "211"
+	  Ports			  [1, 1]
+	  Position		  [195, 106, 240, 154]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "4"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[2 3]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "position_command"
+	  SID			  "212"
+	  Ports			  [0, 1]
+	  Position		  [25, 107, 140, 153]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/InputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,4)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "213"
+	  Position		  [380, 53, 410, 67]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "data\n(x, y)"
+	  SID			  "214"
+	  Position		  [380, 123, 410, 137]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Selector"
+	  SrcPort		  1
+	  DstBlock		  "header\n(seq, stamp)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "position_command"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    DstBlock		    "Selector1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -70]
+	    DstBlock		    "Selector"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Selector1"
+	  SrcPort		  1
+	  DstBlock		  "data\n(x, y)"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "raw_imu"
+      SID		      "271"
+      Ports		      [0, 3]
+      Position		      [480, 354, 610, 436]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"raw_imu"
+	Location		[439, 279, 1000, 620]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector"
+	  SID			  "272"
+	  Ports			  [1, 1]
+	  Position		  [195, 36, 240, 84]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "12"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[0 1]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector2"
+	  SID			  "274"
+	  Ports			  [1, 1]
+	  Position		  [195, 176, 240, 224]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "12"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[6 7 8]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector3"
+	  SID			  "275"
+	  Ports			  [1, 1]
+	  Position		  [195, 246, 240, 294]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "12"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[9 10 11]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "raw_imu"
+	  SID			  "276"
+	  Ports			  [0, 1]
+	  Position		  [25, 147, 140, 193]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/InputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,12)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "277"
+	  Position		  [380, 53, 410, 67]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "angular_velocity\n(x, y, z)"
+	  SID			  "279"
+	  Position		  [380, 193, 410, 207]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "linear_acceleration\n(x, y, z)"
+	  SID			  "280"
+	  Position		  [380, 263, 410, 277]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Selector"
+	  SrcPort		  1
+	  DstBlock		  "header\n(seq, stamp)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "raw_imu"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, 30]
+	    Branch {
+	      Points		      [0, 70]
+	      DstBlock		      "Selector3"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "Selector2"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Points		    [0, -110]
+	    DstBlock		    "Selector"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Selector3"
+	  SrcPort		  1
+	  DstBlock		  "linear_acceleration\n(x, y, z)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector2"
+	  SrcPort		  1
+	  DstBlock		  "angular_velocity\n(x, y, z)"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "reference_orientation"
+      SID		      "41"
+      Ports		      [0, 4]
+      Position		      [280, 774, 405, 856]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"reference_orientation"
+	Location		[2134, 279, 2695, 620]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector"
+	  SID			  "253"
+	  Ports			  [1, 1]
+	  Position		  [195, 36, 240, 84]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "12"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[0 1]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector1"
+	  SID			  "254"
+	  Ports			  [1, 1]
+	  Position		  [195, 106, 240, 154]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "12"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[5 2 3 4]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector2"
+	  SID			  "255"
+	  Ports			  [1, 1]
+	  Position		  [195, 176, 240, 224]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "12"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[6 7 8]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector3"
+	  SID			  "256"
+	  Ports			  [1, 1]
+	  Position		  [195, 246, 240, 294]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "12"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[9 10 11]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "reference_orientation"
+	  SID			  "257"
+	  Ports			  [0, 1]
+	  Position		  [25, 147, 140, 193]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/InputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,12)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "258"
+	  Position		  [380, 53, 410, 67]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "orientation\n(w, x, y, z)"
+	  SID			  "259"
+	  Position		  [380, 123, 410, 137]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "angular_velocity\n(x, y, z)"
+	  SID			  "260"
+	  Position		  [380, 193, 410, 207]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "linear_acceleration\n(x, y, z)"
+	  SID			  "261"
+	  Position		  [380, 263, 410, 277]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Selector"
+	  SrcPort		  1
+	  DstBlock		  "header\n(seq, stamp)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "reference_orientation"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, 30]
+	    Branch {
+	      Points		      [0, 70]
+	      DstBlock		      "Selector3"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "Selector2"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Points		    [0, -40]
+	    Branch {
+	      DstBlock		      "Selector1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, -70]
+	      DstBlock		      "Selector"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Selector3"
+	  SrcPort		  1
+	  DstBlock		  "linear_acceleration\n(x, y, z)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector2"
+	  SrcPort		  1
+	  DstBlock		  "angular_velocity\n(x, y, z)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector1"
+	  SrcPort		  1
+	  DstBlock		  "orientation\n(w, x, y, z)"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "rudders_command"
+      SID		      "37"
+      Ports		      [0, 2]
+      Position		      [270, 573, 400, 617]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"rudders_command"
+	Location		[439, 199, 1000, 700]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector"
+	  SID			  "235"
+	  Ports			  [1, 1]
+	  Position		  [195, 36, 240, 84]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "5"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[0 1]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector1"
+	  SID			  "236"
+	  Ports			  [1, 1]
+	  Position		  [195, 106, 240, 154]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "5"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[2 3 4]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "rudders_command"
+	  SID			  "237"
+	  Ports			  [0, 1]
+	  Position		  [25, 107, 140, 153]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/InputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,5)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "238"
+	  Position		  [380, 53, 410, 67]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "data\n(aileron, elevator, rudder)"
+	  SID			  "239"
+	  Position		  [380, 123, 410, 137]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Selector1"
+	  SrcPort		  1
+	  DstBlock		  "data\n(aileron, elevator, rudder)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "rudders_command"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, -70]
+	    DstBlock		    "Selector"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Selector1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Selector"
+	  SrcPort		  1
+	  DstBlock		  "header\n(seq, stamp)"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "servo_output\n(variable size)"
+      SID		      "40"
+      Ports		      [2]
+      Position		      [980, 138, 1105, 182]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"servo_output\n(variable size)"
+	Location		[618, 314, 1179, 602]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "286"
+	  Position		  [135, 63, 165, 77]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "value"
+	  SID			  "287"
+	  Position		  [135, 118, 165, 132]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  SID			  "288"
+	  Ports			  [2, 1]
+	  Position		  [235, 44, 240, 151]
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "servo_output"
+	  SID			  "289"
+	  Ports			  [1]
+	  Position		  [330, 77, 445, 123]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/OutputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,6)"
+	}
+	Line {
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "servo_output"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "value"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "header\n(seq, stamp)"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "sonar_height"
+      SID		      "24"
+      Ports		      [0, 2]
+      Position		      [80, 359, 205, 406]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"sonar_height"
+	Location		[361, 287, 922, 788]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector"
+	  SID			  "169"
+	  Ports			  [1, 1]
+	  Position		  [195, 36, 240, 84]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "3"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[0 1]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector1"
+	  SID			  "170"
+	  Ports			  [1, 1]
+	  Position		  [195, 106, 240, 154]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "3"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[2]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "sonar_height"
+	  SID			  "171"
+	  Ports			  [0, 1]
+	  Position		  [25, 107, 140, 153]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/InputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,3)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "172"
+	  Position		  [380, 53, 410, 67]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "range"
+	  SID			  "173"
+	  Position		  [380, 123, 410, 137]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Selector"
+	  SrcPort		  1
+	  DstBlock		  "header\n(seq, stamp)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "sonar_height"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    DstBlock		    "Selector1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -70]
+	    DstBlock		    "Selector"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Selector1"
+	  SrcPort		  1
+	  DstBlock		  "range"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "state"
+      SID		      "21"
+      Ports		      [0, 5]
+      Position		      [80, 159, 205, 241]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"state"
+	Location		[1962, 275, 2523, 776]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector"
+	  SID			  "151"
+	  Ports			  [1, 1]
+	  Position		  [195, 36, 240, 84]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "15"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[0 1]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector1"
+	  SID			  "152"
+	  Ports			  [1, 1]
+	  Position		  [195, 106, 240, 154]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "15"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[2 3 4]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector2"
+	  SID			  "153"
+	  Ports			  [1, 1]
+	  Position		  [195, 176, 240, 224]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "15"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[8 5 6 7]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector3"
+	  SID			  "154"
+	  Ports			  [1, 1]
+	  Position		  [195, 246, 240, 294]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "15"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[9 10 11]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector4"
+	  SID			  "155"
+	  Ports			  [1, 1]
+	  Position		  [195, 316, 240, 364]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "15"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[12 13 14]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "state"
+	  SID			  "156"
+	  Ports			  [0, 1]
+	  Position		  [25, 147, 140, 193]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/InputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,15)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "157"
+	  Position		  [380, 53, 410, 67]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pose.position\n(x, y, z)"
+	  SID			  "158"
+	  Position		  [380, 123, 410, 137]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "pose.orientation\n(w, x, y, z)"
+	  SID			  "159"
+	  Position		  [380, 193, 410, 207]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "twist.linear\n(x, y, z)"
+	  SID			  "160"
+	  Position		  [380, 263, 410, 277]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "twist.angular\n(x, y, z)"
+	  SID			  "161"
+	  Position		  [380, 333, 410, 347]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Selector"
+	  SrcPort		  1
+	  DstBlock		  "header\n(seq, stamp)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "state"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, 30]
+	    Branch {
+	      DstBlock		      "Selector2"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 70]
+	      Branch {
+		DstBlock		"Selector3"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 70]
+		DstBlock		"Selector4"
+		DstPort			1
+	      }
+	    }
+	  }
+	  Branch {
+	    Points		    [0, -40]
+	    Branch {
+	      DstBlock		      "Selector1"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, -70]
+	      DstBlock		      "Selector"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Selector3"
+	  SrcPort		  1
+	  DstBlock		  "twist.linear\n(x, y, z)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector2"
+	  SrcPort		  1
+	  DstBlock		  "pose.orientation\n(w, x, y, z)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector1"
+	  SrcPort		  1
+	  DstBlock		  "pose.position\n(x, y, z)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector4"
+	  SrcPort		  1
+	  DstBlock		  "twist.angular\n(x, y, z)"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "state_output"
+      SID		      "77"
+      Ports		      [5]
+      Position		      [980, 395, 1105, 505]
+      LibraryVersion	      "1.76"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"state_output"
+	Location		[1800, 444, 2556, 1049]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "78"
+	  Position		  [80, 68, 110, 82]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pose.position (x, y, z)"
+	  SID			  "79"
+	  Position		  [80, 113, 110, 127]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pose.orientation (w, x, y, z)"
+	  SID			  "82"
+	  Position		  [80, 158, 110, 172]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "twist.linear (x, y, z)"
+	  SID			  "83"
+	  Position		  [80, 203, 110, 217]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "twist.angular (x, y, z)"
+	  SID			  "84"
+	  Position		  [80, 248, 110, 262]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  SID			  "80"
+	  Ports			  [5, 1]
+	  Position		  [300, 45, 305, 285]
+	  ShowName		  off
+	  Inputs		  "5"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector10"
+	  SID			  "362"
+	  Ports			  [1, 1]
+	  Position		  [205, 146, 245, 184]
+	  InputPortWidth	  "4"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[2 3 4 1]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "state"
+	  SID			  "81"
+	  Ports			  [1]
+	  Position		  [450, 142, 565, 188]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/OutputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,15)"
+	}
+	Line {
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "state"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "pose.position (x, y, z)"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "header\n(seq, stamp)"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "pose.orientation (w, x, y, z)"
+	  SrcPort		  1
+	  DstBlock		  "Selector10"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "twist.linear (x, y, z)"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "twist.angular (x, y, z)"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "Selector10"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  3
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "supply"
+      SID		      "22"
+      Ports		      [0, 3]
+      Position		      [80, 278, 205, 342]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"supply"
+	Location		[559, 274, 1120, 775]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector"
+	  SID			  "162"
+	  Ports			  [1, 1]
+	  Position		  [195, 36, 240, 84]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "5"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[0 1]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector1"
+	  SID			  "163"
+	  Ports			  [1, 1]
+	  Position		  [195, 106, 240, 154]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "5"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[2 3]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector2"
+	  SID			  "164"
+	  Ports			  [1, 1]
+	  Position		  [195, 176, 240, 224]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "5"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[4]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "supply"
+	  SID			  "165"
+	  Ports			  [0, 1]
+	  Position		  [25, 147, 140, 193]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/InputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,5)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "166"
+	  Position		  [380, 53, 410, 67]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "voltage\n(pc, motor)"
+	  SID			  "167"
+	  Position		  [380, 123, 410, 137]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "current\n(motor)"
+	  SID			  "168"
+	  Position		  [380, 193, 410, 207]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Selector1"
+	  SrcPort		  1
+	  DstBlock		  "voltage\n(pc, motor)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Selector2"
+	  SrcPort		  1
+	  DstBlock		  "current\n(motor)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "supply"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, -40]
+	    Branch {
+	      Points		      [0, -70]
+	      DstBlock		      "Selector"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "Selector1"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Points		    [0, 30]
+	    DstBlock		    "Selector2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Selector"
+	  SrcPort		  1
+	  DstBlock		  "header\n(seq, stamp)"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "temperature"
+      SID		      "26"
+      Ports		      [0, 2]
+      Position		      [80, 519, 205, 566]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"temperature"
+	Location		[439, 199, 1000, 700]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector"
+	  SID			  "183"
+	  Ports			  [1, 1]
+	  Position		  [195, 36, 240, 84]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "3"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[0 1]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector1"
+	  SID			  "184"
+	  Ports			  [1, 1]
+	  Position		  [195, 106, 240, 154]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "3"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[2]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "temperature"
+	  SID			  "185"
+	  Ports			  [0, 1]
+	  Position		  [25, 107, 140, 153]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/InputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,3)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "186"
+	  Position		  [380, 53, 410, 67]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "temperature1"
+	  SID			  "187"
+	  Position		  [380, 123, 410, 137]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Selector1"
+	  SrcPort		  1
+	  DstBlock		  "temperature1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "temperature"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, -70]
+	    DstBlock		    "Selector"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Selector1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Selector"
+	  SrcPort		  1
+	  DstBlock		  "header\n(seq, stamp)"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "throttle_command"
+      SID		      "36"
+      Ports		      [0, 2]
+      Position		      [280, 498, 405, 542]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"throttle_command"
+	Location		[439, 199, 1000, 700]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector"
+	  SID			  "230"
+	  Ports			  [1, 1]
+	  Position		  [195, 36, 240, 84]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "3"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[0 1]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector1"
+	  SID			  "231"
+	  Ports			  [1, 1]
+	  Position		  [195, 106, 240, 154]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "3"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[2]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "throttle_command"
+	  SID			  "232"
+	  Ports			  [0, 1]
+	  Position		  [25, 107, 140, 153]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/InputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,3)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "233"
+	  Position		  [380, 53, 410, 67]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "data\n(thrust)"
+	  SID			  "234"
+	  Position		  [380, 123, 410, 137]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Selector1"
+	  SrcPort		  1
+	  DstBlock		  "data\n(thrust)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "throttle_command"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, -70]
+	    DstBlock		    "Selector"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Selector1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Selector"
+	  SrcPort		  1
+	  DstBlock		  "header\n(seq, stamp)"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "velocity_command"
+      SID		      "32"
+      Ports		      [0, 2]
+      Position		      [280, 213, 405, 257]
+      AncestorBlock	      "PortLib/PositionXYCommand"
+      LibraryVersion	      "*1.22"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"velocity_command"
+	Location		[439, 199, 1000, 700]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SIDHighWatermark	"22"
+	SIDPrevWatermark	"22"
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector"
+	  SID			  "32:17"
+	  Ports			  [1, 1]
+	  Position		  [195, 36, 240, 84]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "4"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[0 1]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector1"
+	  SID			  "32:18"
+	  Ports			  [1, 1]
+	  Position		  [195, 106, 240, 154]
+	  IndexMode		  "Zero-based"
+	  InputPortWidth	  "4"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "[2 3]"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "velocity_command"
+	  SID			  "32:1"
+	  Ports			  [0, 1]
+	  Position		  [25, 107, 140, 153]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/InputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,4)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "32:4"
+	  Position		  [380, 53, 410, 67]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "data\n(x, y)"
+	  SID			  "32:5"
+	  Position		  [380, 123, 410, 137]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Selector1"
+	  SrcPort		  1
+	  DstBlock		  "data\n(x, y)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "velocity_command"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, -70]
+	    DstBlock		    "Selector"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Selector1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Selector"
+	  SrcPort		  1
+	  DstBlock		  "header\n(seq, stamp)"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "wrench_output"
+      SID		      "43"
+      Ports		      [3]
+      Position		      [980, 328, 1105, 372]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"wrench_output"
+	Location		[618, 314, 1179, 602]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "header\n(seq, stamp)"
+	  SID			  "304"
+	  Position		  [135, 68, 165, 82]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "force\n(x, y, z)"
+	  SID			  "305"
+	  Position		  [135, 133, 165, 147]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "torque\n(x, y, z)"
+	  SID			  "306"
+	  Position		  [135, 198, 165, 212]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  SID			  "307"
+	  Ports			  [3, 1]
+	  Position		  [230, 40, 240, 240]
+	  ShowName		  off
+	  Inputs		  "3"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "wrench_output"
+	  SID			  "308"
+	  Ports			  [1]
+	  Position		  [330, 117, 445, 163]
+	  AttributesFormatString  "Value=%<dpvalue>"
+	  LibraryVersion	  "1.28"
+	  SourceBlock		  "orocos_taskcontext/OutputPort<array>"
+	  SourceType		  "DataPort<array>"
+	  dpdesc		  "Port's Description"
+	  dpvalue		  "zeros(1,8)"
+	}
+	Line {
+	  SrcBlock		  "header\n(seq, stamp)"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "force\n(x, y, z)"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "wrench_output"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "torque\n(x, y, z)"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  3
+	}
+      }
+    }
+    Annotation {
+      Position		      [496, 323]
+    }
+  }
+}

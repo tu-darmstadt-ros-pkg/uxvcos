@@ -1,0 +1,20 @@
+<package>
+  <description brief="rosmatlab_quadro_msgs">
+
+     rosmatlab_quadro_msgs
+
+  </description>
+  <author>Johannes Meyer</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/rosmatlab_quadro_msgs</url>
+  <depend package="quadro_msgs"/>
+  <depend package="rosmatlab"/>
+
+  <export>
+    <rosmatlab path="${prefix}/matlab"/>
+  </export>
+
+</package>
+
+

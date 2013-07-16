@@ -1,0 +1,14 @@
+--- pci.ids.old	2007-05-17 11:16:12.000000000 +0200
++++ pci.ids	2007-05-17 11:26:10.000000000 +0200
+@@ -9832,6 +9832,11 @@
+ 	5a46  MT23108 InfiniHost HCA bridge
+ 	6278  MT25208 InfiniHost III Ex (Tavor compatibility mode)
+ 	6282  MT25208 InfiniHost III Ex
++186c  Humusoft, s.r.o.
++	0612  AD612 Data Acquisition Device
++	0614  MF614 Multifunction I/O Card
++	0622  AD622 Data Acquisition Device
++	0624  MF624 Multifunction I/O Card
+ 187e  ZyXEL Communication Corporation
+ 	3403  ZyAir G-110 802.11g
+ 	340e  M-302 802.11g XtremeMIMO

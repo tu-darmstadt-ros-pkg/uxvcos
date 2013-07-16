@@ -1,0 +1,93 @@
+# load components
+if (!simulation) then {
+  addTask(loadComponent("Interface", "EthernetInterface", 2))
+  try import("uxvcos_ublox_gps");
+  try addTask(loadComponent("GPS", "uxvcos::ublox_gps::GPS", 2))
+  try addTask(loadComponent("Testbed", "Testbed", 2))
+}
+
+addTask(loadComponent("Navigation", "Navigation", 3))
+
+#try import("hector_pose_estimation_rtt");
+#addTask(loadComponent("Navigation", "hector_pose_estimation::PoseEstimationTaskContext", 3));
+
+addTask(loadComponent("Controller", "Controller", 4))
+#try addTask(loadComponent("SimulinkController", "Simulink", 4))
+#try addTask(loadComponent("SimulinkAutonomy", "Simulink", 4))
+
+# Watchdog
+loadComponent("Watchdog", "Watchdog", 0)
+try addPeer("Watchdog", "Interface")
+try addPeer("Watchdog", "GPS")
+try addPeer("Watchdog", "Testbed")
+try addPeer("Watchdog", "Navigation")
+try addPeer("Watchdog", "Controller")
+
+program configure {
+  # create ROS publishers/subscribers
+  if (!simulation) then {
+    publish("clock", ros.topic("clock"))
+    publish("raw_imu", ros.topic("raw_imu"))
+    publish("magnetic", ros.topic("magnetic"))
+    publish("altimeter", ros.topic("altimeter"))
+    publish("pressure_height", ros.topic("pressure_height"))
+    publish("supply", ros.topic("supply"))
+    publish("rc", ros.topic("rc"))
+    publish("motor_status", ros.topic("motor_status"))
+    publish("sonar_height", ros.topic("sonar_height"))
+    publish("fix", ros.topic("fix"))
+    publish("fix_velocity", ros.topic("fix_velocity"))
+
+    publish("reference_orientation", ros.topic("reference/orientation"));
+
+  } else {
+    subscribe("uxvcos.trigger", ros.topic("quadro/trigger"))
+
+    subscribe("clock", ros.topic("clock"))
+    subscribe("raw_imu", ros.topic("raw_imu"))
+    subscribe("magnetic", ros.topic("magnetic"))
+    subscribe("altimeter", ros.topic("altimeter"))
+    subscribe("pressure_height", ros.topic("pressure_height"))
+    subscribe("supply", ros.topic("supply"))
+    subscribe("rc", ros.topic("rc"))
+    subscribe("motor_status", ros.topic("motor_status"))
+    subscribe("sonar_height", ros.topic("sonar_height"))
+    subscribe("fix", ros.topic("fix"))
+    subscribe("fix_velocity", ros.topic("fix_velocity"))
+  }
+
+  subscribe("poseupdate", ros.topic("poseupdate"))
+  publish("state", ros.topic("state"))
+  publish("imu", ros.topic("imu"))
+  publish("global", ros.topic("global"))
+  publish("linear_acceleration_bias", ros.topic("linear_acceleration_bias"))
+  publish("angular_velocity_bias", ros.topic("angular_velocity_bias"))
+
+  subscribe("command_velocity", ros.topic("cmd_vel"))
+  publish("height", ros.topic("height"))
+  publish("force_simulator", ros.topic("force"))
+  publish("motor_input", ros.topic("input/motor"))
+  publish("motor_output", ros.topic("motor_pwm"))
+  publish("attitude_input", ros.topic("input/attitude"))
+  publish("velocity_input", ros.topic("input/velocity"))
+  publish("position_input", ros.topic("input/position"))
+  publish("heading_input", ros.topic("input/heading"))
+  publish("heading_rate_input", ros.topic("input/turnrate"))
+  publish("height_input", ros.topic("input/height"))
+  publish("height_rate_input", ros.topic("input/climbrate"))
+  publish("command_velocity_input", ros.topic("input/cmd_vel"))
+
+  subscribe("syscommand", ros.topic("/syscommand"))
+}
+
+program start {
+  Watchdog.start
+}
+
+program stop {
+  Watchdog.stop
+}
+
+program cleanup {
+
+}

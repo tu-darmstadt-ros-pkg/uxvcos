@@ -1,0 +1,5 @@
+<launch>
+  <arg name="topics" default="raw_imu magnetic altimeter fix fix_velocity supply fmp state global imu navigation_status rosout"/>
+  <node pkg="rosbag" type="record" name="record" args="-o /opt/uxvcos/fmp/log/fmp $(arg topics)" output="screen"/>
+</launch>
+

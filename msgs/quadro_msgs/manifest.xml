@@ -1,0 +1,14 @@
+<package>
+  <description brief="quadro_msgs">
+
+     quadro_msgs
+
+  </description>
+  <author>Johannes Meyer</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/quadro</url>
+
+</package>
+
+

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
+  <simple name="Sync" type="string"><description>Sync characters in hexadecimal notation</description><value>4D43</value></simple>
+  <simple name="DeviceName" type="string"><description>Name of the serial device (/dev/ttyX or COMx)</description><value>/dev/fmpbox</value></simple>
+  <simple name="Baudrate" type="ulong"><description>Baudrate of the serial device</description><value>115200</value></simple>
+  <struct name="FMP" type="PropertyBag">
+     <description>FMP sensor data</description>
+     <struct name="Voltage" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>1</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="Temperature" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>0.01</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>-39.66</value></simple>
+     </struct>
+     <struct name="Humidity" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>1</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>100</value></simple>
+        <simple name="offsetRaw" type="long"><description>This offset will be added before the transformation</description><value>0</value></simple>
+        <simple name="a" type="double"><description>Constant a in a * x^2 + b * x + c</description><value>-2.8e-06</value></simple>
+        <simple name="b" type="double"><description>Constant b in a * x^2 + b * x + c</description><value>0.0405</value></simple>
+        <simple name="c" type="double"><description>Constant c in a * x^2 + b * x + c</description><value>-4</value></simple>
+     </struct>
+     <struct name="alpha" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>1</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>-0.436332312998582</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0.436332312998582</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>-13658</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>3.244106416346337e-005</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="beta" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>1</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>-0.436332312998582</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0.436332312998582</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>-16777</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>3.137162979462792e-005</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="TAS" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>0.00386</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="pStat" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>-1800</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>0.016666666666667</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>600</value></simple>
+     </struct>
+     <struct name="pDyn" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>-2156</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>8.333333333333334e-002</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="xMag" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>0</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="yMag" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>0</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="zMag" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>0</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="Aileron" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>1</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>-1</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>1</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>-31500</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>8.3347224537422903817302883813969e-5</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="Elevator" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>1</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>-1</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>1</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>-45660</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>6.1199510403916768665850673194614e-5</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="Rudder" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>1</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>-1</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>1</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>-31710</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>4.3687199650502402795980777632154e-5</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="ElevatorTrim" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>1</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>-1</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>1</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>-32275</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>-3.0983733539891556932610379550736e-5</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="Motor" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>1</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+  </struct>
+</properties>

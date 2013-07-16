@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
+  <struct name="ReferencePosition" type="/sensor_msgs/NavSatFix">
+     <description>Reference position for local coordinates</description>
+     <simple name="latitude" type="double"><description>Part</description><value>49.86196862999999979138011</value></simple>
+     <simple name="longitude" type="double"><description>Part</description><value>8.682758529999999197457328</value></simple>
+     <simple name="altitude" type="double"><description>Part</description><value>0.0</value></simple>
+  </struct>
+</properties>

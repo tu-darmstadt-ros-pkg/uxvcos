@@ -1,0 +1,19 @@
+<launch>
+  <arg name="inbag" />
+  <arg name="processedbag" default="$(arg inbag)" />
+  <arg name="paused" default="true" />
+  <arg name="rate" default="1.0" />
+  <arg name="start" default="" />
+  <arg name="stop" default="" />
+
+  <node pkg="fmp" type="replay" name="fmp_replay" args="$(arg inbag) $(arg processedbag) --rate $(arg rate) --paused $(arg paused) --start $(arg start) --stop $(arg stop)" required="true" output="screen" />
+
+  <node pkg="message_to_tf" type="message_to_tf" name="state_to_tf">
+    <param name="odometry_topic" value="state" />
+  </node>
+
+  <node pkg="hector_trajectory_server" type="hector_trajectory_server" name="trajectory_server" output="screen">
+    <param name="target_frame_name" value="nav" />
+  </node>
+</launch>
+

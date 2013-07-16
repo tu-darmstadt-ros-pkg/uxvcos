@@ -1,0 +1,17 @@
+addTask(loadComponent("Interface", "EthernetInterface", 2))
+Interface.IMU.disable
+Interface.Magnetic.disable
+Interface.Baro.disable
+Interface.Ultrasound.disable
+Interface.Temperature.disable
+Interface.Supply.disable
+Interface.MotorStatus.disable
+
+program configure {
+  Interface.ConnectionType = 1
+  Interface.Device = "/dev/ttyUSB0"
+}
+
+# create ROS publishers/subscribers
+publish("rc", ros.topic("rc"))
+

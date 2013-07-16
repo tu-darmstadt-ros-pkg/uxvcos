@@ -1,0 +1,11 @@
+addTask(loadComponent("MBN", "Simulink", 3))
+MBN.Model = "../simulink/MBN/RTWmodel_QK_SFSVD_ROS.so"
+MBN.configure
+
+connectTasks()
+
+publish("MBN.state", ros.topic("mbn/state"))
+publish("MBN.imu", ros.topic("mbn/imu"))
+publish("MBN.log", ros.topic("mbn/log"))
+
+subscribe("supply", ros.topic("supply"))

@@ -1,0 +1,2 @@
+SUBSYSTEM=="tty",ATTRS{manufacturer}=="LPCUSB",ATTRS{product}=="USBSerial",ATTRS{serial}=="DATALOGG",SYMLINK+="fmpbox",MODE="0666"
+

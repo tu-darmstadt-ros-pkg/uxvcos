@@ -1,0 +1,65 @@
+# Interface components
+if (!simulation) then {
+  addTask(loadComponent("Interface", "EthernetInterface", 2))
+  try addTask(loadComponent("GPS", "uxvcos::ublox_gps::GPS", 2))
+  try addTask(loadComponent("FMPBox", "FMPBox", 0))
+}
+
+# Navigation
+addTask(loadComponent("Navigation", "Navigation", 3))
+
+# configure Watchdog
+loadComponent("Watchdog", "Watchdog", 0)
+try addPeer("Watchdog", "Interface")
+try addPeer("Watchdog", "FMPBox")
+try addPeer("Watchdog", "GPS")
+try addPeer("Watchdog", "Navigation")
+
+# create ROS publishers/subscribers
+if (!simulation) then {
+  publish("clock", ros.topic("clock"))
+  publish("raw_imu", ros.topic("raw_imu"))
+  publish("magnetic", ros.topic("magnetic"))
+  publish("altimeter", ros.topic("altimeter"))
+  publish("pressure_height", ros.topic("pressure_height"))
+  publish("fix", ros.topic("fix"))
+  publish("fix_velocity", ros.topic("fix_velocity"))
+  publish("fmp", ros.topic("fmp"))
+  publish("supply", ros.topic("supply"))
+
+} else {
+  subscribe("uxvcos.trigger", ros.topic("clock"))
+
+  subscribe("clock", ros.topic("clock"))
+  subscribe("raw_imu", ros.topic("raw_imu"))
+  subscribe("magnetic", ros.topic("magnetic"))
+  subscribe("altimeter", ros.topic("altimeter"))
+  subscribe("pressure_height", ros.topic("pressure_height"))
+  subscribe("fix", ros.topic("fix"))
+  subscribe("fix_velocity", ros.topic("fix_velocity"))
+  subscribe("fmp", ros.topic("fmp"))
+  subscribe("supply", ros.topic("supply"))
+}
+
+publish("state", ros.topic("state"))
+publish("imu", ros.topic("imu"))
+publish("global", ros.topic("global"))
+publish("navigation_status", ros.topic("navigation_status"))
+
+subscribe("syscommand", ros.topic("/syscommand"))
+
+program configure {
+
+}
+
+program start {
+  Watchdog.start
+}
+
+program stop {
+  Watchdog.stop
+}
+
+program cleanup {
+
+}

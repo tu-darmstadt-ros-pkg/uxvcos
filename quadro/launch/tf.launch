@@ -1,0 +1,19 @@
+<launch>
+  <arg name="model" default="$(find hector_quadrotor_description)/urdf/quadrotor_with_asus_with_hokuyo_utm30lx.urdf.xacro"/>
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(arg model)'" />
+
+  <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher" />
+
+  <node name="message_to_tf" pkg="message_to_tf" type="message_to_tf">
+    <param name="odometry_topic" value="state"/>
+    <param name="frame_id" value="nav"/>
+  </node>
+
+  <node name="reference_to_tf" pkg="message_to_tf" type="message_to_tf">
+    <param name="imu_topic" value="reference/orientation"/>
+    <param name="child_frame_id" value="reference/base_link"/>
+    <param name="frame_id" value="nav"/>
+  </node>
+
+  <!-- node pkg="tf" type="static_transform_publisher" name="laser_broadcaster" args="0 0 -.1 0 0 3.141592654 base_link laser 100" / -->
+</launch>

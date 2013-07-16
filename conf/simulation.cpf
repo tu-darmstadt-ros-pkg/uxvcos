@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
+  <simple name="Type" type="string"><description>Server type (TCP,UDP)</description><value>TCP</value></simple>
+  <simple name="LocalPort" type="ulong"><description>Local port</description><value>32001</value></simple>
+</properties>

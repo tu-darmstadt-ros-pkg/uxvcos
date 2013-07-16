@@ -1,0 +1,18 @@
+<package>
+  <description brief="uxvcos_ublox_gps">
+
+     uxvcos_ublox_gps
+
+  </description>
+  <author>Johannes Meyer</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/uxvcos_ublox_gps</url>
+
+  <depend package="uxvcos_rtt"/>
+  <depend package="ublox_gps"/>
+
+  <depend package="rtt_sensor_msgs"/>
+  <depend package="rtt_geometry_msgs"/>
+
+</package>

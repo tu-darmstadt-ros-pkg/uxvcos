@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
+  <struct name="Position" type="PropertyBag">
+     <description>Position Controller</description>
+     <struct name="PID" type="PropertyBag">
+        <simple name="T_in" type="double"><description>Time constant of the prefilter</description><value>0.0</value></simple>
+        <simple name="KP" type="double"><description>Constant for proportional action</description><value>0.1</value></simple>
+        <simple name="KI" type="double"><description>Constant for integral action</description><value>0</value></simple>
+        <simple name="KD" type="double"><description>Constant for differential action</description><value>0</value></simple>
+        <simple name="Kw" type="double"><description>Constant for proportional direct action</description><value>0</value></simple>
+        <simple name="Kdw" type="double"><description>Constant for differential direct action</description><value>0</value></simple>
+        <struct name="limit_P" type="Limit">
+           <description>Limits of the proportional error</description>
+        </struct>
+        <struct name="limit_I" type="Limit">
+           <description>Limits of the integral error</description>
+        </struct>
+        <struct name="limit_D" type="Limit">
+           <description>Limits of the differential error</description>
+        </struct>
+        <struct name="limit_w" type="Limit">
+           <description>Limits of the direct action</description>
+        </struct>
+        <struct name="limit_dw" type="Limit">
+           <description>Limits of the differential direct action</description>
+        </struct>
+        <struct name="limit_u" type="Limit">
+           <description>Limits of the controller output</description>
+           <simple name="abs" type="double"><description>Maximum absolute value</description><value>1.0</value></simple>
+        </struct>
+        <simple name="enabled" type="boolean"><description>Controller active</description><value>1</value></simple>
+     </struct>
+  </struct>
+  <struct name="Velocity" type="PropertyBag">
+     <description>Velocity Controller</description>
+     <struct name="PID" type="PropertyBag">
+        <simple name="T_in" type="double"><description>Time constant of the prefilter</description><value>0.05</value></simple>
+        <simple name="KP" type="double"><description>Constant for proportional action</description><value>0.1</value></simple>
+        <simple name="KI" type="double"><description>Constant for integral action</description><value>0.05</value></simple>
+        <simple name="KD" type="double"><description>Constant for differential action</description><value>0</value></simple>
+        <simple name="Kw" type="double"><description>Constant for proportional direct action</description><value>0</value></simple>
+        <simple name="Kdw" type="double"><description>Constant for differential direct action</description><value>0</value></simple>
+        <struct name="limit_P" type="Limit">
+           <description>Limits of the proportional error</description>
+           <simple name="abs" type="double"><description>Maximum absolute value</description><value>5</value></simple>
+        </struct>
+        <struct name="limit_I" type="Limit">
+           <description>Limits of the integral error</description>
+           <simple name="abs" type="double"><description>Maximum absolute value</description><value>10</value></simple>
+        </struct>
+        <struct name="limit_D" type="Limit">
+           <description>Limits of the differential error</description>
+        </struct>
+        <struct name="limit_w" type="Limit">
+           <description>Limits of the direct action</description>
+        </struct>
+        <struct name="limit_dw" type="Limit">
+           <description>Limits of the differential direct action</description>
+        </struct>
+        <struct name="limit_u" type="Limit">
+           <description>Limits of the controller output</description>
+        </struct>
+        <simple name="enabled" type="boolean"><description>Controller active</description><value>1</value></simple>
+     </struct>
+     <struct name="Input" type="PropertyBag">
+        <struct name="Transformation" type="PropertyBag">
+           <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+           <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+           <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+           <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+           <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>5</value></simple>
+           <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+        </struct>
+        <simple name="Deadzone" type="double"><description>Dead zone (in fraction of 1.0) where action is set to zero</description><value>0.1</value></simple>
+     </struct>
+  </struct>
+  <struct name="Attitude" type="PropertyBag">
+     <description>Attitude Controller</description>
+     <struct name="Angle" type="PropertyBag">
+        <simple name="T_in" type="double"><description>Time constant of the prefilter</description><value>0.05</value></simple>
+        <simple name="KP" type="double"><description>Constant for proportional action</description><value>1</value></simple>
+        <simple name="KI" type="double"><description>Constant for integral action</description><value>0</value></simple>
+        <simple name="KD" type="double"><description>Constant for differential action</description><value>0</value></simple>
+        <simple name="Kw" type="double"><description>Constant for proportional direct action</description><value>0</value></simple>
+        <simple name="Kdw" type="double"><description>Constant for differential direct action</description><value>0</value></simple>
+        <struct name="limit_P" type="Limit">
+           <description>Limits of the proportional error</description>
+           <simple name="abs" type="double"><description>Maximum absolute value</description><value>0.523598776</value></simple>
+        </struct>
+        <struct name="limit_I" type="Limit">
+           <description>Limits of the integral error</description>
+        </struct>
+        <struct name="limit_D" type="Limit">
+           <description>Limits of the differential error</description>
+        </struct>
+        <struct name="limit_w" type="Limit">
+           <description>Limits of the direct action</description>
+        </struct>
+        <struct name="limit_dw" type="Limit">
+           <description>Limits of the differential direct action</description>
+        </struct>
+        <struct name="limit_u" type="Limit">
+           <description>Limits of the controller output</description>
+        </struct>
+        <simple name="enabled" type="boolean"><description>Controller active</description><value>1</value></simple>
+     </struct>
+     <struct name="Rate" type="PropertyBag">
+        <simple name="T_in" type="double"><description>Time constant of the prefilter</description><value>0</value></simple>
+        <simple name="KP" type="double"><description>Constant for proportional action</description><value>20</value></simple>
+        <simple name="KI" type="double"><description>Constant for integral action</description><value>20</value></simple>
+        <simple name="KD" type="double"><description>Constant for differential action</description><value>0</value></simple>
+        <simple name="Kw" type="double"><description>Constant for proportional direct action</description><value>0</value></simple>
+        <simple name="Kdw" type="double"><description>Constant for differential direct action</description><value>0</value></simple>
+        <struct name="limit_P" type="Limit">
+           <description>Limits of the proportional error</description>
+           <simple name="abs" type="double"><description>Maximum absolute value</description><value>2.094395103</value></simple>
+        </struct>
+        <struct name="limit_I" type="Limit">
+           <description>Limits of the integral error</description>
+           <simple name="abs" type="double"><description>Maximum absolute value</description><value>0.3</value></simple>
+        </struct>
+        <struct name="limit_D" type="Limit">
+           <description>Limits of the differential error</description>
+        </struct>
+        <struct name="limit_w" type="Limit">
+           <description>Limits of the direct action</description>
+        </struct>
+        <struct name="limit_dw" type="Limit">
+           <description>Limits of the differential direct action</description>
+        </struct>
+        <struct name="limit_u" type="Limit">
+           <description>Limits of the controller output</description>
+        </struct>
+        <simple name="enabled" type="boolean"><description>Controller active</description><value>1</value></simple>
+     </struct>
+     <struct name="Input" type="PropertyBag">
+        <struct name="Transformation" type="PropertyBag">
+           <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+           <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+           <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+           <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+           <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>0.5235990000000000366142672</value></simple>
+           <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+        </struct>
+        <simple name="Deadzone" type="double"><description>Dead zone (in fraction of 1.0) where action is set to zero</description><value>0</value></simple>
+     </struct>
+  </struct>
+  <struct name="Heading" type="PropertyBag">
+     <description>Heading Controller</description>
+     <struct name="Angle" type="PropertyBag">
+        <simple name="T_in" type="double"><description>Time constant of the prefilter</description><value>0.2</value></simple>
+        <simple name="KP" type="double"><description>Constant for proportional action</description><value>2.5</value></simple>
+        <simple name="KI" type="double"><description>Constant for integral action</description><value>0</value></simple>
+        <simple name="KD" type="double"><description>Constant for differential action</description><value>0</value></simple>
+        <simple name="Kw" type="double"><description>Constant for proportional direct action</description><value>0</value></simple>
+        <simple name="Kdw" type="double"><description>Constant for differential direct action</description><value>0</value></simple>
+        <struct name="limit_P" type="Limit">
+           <description>Limits of the proportional error</description>
+           <simple name="abs" type="double"><description>Maximum absolute value</description><value>0.523599</value></simple>
+        </struct>
+        <struct name="limit_I" type="Limit">
+           <description>Limits of the integral error</description>
+        </struct>
+        <struct name="limit_D" type="Limit">
+           <description>Limits of the differential error</description>
+        </struct>
+        <struct name="limit_w" type="Limit">
+           <description>Limits of the direct action</description>
+        </struct>
+        <struct name="limit_dw" type="Limit">
+           <description>Limits of the differential direct action</description>
+        </struct>
+        <struct name="limit_u" type="Limit">
+           <description>Limits of the controller output</description>
+        </struct>
+        <simple name="enabled" type="boolean"><description>Controller active</description><value>1</value></simple>
+     </struct>
+     <struct name="Rate" type="PropertyBag">
+        <simple name="T_in" type="double"><description>Time constant of the prefilter</description><value>0</value></simple>
+        <simple name="KP" type="double"><description>Constant for proportional action</description><value>120</value></simple>
+        <simple name="KI" type="double"><description>Constant for integral action</description><value>0</value></simple>
+        <simple name="KD" type="double"><description>Constant for differential action</description><value>0</value></simple>
+        <simple name="Kw" type="double"><description>Constant for proportional direct action</description><value>0</value></simple>
+        <simple name="Kdw" type="double"><description>Constant for differential direct action</description><value>0</value></simple>
+        <struct name="limit_P" type="Limit">
+           <description>Limits of the proportional error</description>
+           <simple name="abs" type="double"><description>Maximum absolute value</description><value>2.0944</value></simple>
+        </struct>
+        <struct name="limit_I" type="Limit">
+           <description>Limits of the integral error</description>
+        </struct>
+        <struct name="limit_D" type="Limit">
+           <description>Limits of the differential error</description>
+        </struct>
+        <struct name="limit_w" type="Limit">
+           <description>Limits of the direct action</description>
+        </struct>
+        <struct name="limit_dw" type="Limit">
+           <description>Limits of the differential direct action</description>
+        </struct>
+        <struct name="limit_u" type="Limit">
+           <description>Limits of the controller output</description>
+        </struct>
+        <simple name="enabled" type="boolean"><description>Controller active</description><value>1</value></simple>
+     </struct>
+     <struct name="Input" type="PropertyBag">
+        <struct name="Transformation" type="PropertyBag">
+           <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+           <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+           <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+           <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+           <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>-1.05</value></simple>
+           <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+        </struct>
+        <simple name="Deadzone" type="double"><description>Dead zone (in fraction of 1.0) where action is set to zero</description><value>0.1</value></simple>
+     </struct>
+  </struct>
+  <struct name="Height" type="PropertyBag">
+     <description>Altitude/Height Controller</description>
+     <struct name="Height" type="PropertyBag">
+        <simple name="T_in" type="double"><description>Time constant of the prefilter</description><value>0.1</value></simple>
+        <simple name="KP" type="double"><description>Constant for proportional action</description><value>1.0</value></simple>
+        <simple name="KI" type="double"><description>Constant for integral action</description><value>0</value></simple>
+        <simple name="KD" type="double"><description>Constant for differential action</description><value>0</value></simple>
+        <simple name="Kw" type="double"><description>Constant for proportional direct action</description><value>0</value></simple>
+        <simple name="Kdw" type="double"><description>Constant for differential direct action</description><value>0</value></simple>
+        <struct name="limit_P" type="Limit">
+           <description>Limits of the proportional error</description>
+           <simple name="abs" type="double"><description>Maximum absolute value</description><value>0.5</value></simple>
+        </struct>
+        <struct name="limit_I" type="Limit">
+           <description>Limits of the integral error</description>
+        </struct>
+        <struct name="limit_D" type="Limit">
+           <description>Limits of the differential error</description>
+        </struct>
+        <struct name="limit_w" type="Limit">
+           <description>Limits of the direct action</description>
+        </struct>
+        <struct name="limit_dw" type="Limit">
+           <description>Limits of the differential direct action</description>
+        </struct>
+        <struct name="limit_u" type="Limit">
+           <description>Limits of the controller output</description>
+        </struct>
+        <simple name="enabled" type="boolean"><description>Controller active</description><value>1</value></simple>
+     </struct>
+     <struct name="Rate" type="PropertyBag">
+        <simple name="T_in" type="double"><description>Time constant of the prefilter</description><value>0</value></simple>
+        <simple name="KP" type="double"><description>Constant for proportional action</description><value>40</value></simple>
+        <simple name="KI" type="double"><description>Constant for integral action</description><value>20</value></simple>
+        <simple name="KD" type="double"><description>Constant for differential action</description><value>0</value></simple>
+        <simple name="Kw" type="double"><description>Constant for proportional direct action</description><value>0</value></simple>
+        <simple name="Kdw" type="double"><description>Constant for differential direct action</description><value>0</value></simple>
+        <struct name="limit_P" type="Limit">
+           <description>Limits of the proportional error</description>
+           <simple name="abs" type="double"><description>Maximum absolute value</description><value>5.0</value></simple>
+        </struct>
+        <struct name="limit_I" type="Limit">
+           <description>Limits of the integral error</description>
+           <simple name="max" type="double"><description>Maximum absolute value</description><value>0</value></simple>
+        </struct>
+        <struct name="limit_D" type="Limit">
+           <description>Limits of the differential error</description>
+        </struct>
+        <struct name="limit_w" type="Limit">
+           <description>Limits of the direct action</description>
+        </struct>
+        <struct name="limit_dw" type="Limit">
+           <description>Limits of the differential direct action</description>
+        </struct>
+        <struct name="limit_u" type="Limit">
+           <description>Limits of the controller output</description>
+        </struct>
+        <simple name="enabled" type="boolean"><description>Controller active</description><value>1</value></simple>
+     </struct>
+     <struct name="Input" type="PropertyBag">
+        <struct name="Transformation" type="PropertyBag">
+           <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+           <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+           <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+           <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+           <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>4</value></simple>
+           <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+        </struct>
+        <simple name="Deadzone" type="double"><description>Dead zone (in fraction of 1.0) where action is set to zero</description><value>0.1</value></simple>
+     </struct>
+   </struct>
+   <struct name="Altimeter" type="PropertyBag">
+     <simple name="AirborneHeight" type="double"><description>Ultrasound height above which the aircraft is considered as airborne</description><value>0.2</value></simple>
+     <struct name="UltrasoundFilter" type="PropertyBag">
+        <simple name="L1" type="double"><value>2.514866859365874</value></simple>
+        <simple name="L2" type="double"><value>3.162277660168385</value></simple>
+     </struct>
+     <struct name="AirborneFilter" type="PropertyBag">
+        <description>PTn Low-pass filter of n-th order</description>
+        <simple name="T" type="double"><description>Time constant</description><value>0.5</value></simple>
+     </struct>
+     <struct name="UltrasoundOutlierElimination" type="PropertyBag">
+        <description>Eliminate outliers that exceed max_delta * dt limit</description>
+        <simple name="max_delta" type="double"><description>Upper bound for the Maximum change per seconds</description><value>1</value></simple>
+     </struct>
+  </struct>
+  <struct name="Thrust" type="PropertyBag">
+     <description>Thrust Controller</description>
+     <struct name="Input" type="PropertyBag">
+        <struct name="Transformation" type="PropertyBag">
+           <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+           <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+           <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+           <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+           <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>1</value></simple>
+           <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+        </struct>
+     </struct>
+     <simple name="AutoThrottle" type="boolean"><description>Throttle should be managed automatically during </description><value>1</value></simple>
+  </struct>
+  <struct name="Motor" type="PropertyBag">
+     <description>Motor Controller</description>
+     <simple name="UsePropulsionModel" type="boolean"><description></description><value>0</value></simple>
+  </struct>
+</properties>

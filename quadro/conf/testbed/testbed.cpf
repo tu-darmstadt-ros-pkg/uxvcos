@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
+  <struct name="Encoder0" type="PropertyBag">
+     <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+     <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+     <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+     <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>-1.65</value></simple>
+     <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>0.238</value></simple>
+     <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+  </struct>
+  <struct name="Encoder1" type="PropertyBag">
+     <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+     <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+     <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+     <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>-1.65</value></simple>
+     <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>0.119</value></simple>
+     <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+  </struct>
+  <struct name="Encoder2" type="PropertyBag">
+     <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+     <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+     <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+     <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>-1.65</value></simple>
+     <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>-0.952</value></simple>
+     <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+  </struct>
+</properties>

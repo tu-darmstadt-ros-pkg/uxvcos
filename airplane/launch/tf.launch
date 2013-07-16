@@ -1,0 +1,16 @@
+<launch>
+  <!--
+    TODO: Add URDF model here...
+
+    <arg name="model" default="$(find hector_quadrotor_urdf)/urdf/quadrotor_with_asus_with_hokuyo_utm30lx.urdf.xacro"/>
+    <param name="robot_description" command="$(find xacro)/xacro.py '$(arg model)'" />
+
+    <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher" />
+  -->
+
+  <node name="message_to_tf" pkg="message_to_tf" type="message_to_tf">
+    <param name="odometry_topic" value="state"/>
+    <param name="frame_id" value="nav"/>
+  </node>
+
+</launch>

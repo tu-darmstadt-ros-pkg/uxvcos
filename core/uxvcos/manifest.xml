@@ -1,0 +1,20 @@
+<package>
+  <description brief="uxvcos">
+
+     uxvcos
+
+  </description>
+  <author>Johannes Meyer</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/uxvcos</url>
+
+  <depend package="rosbuild"/>
+  <depend package="roscpp"/> <!-- for ros::Time -->
+
+  <export>
+    <rosbuild cmake_directory="${prefix}/../../cmake"/>
+    <cpp cflags="-I${prefix}/../../src"  lflags="-Wl,-rpath=${prefix}/../lib -L${prefix}/../lib"/>
+    <matlab path="${prefix}/../../contrib/matlab"/>
+  </export>
+</package>

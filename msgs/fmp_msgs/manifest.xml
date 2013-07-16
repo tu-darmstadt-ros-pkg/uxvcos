@@ -1,0 +1,14 @@
+<package>
+  <description brief="fmp_msgs">
+
+     fmp_msgs
+
+  </description>
+  <author>Johannes Meyer</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/fmp_msgs</url>
+
+</package>
+
+

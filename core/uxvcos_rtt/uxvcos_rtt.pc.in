@@ -1,0 +1,11 @@
+prefix=@UXVCOS_PATH@/core
+libdir=${prefix}/lib
+includedir=${prefix}/include
+orocos_libdir=${libdir}/orocos/@OROCOS_TARGET@
+
+Name: uxvcos_rtt
+Description: uxvcos_rtt package for Orocos
+Requires: orocos-rtt-@OROCOS_TARGET@ 
+Version: 1.0
+Libs:  -L${libdir}  -luxvcos-@OROCOS_TARGET@ -lboost_program_options-mt
+Cflags: -I${includedir} -I${prefix}/..

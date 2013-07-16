@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
+  <simple name="Model" type="string"><description>Name of the Simulink model to run</description><value>Kadett_UAV_v14_Orocos</value></simple>
+</properties>

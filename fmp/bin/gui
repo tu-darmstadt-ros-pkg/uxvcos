@@ -1,0 +1,30 @@
+#!/bin/sh
+
+if [ -z "$MATLAB_ROOT" ]; then
+  for dir in \
+    /usr/local/MATLAB/R2011a \
+    /usr/local/MATLAB/R2011b \
+    /usr/local/MATLAB/R2012a \
+    /usr/local/MATLAB/R2012b
+  do
+    if [ -d "$dir/ros" ]; then
+      MATLAB_ROOT=$dir
+      break
+    fi
+  done
+fi
+
+if [ -z "$MATLAB_ROOT" ]; then
+  echo "Matlab with installed ROS not found."
+  return
+fi
+
+if [ -z "$UXVCOS_ROOT" ]; then
+  UXVCOS_ROOT=`cd $(dirname $0)/../..; pwd`
+fi
+
+. $MATLAB_ROOT/ros/setup.sh
+export ROS_PACKAGE_PATH=$UXVCOS_ROOT/msgs:$ROS_PACKAGE_PATH
+
+cd $UXVCOS_ROOT/fmp/matlab
+exec matlab -r "run $MATLAB_ROOT/ros/setup.m; FMP"

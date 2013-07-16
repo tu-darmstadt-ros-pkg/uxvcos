@@ -1,0 +1,13 @@
+<launch>
+  <node pkg="fmp" type="fmp" name="fmp" output="screen" required="true">
+  </node>
+
+  <node pkg="message_to_tf" type="message_to_tf" name="state_to_tf" output="screen">
+    <param name="frame_id" value="nav"/>
+    <param name="odometry_topic" value="state"/>
+  </node>
+
+  <arg name="record" default="true"/>
+  <include file="$(find fmp)/launch/record.launch" if="$(arg record)"/>
+</launch>
+

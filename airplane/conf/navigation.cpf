@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
+  <struct name="GPS" type="PropertyBag">
+     <description>GPS Receiver</description>
+     <simple name="device" type="string"><description>Name of the SerialPort device to use for GPS communication</description><value>Ethernet1</value></simple>
+  </struct>
+  <struct name="ReferencePosition" type="Navigation::ReferencePosition">
+     <description>Reference position for local coordinates</description>
+     <simple name="Lat" type="double"><value>0.87091929674517045888492169347582</value></simple>
+     <simple name="Lon" type="double"><value>0.14835298641951801403851371532153</value></simple>
+     <simple name="Altitude" type="double"><value>0</value></simple>
+  </struct>
+</properties>

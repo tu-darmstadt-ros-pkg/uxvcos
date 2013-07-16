@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
+  <struct name="GPS" type="PropertyBag">
+     <description>GPS Receiver</description>
+     <simple name="device" type="string"><description>Name of the SerialPort device to use for GPS communication</description><value>Ethernet1</value></simple>
+  </struct>
+  <struct name="Compass" type="PropertyBag">
+     <description>Compass Sensor</description>
+     <struct name="DeviationX" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>1.49</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>1.0</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0.0</value></simple>
+     </struct>
+     <struct name="DeviationY" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>0.86</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>1.0</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0.0</value></simple>
+     </struct>
+     <struct name="DeviationZ" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>-2.0</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>1.25</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0.0</value></simple>
+     </struct>
+  </struct>
+  <simple name="AutoInitializeReferenceAltitude" type="boolean"><description>Automatically initialize reference altitude with present altitude after alignment</description><value>0</value></simple>
+</properties>

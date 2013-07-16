@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
+  <struct name="Throttle" type="PropertyBag">
+     <description>Throttle Controller</description>
+  </struct>
+  <struct name="Rudders" type="PropertyBag">
+     <description>Rudders Controller</description>
+     <struct name="LeftAileron" type="PropertyBag">
+        <simple name="Channel" type="long"><description>Channel number for this axis</description><value>2</value></simple>
+        <struct name="LeftAileron" type="PropertyBag">
+           <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+           <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>-0.55</value></simple>
+           <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+           <simple name="limit" type="double"><description>If true, values are limited between limitMin and limitMax</description><value>1</value></simple>
+           <simple name="min" type="double"><description>Lower limit for the output value</description><value>-1</value></simple>
+           <simple name="max" type="double"><description>Upper limit for the output value</description><value>1</value></simple>
+        </struct>
+     </struct>
+     <struct name="RightAileron" type="PropertyBag">
+        <simple name="Channel" type="long"><description>Channel number for this axis</description><value>5</value></simple>
+        <struct name="RightAileron" type="PropertyBag">
+           <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+           <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>-0.55</value></simple>
+           <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+           <simple name="limit" type="double"><description>If true, values are limited between limitMin and limitMax</description><value>1</value></simple>
+           <simple name="min" type="double"><description>Lower limit for the output value</description><value>-1</value></simple>
+           <simple name="max" type="double"><description>Upper limit for the output value</description><value>1</value></simple>
+        </struct>
+     </struct>
+     <struct name="Elevator" type="PropertyBag">
+        <simple name="Channel" type="long"><description>Channel number for this axis</description><value>1</value></simple>
+        <struct name="Elevator" type="PropertyBag">
+           <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+           <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>-0.43</value></simple>
+           <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+           <simple name="limit" type="double"><description>If true, values are limited between limitMin and limitMax</description><value>1</value></simple>
+           <simple name="min" type="double"><description>Lower limit for the output value</description><value>-1</value></simple>
+           <simple name="max" type="double"><description>Upper limit for the output value</description><value>1</value></simple>
+        </struct>
+     </struct>
+     <struct name="Rudder" type="PropertyBag">
+        <simple name="Channel" type="long"><description>Channel number for this axis</description><value>4</value></simple>
+        <struct name="Rudder" type="PropertyBag">
+           <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+           <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>0.7</value></simple>
+           <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>-0.3</value></simple>
+           <simple name="limit" type="double"><description>If true, values are limited between limitMin and limitMax</description><value>1</value></simple>
+           <simple name="min" type="double"><description>Lower limit for the output value</description><value>-1</value></simple>
+           <simple name="max" type="double"><description>Upper limit for the output value</description><value>1</value></simple>
+        </struct>
+     </struct>
+     <struct name="Throttle" type="PropertyBag">
+        <simple name="Channel" type="long"><description>Channel number for this axis</description><value>3</value></simple>
+        <struct name="Throttle" type="PropertyBag">
+           <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+           <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>1</value></simple>
+           <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+           <simple name="limit" type="double"><description>If true, values are limited between limitMin and limitMax</description><value>1</value></simple>
+           <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+           <simple name="max" type="double"><description>Upper limit for the output value</description><value>1</value></simple>
+        </struct>
+     </struct>
+  </struct>
+</properties>

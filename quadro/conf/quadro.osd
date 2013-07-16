@@ -1,0 +1,20 @@
+StateMachine MainMachine {
+
+  initial state Startup {
+    transition select ManualControl
+  }
+
+  state ManualControl {
+  }
+
+  state AutomaticControl {
+  }
+
+  state Emergency {
+  }
+
+  final state Shutdown {
+  }
+}
+
+RootMachine MainMachine Main

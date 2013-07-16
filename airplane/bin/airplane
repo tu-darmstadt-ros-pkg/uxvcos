@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if [ -z "$UXVCOS_ROOT" ]; then
+  source /opt/uxvcos/setup.bash
+fi
+
+export UXVCOS_CONFIGURATION=$UXVCOS_ROOT/airplane/conf
+export UXVCOS_SCRIPT_PATH=$UXVCOS_ROOT/airplane/bin
+
+
+cd $UXVCOS_ROOT/airplane/bin
+AIRPLANE_OPTIONS="$AIRPLANE_OPTIONS $@"
+sudo setcap cap_net_raw,cap_sys_rawio+ep `rospack find uxvcos`/bin/uxvcos
+
+$LAUNCH_PREFIX $UXVCOS_ROOT/core/bin/uxvcos --realm airplane --start airplane.ops --config $HOSTNAME $AIRPLANE_OPTIONS
+
+if [ $? -ne 0 ]; then
+  read -p "Press any key to continue... " -n1 -s
+  echo
+fi

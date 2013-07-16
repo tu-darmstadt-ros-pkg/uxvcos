@@ -1,0 +1,19 @@
+<launch>
+  <node pkg="tf" type="static_transform_publisher" name="laser_broadcaster" args="0 0 .1 0 0 0 base_link laser 100" />
+  <include file="$(find hector_slam_launch)/launch/mapping_box.launch" />
+
+  <group if="$(optenv REALROBOT false)">
+    <node name="state_to_tf" pkg="message_to_tf" type="message_to_tf">
+      <param name="odometry_topic" value="state"/>
+      <param name="frame_id" value="nav"/>
+    </node>
+
+    <include file="$(find quadro)/launch/quadro.launch">
+      <arg name="cmdline" value="$(optenv QUADRO_OPTIONS) --config mapping" /> 
+    </include>
+  </group>
+
+  <group unless="$(optenv REALROBOT false)">
+    <node name="quadro" pkg="hector_pose_estimation" type="pose_estimation" />
+  </group>
+</launch>

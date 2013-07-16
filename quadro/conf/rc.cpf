@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
+   <struct name="Roll" type="PropertyBag">
+      <simple name="Type" type="string"><value>Axis</value></simple>
+      <simple name="Channel" type="long"><description>Channel number for this axis</description><value>4</value></simple>
+      <simple name="Function" type="ulong"><description>Function ID</description><value>1</value></simple>
+      <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+      <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+      <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+      <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+      <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>1</value></simple>
+      <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+   </struct>
+   <struct name="Pitch" type="PropertyBag">
+      <simple name="Type" type="string"><value>Axis</value></simple>
+      <simple name="Channel" type="long"><description>Channel number for this axis</description><value>3</value></simple>
+      <simple name="Function" type="ulong"><description>Function ID</description><value>2</value></simple>
+      <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+      <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+      <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+      <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+      <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>1</value></simple>
+      <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+   </struct>
+   <struct name="Yaw" type="PropertyBag">
+      <simple name="Type" type="string"><value>Axis</value></simple>
+      <simple name="Channel" type="long"><description>Channel number for this axis</description><value>2</value></simple>
+      <simple name="Function" type="ulong"><description>Function ID</description><value>3</value></simple>
+      <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+      <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+      <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+      <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+      <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>1</value></simple>
+      <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+   </struct>
+   <struct name="Height" type="PropertyBag">
+      <simple name="Type" type="string"><value>Axis</value></simple>
+      <simple name="Channel" type="long"><description>Channel number for this axis</description><value>1</value></simple>
+      <simple name="Function" type="ulong"><description>Function ID</description><value>5</value></simple>
+      <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+      <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+      <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+      <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+      <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>1</value></simple>
+      <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+   </struct>
+   <struct name="Throttle" type="PropertyBag">
+      <simple name="Type" type="string"><value>Axis</value></simple>
+      <simple name="Channel" type="long"><description>Channel number for this axis</description><value>6</value></simple>
+      <simple name="Function" type="ulong"><description>Function ID</description><value>6</value></simple>
+      <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+      <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+      <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+      <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>1.0</value></simple>
+      <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>0.5</value></simple>
+      <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+   </struct>
+   <struct name="FlightModeSwitch" type="PropertyBag">
+      <simple name="Type" type="string"><value>Switch</value></simple>
+      <simple name="Channel" type="long"><description>Channel number for this switch</description><value>5</value></simple>
+      <simple name="Function" type="ulong"><description>Function ID</description><value>1</value></simple>
+   </struct>
+   <struct name="HeightModeSwitch" type="PropertyBag">
+      <simple name="Type" type="string"><value>Switch</value></simple>
+      <simple name="Channel" type="long"><description>Channel number for this switch</description><value>8</value></simple>
+      <simple name="Function" type="ulong"><description>Function ID</description><value>2</value></simple>
+   </struct>
+</properties>

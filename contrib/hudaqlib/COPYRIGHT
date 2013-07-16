@@ -1,0 +1,30 @@
+Library Hudaqlib is copyrighted by Jaroslav Fojtik.
+Copyright (c) 2005-2007
+
+It is covered by two different licency models. It has been published with 
+agreement of Humusoft s.r.o.
+
+
+----------- Humusoft's copyright -----------------------------------------
+This licency model allows you to freely link files to both commercional and 
+noncommercional projects. 
+   It requests up to you not to remove Humusoft's copyright from source 
+files. There are no limitations for resulting executable files.
+   For clarification please contact info@humusoft.com.
+
+filese covered by this licency model are:
+  hudaqlib.h; MF614.c; MF624.c; generic.c
+
+
+----------- LGPL -------------------------------------------------------
+All other files are covered by LGPL licency model.
+
+
+-----------------------------------------------------------------------------
+
+Contact information:
+
+ E-Mail: JaFojtik@seznam.cz or fojtik@penguin.cz
+ 
+ Web:    http://www.penguin.cz/~fojtik/hudaqlib/hudaqlib.html
+

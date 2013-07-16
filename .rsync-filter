@@ -1,0 +1,15 @@
+- .*
+- .gems
+- *.pyc
+- *.o
+- *.log
+- *.tar.gz
+- *.tar.bz2
+- *.last
+- CMakeFiles
+- .cproject
+- .project
+
+- build*/
+- doc/
+- share/

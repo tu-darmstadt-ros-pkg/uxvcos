@@ -1,0 +1,30 @@
+<launch>
+  <arg name="inbag" />
+  <arg name="outbag" default="$(arg inbag).out.bag" />
+  <arg name="paused" default="true" />
+  <arg name="rate" default="3.0" />
+  <arg name="start" default="" />
+  <arg name="stop" default="" />
+
+  <param name="use_sim_time" value="true" />
+
+  <node pkg="hector_pose_estimation" type="pose_estimation" name="pose_estimation" output="screen">
+    <rosparam>
+      magnetic:
+        auto_heading: false
+        declination: 0.017453293
+        deviation: [0.002937424162628, -1.999783026406028, 0.029312434863677]
+      gps:
+        timeout: 99999.0
+    </rosparam>
+  </node>
+
+  <group if="false">
+    <arg name="paused_arg" value="" unless="$(arg paused)" />
+    <arg name="paused_arg" value="--pause" if="$(arg paused)" />
+    <node pkg="rosbag" type="play" name="rosbag_play" args="$(arg inbag) --clock $(arg paused_arg) --rate $(arg rate) --topics raw_imu altimeter fix fix_velocity magnetic" output="screen" required="true" />
+  </group>
+  <node pkg="fmp" type="replay" name="fmp_replay" args="$(arg inbag) - --rate $(arg rate) --paused $(arg paused) --start $(arg start) --stop $(arg stop)" output="screen" required="true" />
+
+  <node pkg="rosbag" type="record" name="rosbag_record" args="-O $(arg outbag) state velocity pose imu global euler" output="screen" />
+</launch>

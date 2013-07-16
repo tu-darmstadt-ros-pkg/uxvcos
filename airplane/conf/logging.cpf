@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
+  <simple name="Directory" type="string"><description>Directory in which logfiles will be stored</description><value>./log</value></simple>
+  <simple name="Filename" type="string"><description>Name of the logfile</description><value>log.raw</value></simple>
+  <simple name="Sync" type="string"><description>Sync characters in hexadecimal notation</description><value></value></simple>
+</properties>

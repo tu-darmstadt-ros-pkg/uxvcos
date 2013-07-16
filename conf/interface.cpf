@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
+  <struct name="Supply" type="PropertyBag">
+     <description>Supply</description>
+     <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>500</value></simple>
+     <simple name="offset" type="ulong"><description>Measurement offset in milliseconds</description><value>0</value></simple>
+  </struct>
+  <struct name="IMU" type="PropertyBag">
+     <description>Inertial Measurement Unit</description>
+     <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>1</value></simple>
+     <simple name="offset" type="ulong"><description>Measurement offset in milliseconds</description><value>0</value></simple>
+     <simple name="RawMode" type="boolean"><description>If true, raw values are requested from the ARM Interface</description><value>1</value></simple>
+  </struct>
+  <struct name="SerialPort0" type="PropertyBag">
+     <description>Interface to the Serial Port on the Ethernet Board</description>
+     <simple name="Baudrate" type="ulong"><description>Baudrate of the serial port</description><value>57600</value></simple>
+  </struct>
+  <struct name="SerialPort1" type="PropertyBag">
+     <description>Interface to the Serial Port on the Ethernet Board</description>
+     <simple name="Baudrate" type="ulong"><description>Baudrate of the serial port</description><value>57600</value></simple>
+  </struct>
+  <simple name="ConnectionType" type="long"><description>Type of connection (0 = Ethernet, 1 = Serial)</description><value>0</value></simple>
+  <simple name="Device" type="string"><description>Network interface/serial port to use</description><value>eth0</value></simple>
+  <simple name="Baudrate" type="ulong"><description>Baudrate for serial connection mode</description><value>921600</value></simple>
+  <simple name="Destination" type="string"><description>Destination MAC address (default ff:ff:ff:ff:ff:ff)</description><value>ff:ff:ff:ff:ff:ff</value></simple>
+  <simple name="Protocol" type="ulong"><description>Ethernet Protocol</description><value>4660</value></simple>
+  <simple name="ReceiveTimeout" type="long"><description>Timeout for packet reception in milliseconds</description><value>100</value></simple>
+  <struct name="Debug" type="PropertyBag">
+     <description>Properties for debugging purposes</description>
+     <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>0</value></simple>
+     <simple name="offset" type="ulong"><description>Measurement offset in milliseconds</description><value>0</value></simple>
+  </struct>
+</properties>

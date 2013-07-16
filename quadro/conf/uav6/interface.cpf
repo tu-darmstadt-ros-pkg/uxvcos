@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
+  <struct name="IMU" type="PropertyBag">
+     <description>Inertial Measurement Unit</description>
+     <struct name="MappingAccel" type="Mapping">
+        <description>Mapping of the acceleration sensors to the x,y,z axes</description>
+        <simple name="Mapping" type="string"><value>1,0,2</value></simple>
+     </struct>
+     <struct name="MappingGyro" type="Mapping">
+        <description>Mapping of the gyro sensors to the x,y,z axes</description>
+        <simple name="Mapping" type="string"><value>0,1,2</value></simple>
+     </struct>
+     <struct name="Accel0" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>-33198</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>0.001496886999999999913815718</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="Accel1" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>-32208</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>0.001496886999999999913815718</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="Accel2" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>-27844</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>-0.001496886999999999913815718</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>9.810000000000000497379915</value></simple>
+     </struct>
+     <struct name="Gyro0" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>-24409</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>0.0002639168999999999803279804</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="Gyro1" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>-23863</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>-0.0002639168999999999803279804</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="Gyro2" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>-24601</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>-0.0002639168999999999803279804</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="AccelX" type="PropertyBag">
+        <description>PTn Low-pass filter of n-th order</description>
+        <simple name="T" type="double"><description>Time constant</description><value>0</value></simple>
+     </struct>
+     <struct name="AccelY" type="PropertyBag">
+        <description>PTn Low-pass filter of n-th order</description>
+        <simple name="T" type="double"><description>Time constant</description><value>0</value></simple>
+     </struct>
+     <struct name="AccelZ" type="PropertyBag">
+        <description>PTn Low-pass filter of n-th order</description>
+        <simple name="T" type="double"><description>Time constant</description><value>0</value></simple>
+     </struct>
+     <struct name="GyroX" type="PropertyBag">
+        <description>PTn Low-pass filter of n-th order</description>
+        <simple name="T" type="double"><description>Time constant</description><value>0</value></simple>
+     </struct>
+     <struct name="GyroY" type="PropertyBag">
+        <description>PTn Low-pass filter of n-th order</description>
+        <simple name="T" type="double"><description>Time constant</description><value>0</value></simple>
+     </struct>
+     <struct name="GyroZ" type="PropertyBag">
+        <description>PTn Low-pass filter of n-th order</description>
+        <simple name="T" type="double"><description>Time constant</description><value>0</value></simple>
+     </struct>
+     <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>1</value></simple>
+     <simple name="offset" type="ulong"><description>Measurement offset in milliseconds</description><value>0</value></simple>
+     <simple name="RawMode" type="boolean"><description>If true, raw values are requested from the ARM Interface</description><value>1</value></simple>
+     <simple name="frame_id" type="string"><description>The frame_id of the IMU sensor</description><value></value></simple>
+  </struct>
+  <struct name="Magnetic" type="PropertyBag">
+     <description>Magnetic Field Sensor</description>
+     <struct name="Mapping" type="Mapping">
+        <description>Mapping of the channels to the x,y,z axes</description>
+        <simple name="Mapping" type="string"><value>1,0,2</value></simple>
+     </struct>
+     <struct name="B0" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>-1</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="B1" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>-1</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="B2" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>-1</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="DeviationX" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>1</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="DeviationY" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>1</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="DeviationZ" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>1</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>50</value></simple>
+     <simple name="offset" type="ulong"><description>Measurement offset in milliseconds</description><value>0</value></simple>
+     <simple name="frame_id" type="string"><description>The frame_id of the Magnetic sensor</description><value></value></simple>
+  </struct>
+  <struct name="Motor" type="PropertyBag">
+     <description>Interface to the Motors</description>
+  </struct>
+  <struct name="Servos" type="PropertyBag">
+     <description>Interface to the Servos</description>
+  </struct>
+  <struct name="Ethernet0" type="PropertyBag">
+     <description>Interface to the Serial Port on the Ethernet Board</description>
+     <simple name="Baudrate" type="ulong"><description>Baudrate of the serial port</description><value>115200</value></simple>
+  </struct>
+  <struct name="Ethernet1" type="PropertyBag">
+     <description>Interface to the Serial Port on the Ethernet Board</description>
+     <simple name="Baudrate" type="ulong"><description>Baudrate of the serial port</description><value>57600</value></simple>
+  </struct>
+  <simple name="ConnectionType" type="long"><description>Type of connection (0 = Ethernet, 1 = Serial)</description><value>0</value></simple>
+  <simple name="Device" type="string"><description>Network interface/serial port to use</description><value>eth0</value></simple>
+  <simple name="Destination" type="string"><description>Destination MAC address (default ff:ff:ff:ff:ff:ff)</description><value>ff:ff:ff:ff:ff:ff</value></simple>
+  <simple name="Protocol" type="ulong"><description>Ethernet Protocol</description><value>4660</value></simple>
+  <simple name="Baudrate" type="ulong"><description>Baudrate for serial connection mode</description><value>921600</value></simple>
+  <simple name="ReceiveTimeout" type="long"><description>Timeout for packet reception in milliseconds</description><value>100</value></simple>
+  <struct name="Debug" type="PropertyBag">
+     <description>Properties for debugging purposes</description>
+     <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>0</value></simple>
+     <simple name="offset" type="ulong"><description>Measurement offset in milliseconds</description><value>0</value></simple>
+  </struct>
+  <struct name="Supply" type="PropertyBag">
+     <description>Supply</description>
+     <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>500</value></simple>
+     <simple name="offset" type="ulong"><description>Measurement offset in milliseconds</description><value>0</value></simple>
+     <simple name="frame_id" type="string"><description>The frame_id of the Supply sensor</description><value></value></simple>
+  </struct>
+  <struct name="AHRS" type="PropertyBag">
+     <description>Attitude and Heading Reference System</description>
+     <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>0</value></simple>
+     <simple name="offset" type="ulong"><description>Measurement offset in milliseconds</description><value>0</value></simple>
+     <simple name="frame_id" type="string"><description>The frame_id of the AHRS sensor</description><value></value></simple>
+  </struct>
+  <struct name="Ultrasound" type="PropertyBag">
+     <description>Ultrasound Range Measurement Sensor</description>
+     <struct name="Filter" type="PropertyBag">
+        <description>PTn Low-pass filter of n-th order</description>
+        <simple name="T" type="double"><description>Time constant</description><value>0</value></simple>
+     </struct>
+     <simple name="field_of_view" type="double"><description>the size of the arc that the distance reading is valid for [rad]</description><value>0</value></simple>
+     <simple name="min_range" type="double"><description>minimum range value [m]</description><value>0</value></simple>
+     <simple name="max_range" type="double"><description>maximum range value [m]</description><value>3</value></simple>
+     <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>100</value></simple>
+     <simple name="offset" type="ulong"><description>Measurement offset in milliseconds</description><value>10</value></simple>
+     <simple name="frame_id" type="string"><description>The frame_id of the Ultrasound sensor</description><value></value></simple>
+  </struct>
+  <struct name="Baro" type="PropertyBag">
+     <description>Barometric Pressure</description>
+     <struct name="Baro" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>6268</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>0.01683880000000000098925312</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="Filter" type="PropertyBag">
+        <description>PTn Low-pass filter of n-th order</description>
+        <simple name="T" type="double"><description>Time constant</description><value>0</value></simple>
+     </struct>
+     <simple name="ReferencePressure" type="double"><description>The reference pressure to be used for altitude calculation</description><value>1013.25</value></simple>
+     <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>1</value></simple>
+     <simple name="offset" type="ulong"><description>Measurement offset in milliseconds</description><value>0</value></simple>
+     <simple name="frame_id" type="string"><description>The frame_id of the Baro sensor</description><value></value></simple>
+  </struct>
+  <struct name="Temperature" type="PropertyBag">
+     <description>Temperature</description>
+     <struct name="Temperature" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>-9830</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>0.007629389999999999782964721</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>25</value></simple>
+     </struct>
+     <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>500</value></simple>
+     <simple name="offset" type="ulong"><description>Measurement offset in milliseconds</description><value>0</value></simple>
+     <simple name="frame_id" type="string"><description>The frame_id of the Temperature sensor</description><value></value></simple>
+  </struct>
+  <struct name="Airspeed" type="PropertyBag">
+     <description>Airspeed</description>
+     <struct name="Airspeed" type="PropertyBag">
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetRaw" type="long"><description>This offset will be added before the transformation</description><value>0</value></simple>
+        <simple name="a" type="double"><description>Constant a in a * x^2 + b * x + c</description><value>0</value></simple>
+        <simple name="b" type="double"><description>Constant b in a * x^2 + b * x + c</description><value>1</value></simple>
+        <simple name="c" type="double"><description>Constant c in a * x^2 + b * x + c</description><value>0</value></simple>
+     </struct>
+     <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>0</value></simple>
+     <simple name="offset" type="ulong"><description>Measurement offset in milliseconds</description><value>0</value></simple>
+     <simple name="frame_id" type="string"><description>The frame_id of the Airspeed sensor</description><value></value></simple>
+  </struct>
+  <struct name="RC" type="PropertyBag">
+     <description>Radio Control Receiver</description>
+     <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>20</value></simple>
+     <simple name="offset" type="ulong"><description>Measurement offset in milliseconds</description><value>10</value></simple>
+     <struct name="Roll" type="PropertyBag">
+        <simple name="Type" type="string"><value>Axis</value></simple>
+        <simple name="Channel" type="long"><description>Channel number for this axis</description><value>4</value></simple>
+        <simple name="Function" type="ulong"><description>Function ID</description><value>1</value></simple>
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>1</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="Pitch" type="PropertyBag">
+        <simple name="Type" type="string"><value>Axis</value></simple>
+        <simple name="Channel" type="long"><description>Channel number for this axis</description><value>3</value></simple>
+        <simple name="Function" type="ulong"><description>Function ID</description><value>2</value></simple>
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>1</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="Yaw" type="PropertyBag">
+        <simple name="Type" type="string"><value>Axis</value></simple>
+        <simple name="Channel" type="long"><description>Channel number for this axis</description><value>2</value></simple>
+        <simple name="Function" type="ulong"><description>Function ID</description><value>3</value></simple>
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>1</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="Height" type="PropertyBag">
+        <simple name="Type" type="string"><value>Axis</value></simple>
+        <simple name="Channel" type="long"><description>Channel number for this axis</description><value>1</value></simple>
+        <simple name="Function" type="ulong"><description>Function ID</description><value>5</value></simple>
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>0</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>1</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="Throttle" type="PropertyBag">
+        <simple name="Type" type="string"><value>Axis</value></simple>
+        <simple name="Channel" type="long"><description>Channel number for this axis</description><value>6</value></simple>
+        <simple name="Function" type="ulong"><description>Function ID</description><value>6</value></simple>
+        <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
+        <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
+        <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
+        <simple name="offsetA" type="double"><description>This offset will be added before the multiplication</description><value>1</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>0.5</value></simple>
+        <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
+     </struct>
+     <struct name="FlightModeSwitch" type="PropertyBag">
+        <simple name="Type" type="string"><value>Switch</value></simple>
+        <simple name="Channel" type="long"><description>Channel number for this switch</description><value>5</value></simple>
+        <simple name="Function" type="ulong"><description>Function ID</description><value>1</value></simple>
+     </struct>
+     <struct name="HeightModeSwitch" type="PropertyBag">
+        <simple name="Type" type="string"><value>Switch</value></simple>
+        <simple name="Channel" type="long"><description>Channel number for this switch</description><value>8</value></simple>
+        <simple name="Function" type="ulong"><description>Function ID</description><value>2</value></simple>
+     </struct>
+     <simple name="frame_id" type="string"><description>The frame_id of the RC sensor</description><value></value></simple>
+  </struct>
+  <struct name="MotorStatus" type="PropertyBag">
+     <description>Frequency and current information</description>
+     <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>1</value></simple>
+     <simple name="offset" type="ulong"><description>Measurement offset in milliseconds</description><value>0</value></simple>
+     <simple name="frame_id" type="string"><description>The frame_id of the MotorStatus sensor</description><value></value></simple>
+  </struct>
+  <struct name="Analog0" type="PropertyBag">
+     <description>Onboard A/D converter</description>
+     <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>0</value></simple>
+     <simple name="offset" type="ulong"><description>Measurement offset in milliseconds</description><value>0</value></simple>
+     <simple name="frame_id" type="string"><description>The frame_id of the Analog0 sensor</description><value></value></simple>
+  </struct>
+  <struct name="Analog1" type="PropertyBag">
+     <description>External A/D converter</description>
+     <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>0</value></simple>
+     <simple name="offset" type="ulong"><description>Measurement offset in milliseconds</description><value>0</value></simple>
+     <simple name="frame_id" type="string"><description>The frame_id of the Analog1 sensor</description><value></value></simple>
+  </struct>
+  <struct name="Analog2" type="PropertyBag">
+     <description>ARM internal A/D converter</description>
+     <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>0</value></simple>
+     <simple name="offset" type="ulong"><description>Measurement offset in milliseconds</description><value>0</value></simple>
+     <simple name="frame_id" type="string"><description>The frame_id of the Analog2 sensor</description><value></value></simple>
+  </struct>
+</properties>

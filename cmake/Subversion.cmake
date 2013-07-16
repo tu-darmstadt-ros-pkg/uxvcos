@@ -1,0 +1,10 @@
+if(WIN32)
+  file(TO_NATIVE_PATH "${BASE_DIR}/cmake/bin" SUBVERSION_PATH)
+  set(ENV{PATH} "$ENV{PATH};${SUBVERSION_PATH}")
+endif(WIN32)
+FIND_PACKAGE(Subversion)
+
+IF(Subversion_FOUND)
+  Subversion_WC_INFO(${PROJECT_SOURCE_DIR} uxvcos)
+  MESSAGE(STATUS "Current SVN revision is ${uxvcos_WC_REVISION}")
+ENDIF(Subversion_FOUND)

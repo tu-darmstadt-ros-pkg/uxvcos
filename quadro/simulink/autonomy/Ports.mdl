@@ -1,0 +1,3033 @@
+Model {
+  Name			  "Ports"
+  Version		  7.7
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.16"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "UTF-8"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  MaxMDLFileLineLength	  120
+  Created		  "Wed Sep 28 09:43:40 2011"
+  Creator		  "meyer"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "meyer"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Wed Oct 26 15:01:33 2011"
+  RTWModifiedTimeStamp	  241542092
+  ModelVersionFormat	  "1.%<AutoIncrement:16>"
+  ConfigurationManager	  "none"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  Object {
+    $PropName		    "DataLoggingOverride"
+    $ObjectID		    1
+    $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
+    model_		    "Ports"
+    signals_		    []
+    overrideMode_	    [0.0]
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      "Ports"
+      PropName		      "logAsSpecifiedByModels_"
+    }
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      []
+      PropName		      "logAsSpecifiedByModelsSSIDs_"
+    }
+  }
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      2
+      Version		      "1.11.0"
+      Array {
+	Type			"Handle"
+	Dimension		9
+	Simulink.SolverCC {
+	  $ObjectID		  3
+	  Version		  "1.11.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  ConcurrentTasks	  off
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  4
+	  Version		  "1.11.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  5
+	  Version		  "1.11.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  AccelParallelForEachSubsystem	on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  6
+	  Version		  "1.11.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  7
+	  Version		  "1.11.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  8
+	  Version		  "1.11.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  9
+	  Version		  "1.11.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  10
+	  Version		  "1.11.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "GenerateSLWebview"
+	    Cell		    "GenerateCodeMetricsReport"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateSLWebview	  off
+	  GenerateCodeMetricsReport off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      11
+	      Version		      "1.11.0"
+	      Array {
+		Type			"Cell"
+		Dimension		21
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      12
+	      Version		      "1.11.0"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      FunctionExecutionProfile off
+	      CodeExecutionProfiling  off
+	      ERTCodeCoverageTool     "None"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  13
+	  Version		  "1.11.0"
+	  Description		  "HDL Coder custom configuration component"
+	  Name			  "HDL Coder"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    ""
+	    PropName		    "HDLConfigFile"
+	  }
+	  HDLCActiveTab		  "0"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition     [ 1100, 210, 1980, 840 ] 
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    2
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  System {
+    Name		    "Ports"
+    Location		    [1, 80, 1679, 958]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "161"
+    Block {
+      BlockType		      Reference
+      Name		      "AttitudeCommandInput"
+      SID		      "1"
+      Ports		      [0, 1]
+      Position		      [50, 32, 165, 78]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/InputPort<array>"
+      SourceType	      "DataPort<array>"
+      dpdesc		      "Port's Description"
+      dpvalue		      "zeros(1,2)"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "AttitudeCommandOutput"
+      SID		      "92"
+      Ports		      [1]
+      Position		      [590, 32, 705, 78]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/OutputPort<array>"
+      SourceType	      "DataPort<array>"
+      dpdesc		      "Port's Description"
+      dpvalue		      "zeros(1,2)"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "AutonomyCommand"
+      SID		      "151"
+      Ports		      [0, 1]
+      Position		      [50, 1177, 165, 1223]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/InputPort<int>"
+      SourceType	      "DataPort"
+      dpdesc		      "Port's Description"
+      dpvalue		      "int32(0)"
+      Port {
+	PortNumber		1
+	Name			"command"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "AutonomyState"
+      SID		      "161"
+      Ports		      [1]
+      Position		      [590, 1177, 705, 1223]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/OutputPort<int>"
+      SourceType	      "DataPort"
+      dpdesc		      "Port's Description"
+      dpvalue		      "int32(0)"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "BiasedIMU"
+      SID		      "105"
+      Ports		      [0, 1]
+      Position		      [800, 757, 915, 803]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/InputPort<array>"
+      SourceType	      "DataPort<array>"
+      dpdesc		      "Port's Description"
+      dpvalue		      "zeros(1,20)"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "ClimbrateCommandInput"
+      SID		      "96"
+      Ports		      [0, 1]
+      Position		      [50, 582, 165, 628]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/InputPort<array>"
+      SourceType	      "DataPort<array>"
+      dpdesc		      "Port's Description"
+      dpvalue		      "0.0"
+      Port {
+	PortNumber		1
+	Name			"v_z"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "ClimbrateCommandOutput"
+      SID		      "120"
+      Ports		      [1]
+      Position		      [590, 582, 705, 628]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/OutputPort<array>"
+      SourceType	      "DataPort<array>"
+      dpdesc		      "Port's Description"
+      dpvalue		      "0.0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "ControlHeight"
+      SID		      "135"
+      Ports		      [0, 1]
+      Position		      [50, 1062, 165, 1108]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/InputPort<array>"
+      SourceType	      "DataPort<array>"
+      dpdesc		      "Port's Description"
+      dpvalue		      "zeros(1,5)"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "ControlMode"
+      SID		      "160"
+      Ports		      [1]
+      Position		      [590, 967, 705, 1013]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/OutputPort<int>"
+      SourceType	      "DataPort"
+      dpdesc		      "Port's Description"
+      dpvalue		      "int32(0)"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "ControlState"
+      SID		      "125"
+      Ports		      [0, 1]
+      Position		      [50, 962, 165, 1008]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/InputPort<array>"
+      SourceType	      "DataPort<array>"
+      dpdesc		      "Port's Description"
+      dpvalue		      "zeros(1,4)"
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux"
+      SID		      "7"
+      Ports		      [1, 23]
+      Position		      [955, 20, 960, 510]
+      ShowName		      off
+      Outputs		      "23"
+      DisplayOption	      "bar"
+      Port {
+	PortNumber		1
+	Name			"time"
+	PropagatedSignals	"time"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		2
+	Name			"phi"
+	PropagatedSignals	"phi"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		3
+	Name			"theta"
+	PropagatedSignals	"theta"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		4
+	Name			"psi"
+	PropagatedSignals	"psi"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		5
+	Name			"dphi"
+	PropagatedSignals	"dphi"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		6
+	Name			"dtheta"
+	PropagatedSignals	"dtheta"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		7
+	Name			"dpsi"
+	PropagatedSignals	"dpsi"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		8
+	Name			"x"
+	PropagatedSignals	"x"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		9
+	Name			"y"
+	PropagatedSignals	"y"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		10
+	Name			"z"
+	PropagatedSignals	"z"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		11
+	Name			"v_x"
+	PropagatedSignals	"v_x"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		12
+	Name			"v_y"
+	PropagatedSignals	"v_y"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		13
+	Name			"v_z"
+	PropagatedSignals	"v_z"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		14
+	Name			"a_x"
+	PropagatedSignals	"a_x"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		15
+	Name			"a_y"
+	PropagatedSignals	"a_y"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		16
+	Name			"a_z"
+	PropagatedSignals	"a_z"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		17
+	Name			"sigma_xy"
+	PropagatedSignals	"sigma_xy"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		18
+	Name			"sigma_z"
+	PropagatedSignals	"sigma_z"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		19
+	Name			"sigma_phitheta"
+	PropagatedSignals	"sigma_phitheta"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		20
+	Name			"sigma_psi"
+	PropagatedSignals	"sigma_psi"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		21
+	Name			"voltage"
+	PropagatedSignals	"voltage"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		22
+	Name			"current"
+	PropagatedSignals	"current"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		23
+	Name			"status"
+	PropagatedSignals	"status"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux1"
+      SID		      "2"
+      Ports		      [1, 2]
+      Position		      [200, 29, 205, 76]
+      ShowName		      off
+      Outputs		      "2"
+      DisplayOption	      "bar"
+      Port {
+	PortNumber		1
+	Name			"roll"
+	PropagatedSignals	"roll"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		2
+	Name			"pitch"
+	PropagatedSignals	"pitch"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux10"
+      SID		      "149"
+      Ports		      [1, 2]
+      Position		      [200, 214, 205, 261]
+      ShowName		      off
+      Outputs		      "2"
+      DisplayOption	      "bar"
+      Port {
+	PortNumber		1
+	Name			"x"
+	PropagatedSignals	"x"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		2
+	Name			"y"
+	PropagatedSignals	"y"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux2"
+      SID		      "100"
+      Ports		      [1, 3]
+      Position		      [200, 121, 205, 179]
+      ShowName		      off
+      Outputs		      "3"
+      DisplayOption	      "bar"
+      Port {
+	PortNumber		1
+	Name			"system (0 = BODY, 1 = NAV)"
+	PropagatedSignals	"system (0 = BODY, 1 = NAV)"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		2
+	Name			"v_x"
+	PropagatedSignals	"v_x"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		3
+	Name			"v_y"
+	PropagatedSignals	"v_y"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux3"
+      SID		      "104"
+      Ports		      [1, 20]
+      Position		      [955, 539, 960, 1026]
+      ShowName		      off
+      Outputs		      "20"
+      DisplayOption	      "bar"
+      Port {
+	PortNumber		1
+	Name			"a_x"
+	PropagatedSignals	"a_x"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		2
+	Name			"a_y"
+	PropagatedSignals	"a_y"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		3
+	Name			"a_z"
+	PropagatedSignals	"a_z"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		4
+	Name			"N/C"
+	PropagatedSignals	"N/C"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		5
+	Name			"p"
+	PropagatedSignals	"p"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		6
+	Name			"q"
+	PropagatedSignals	"q"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		7
+	Name			"r"
+	PropagatedSignals	"r"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		8
+	Name			"N/C"
+	PropagatedSignals	"N/C"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		9
+	Name			"N/C"
+	PropagatedSignals	"N/C"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		10
+	Name			"N/C"
+	PropagatedSignals	"N/C"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		11
+	Name			"N/C"
+	PropagatedSignals	"N/C"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		12
+	Name			"N/C"
+	PropagatedSignals	"N/C"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		13
+	Name			"N/C"
+	PropagatedSignals	"N/C"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		14
+	Name			"g"
+	PropagatedSignals	"g"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		15
+	Name			"bias_a_x"
+	PropagatedSignals	"bias_a_x"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		16
+	Name			"bias_a_y"
+	PropagatedSignals	"bias_a_y"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		17
+	Name			"bias_a_z"
+	PropagatedSignals	"bias_a_z"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		18
+	Name			"bias_p"
+	PropagatedSignals	"bias_p"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		19
+	Name			"bias_q"
+	PropagatedSignals	"bias_q"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		20
+	Name			"bias_r"
+	PropagatedSignals	"bias_r"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux4"
+      SID		      "126"
+      Ports		      [1, 4]
+      Position		      [200, 752, 205, 823]
+      ShowName		      off
+      DisplayOption	      "bar"
+      Port {
+	PortNumber		1
+	Name			"F_z"
+	PropagatedSignals	"F_z"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		2
+	Name			"L"
+	PropagatedSignals	"L"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		3
+	Name			"M"
+	PropagatedSignals	"M"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		4
+	Name			"N"
+	PropagatedSignals	"N"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux5"
+      SID		      "134"
+      Ports		      [1, 4]
+      Position		      [200, 947, 205, 1018]
+      ShowName		      off
+      DisplayOption	      "bar"
+      Port {
+	PortNumber		1
+	Name			"controlSource"
+	PropagatedSignals	"controlSource"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		2
+	Name			"state"
+	PropagatedSignals	"state"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		3
+	Name			"heightMode"
+	PropagatedSignals	"heightMode"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		4
+	Name			"controlMode"
+	PropagatedSignals	"controlMode"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux6"
+      SID		      "136"
+      Ports		      [1, 5]
+      Position		      [200, 1037, 205, 1133]
+      ShowName		      off
+      Outputs		      "5"
+      DisplayOption	      "bar"
+      Port {
+	PortNumber		1
+	Name			"heightMode"
+	PropagatedSignals	"heightMode"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		2
+	Name			"height"
+	PropagatedSignals	"height"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		3
+	Name			"elevation"
+	PropagatedSignals	"elevation"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		4
+	Name			"v_down"
+	PropagatedSignals	"v_down"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		5
+	Name			"ultrasound"
+	PropagatedSignals	"ultrasound"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux7"
+      SID		      "139"
+      Ports		      [1, 23]
+      Position		      [1415, 21, 1420, 509]
+      ShowName		      off
+      Outputs		      "23"
+      DisplayOption	      "bar"
+      Port {
+	PortNumber		1
+	Name			"time"
+	PropagatedSignals	"time"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		2
+	Name			"phi"
+	PropagatedSignals	"phi"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		3
+	Name			"theta"
+	PropagatedSignals	"theta"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		4
+	Name			"psi"
+	PropagatedSignals	"psi"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		5
+	Name			"dphi"
+	PropagatedSignals	"dphi"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		6
+	Name			"dtheta"
+	PropagatedSignals	"dtheta"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		7
+	Name			"dpsi"
+	PropagatedSignals	"dpsi"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		8
+	Name			"latitude"
+	PropagatedSignals	"latitude"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		9
+	Name			"longitude"
+	PropagatedSignals	"longitude"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		10
+	Name			"altitude"
+	PropagatedSignals	"altitude"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		11
+	Name			"v_north"
+	PropagatedSignals	"v_north"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		12
+	Name			"v_east"
+	PropagatedSignals	"v_east"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		13
+	Name			"v_down"
+	PropagatedSignals	"v_down"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		14
+	Name			"a_north"
+	PropagatedSignals	"a_north"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		15
+	Name			"a_east"
+	PropagatedSignals	"a_east"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		16
+	Name			"a_down"
+	PropagatedSignals	"a_down"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		17
+	Name			"sigma_xy"
+	PropagatedSignals	"sigma_xy"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		18
+	Name			"sigma_z"
+	PropagatedSignals	"sigma_z"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		19
+	Name			"sigma_phitheta"
+	PropagatedSignals	"sigma_phitheta"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		20
+	Name			"sigma_psi"
+	PropagatedSignals	"sigma_psi"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		21
+	Name			"voltage"
+	PropagatedSignals	"voltage"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		22
+	Name			"current"
+	PropagatedSignals	"current"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		23
+	Name			"status"
+	PropagatedSignals	"status"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux8"
+      SID		      "141"
+      Ports		      [1, 4]
+      Position		      [200, 852, 205, 923]
+      ShowName		      off
+      DisplayOption	      "bar"
+      Port {
+	PortNumber		1
+	Name			"front"
+	PropagatedSignals	"front"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		2
+	Name			"right"
+	PropagatedSignals	"right"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		3
+	Name			"rear"
+	PropagatedSignals	"rear"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		4
+	Name			"left"
+	PropagatedSignals	"left"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux9"
+      SID		      "143"
+      Ports		      [1, 8]
+      Position		      [1415, 539, 1420, 721]
+      ShowName		      off
+      Outputs		      "8"
+      DisplayOption	      "bar"
+      Port {
+	PortNumber		1
+	Name			"frequency1"
+	PropagatedSignals	"frequency1"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		2
+	Name			"frequency2"
+	PropagatedSignals	"frequency2"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		3
+	Name			"frequency3"
+	PropagatedSignals	"frequency3"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		4
+	Name			"frequency4"
+	PropagatedSignals	"frequency4"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		5
+	Name			"current1"
+	PropagatedSignals	"current1"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		6
+	Name			"current2"
+	PropagatedSignals	"current2"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		7
+	Name			"current3"
+	PropagatedSignals	"current3"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		8
+	Name			"current4"
+	PropagatedSignals	"current4"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "ForcesCommandInput"
+      SID		      "128"
+      Ports		      [0, 1]
+      Position		      [50, 767, 165, 813]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/InputPort<array>"
+      SourceType	      "DataPort<array>"
+      dpdesc		      "Port's Description"
+      dpvalue		      "zeros(1,4)"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "ForcesCommandOutput"
+      SID		      "129"
+      Ports		      [1]
+      Position		      [590, 767, 705, 813]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/OutputPort<array>"
+      SourceType	      "DataPort<array>"
+      dpdesc		      "Port's Description"
+      dpvalue		      "zeros(1,4)"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "HeadingCommandInput"
+      SID		      "5"
+      Ports		      [0, 1]
+      Position		      [50, 312, 165, 358]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/InputPort<array>"
+      SourceType	      "DataPort<array>"
+      dpdesc		      "Port's Description"
+      dpvalue		      "0.0"
+      Port {
+	PortNumber		1
+	Name			"yaw"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "HeadingCommandOutput"
+      SID		      "118"
+      Ports		      [1]
+      Position		      [590, 312, 705, 358]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/OutputPort<array>"
+      SourceType	      "DataPort<array>"
+      dpdesc		      "Port's Description"
+      dpvalue		      "0.0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "HeightCommandInput"
+      SID		      "94"
+      Ports		      [0, 1]
+      Position		      [50, 492, 165, 538]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/InputPort<array>"
+      SourceType	      "DataPort<array>"
+      dpdesc		      "Port's Description"
+      dpvalue		      "0.0"
+      Port {
+	PortNumber		1
+	Name			"height"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "HeightCommandOutput"
+      SID		      "119"
+      Ports		      [1]
+      Position		      [590, 492, 705, 538]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/OutputPort<array>"
+      SourceType	      "DataPort<array>"
+      dpdesc		      "Port's Description"
+      dpvalue		      "0.0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "HeightMode"
+      SID		      "157"
+      Ports		      [1]
+      Position		      [590, 1057, 705, 1103]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/OutputPort<int>"
+      SourceType	      "DataPort"
+      dpdesc		      "Port's Description"
+      dpvalue		      "int32(0)"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "LocalSolution"
+      SID		      "8"
+      Ports		      [0, 1]
+      Position		      [800, 242, 915, 288]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/InputPort<array>"
+      SourceType	      "DataPort<array>"
+      dpdesc		      "Port's Description"
+      dpvalue		      "zeros(1,23)"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "MotorCommandInput"
+      SID		      "142"
+      Ports		      [0, 1]
+      Position		      [50, 867, 165, 913]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/InputPort<array>"
+      SourceType	      "DataPort<array>"
+      dpdesc		      "Port's Description"
+      dpvalue		      "zeros(1,4)"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "MotorCommandOutput"
+      SID		      "122"
+      Ports		      [1]
+      Position		      [590, 862, 705, 908]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/OutputPort<array>"
+      SourceType	      "DataPort<array>"
+      dpdesc		      "Port's Description"
+      dpvalue		      "zeros(1,4)"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "MotorState"
+      SID		      "144"
+      Ports		      [0, 1]
+      Position		      [1265, 607, 1380, 653]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/InputPort<array>"
+      SourceType	      "DataPort<array>"
+      dpdesc		      "Port's Description"
+      dpvalue		      "zeros(1,8)"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux"
+      SID		      "63"
+      Ports		      [2, 1]
+      Position		      [540, 36, 545, 74]
+      ShowName		      off
+      Inputs		      "2"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux1"
+      SID		      "101"
+      Ports		      [3, 1]
+      Position		      [540, 120, 545, 180]
+      ShowName		      off
+      Inputs		      "3"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux2"
+      SID		      "123"
+      Ports		      [4, 1]
+      Position		      [540, 846, 545, 924]
+      ShowName		      off
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux3"
+      SID		      "127"
+      Ports		      [4, 1]
+      Position		      [540, 757, 545, 818]
+      ShowName		      off
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux4"
+      SID		      "150"
+      Ports		      [2, 1]
+      Position		      [540, 221, 545, 259]
+      ShowName		      off
+      Inputs		      "2"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "PositionCommandInput"
+      SID		      "147"
+      Ports		      [0, 1]
+      Position		      [50, 217, 165, 263]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/InputPort<array>"
+      SourceType	      "DataPort<array>"
+      dpdesc		      "Port's Description"
+      dpvalue		      "zeros(1,2)"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "PositionCommandOutput"
+      SID		      "148"
+      Ports		      [1]
+      Position		      [590, 217, 705, 263]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/OutputPort<array>"
+      SourceType	      "DataPort<array>"
+      dpdesc		      "Port's Description"
+      dpvalue		      "zeros(1,2)"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Solution"
+      SID		      "140"
+      Ports		      [0, 1]
+      Position		      [1260, 242, 1375, 288]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/InputPort<array>"
+      SourceType	      "DataPort<array>"
+      dpdesc		      "Port's Description"
+      dpvalue		      "zeros(1,23)"
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator"
+      SID		      "106"
+      Position		      [1005, 710, 1025, 730]
+      ShowName		      off
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator1"
+      SID		      "110"
+      Position		      [1005, 735, 1025, 755]
+      ShowName		      off
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator2"
+      SID		      "111"
+      Position		      [1005, 760, 1025, 780]
+      ShowName		      off
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator3"
+      SID		      "112"
+      Position		      [1005, 785, 1025, 805]
+      ShowName		      off
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator4"
+      SID		      "113"
+      Position		      [1005, 810, 1025, 830]
+      ShowName		      off
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator5"
+      SID		      "114"
+      Position		      [1005, 835, 1025, 855]
+      ShowName		      off
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator6"
+      SID		      "115"
+      Position		      [1005, 610, 1025, 630]
+      ShowName		      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "ThrustCommandInput"
+      SID		      "116"
+      Ports		      [0, 1]
+      Position		      [50, 672, 165, 718]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/InputPort<array>"
+      SourceType	      "DataPort<array>"
+      dpdesc		      "Port's Description"
+      dpvalue		      "0.0"
+      Port {
+	PortNumber		1
+	Name			"thrust [0,1]"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "ThrustCommandOutput"
+      SID		      "121"
+      Ports		      [1]
+      Position		      [590, 672, 705, 718]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/OutputPort<array>"
+      SourceType	      "DataPort<array>"
+      dpdesc		      "Port's Description"
+      dpvalue		      "0.0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "TurnrateCommandInput"
+      SID		      "137"
+      Ports		      [0, 1]
+      Position		      [50, 402, 165, 448]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/InputPort<array>"
+      SourceType	      "DataPort<array>"
+      dpdesc		      "Port's Description"
+      dpvalue		      "0.0"
+      Port {
+	PortNumber		1
+	Name			"dpsi"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "TurnrateCommandOutput"
+      SID		      "138"
+      Ports		      [1]
+      Position		      [590, 402, 705, 448]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/OutputPort<array>"
+      SourceType	      "DataPort<array>"
+      dpdesc		      "Port's Description"
+      dpvalue		      "0.0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "VelocityCommandInput"
+      SID		      "98"
+      Ports		      [0, 1]
+      Position		      [50, 127, 165, 173]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/InputPort<array>"
+      SourceType	      "DataPort<array>"
+      dpdesc		      "Port's Description"
+      dpvalue		      "zeros(1,3)"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "VelocityCommandOutput"
+      SID		      "99"
+      Ports		      [1]
+      Position		      [590, 127, 705, 173]
+      AttributesFormatString  "Value=%<dpvalue>"
+      LibraryVersion	      "1.28"
+      SourceBlock	      "orocos_taskcontext/OutputPort<array>"
+      SourceType	      "DataPort<array>"
+      dpdesc		      "Port's Description"
+      dpvalue		      "zeros(1,3)"
+    }
+    Line {
+      Name		      "roll"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux1"
+      SrcPort		      1
+      Points		      [40, 0]
+    }
+    Line {
+      Name		      "pitch"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux1"
+      SrcPort		      2
+      Points		      [40, 0]
+    }
+    Line {
+      Name		      "phi"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      2
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "time"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      1
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "theta"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      3
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "psi"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      4
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "dphi"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      5
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "dtheta"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      6
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "dpsi"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      7
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "x"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      8
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "y"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      9
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "z"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      10
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "v_x"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      11
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "v_y"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      12
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "v_z"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      13
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "yaw"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "HeadingCommandInput"
+      SrcPort		      1
+      Points		      [80, 0]
+    }
+    Line {
+      Name		      "a_x"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      14
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "a_y"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      15
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "a_z"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      16
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "sigma_xy"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      17
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "sigma_z"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      18
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "sigma_phitheta"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      19
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "sigma_psi"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      20
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "voltage"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      21
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "current"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      22
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "status"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux"
+      SrcPort		      23
+      Points		      [35, 0]
+    }
+    Line {
+      SrcBlock		      "Mux"
+      SrcPort		      1
+      DstBlock		      "AttitudeCommandOutput"
+      DstPort		      1
+    }
+    Line {
+      Name		      "roll"
+      Labels		      [0, 0]
+      Points		      [500, 45]
+      DstBlock		      "Mux"
+      DstPort		      1
+    }
+    Line {
+      Name		      "pitch"
+      Labels		      [0, 0]
+      Points		      [500, 65]
+      DstBlock		      "Mux"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "LocalSolution"
+      SrcPort		      1
+      DstBlock		      "Demux"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "AttitudeCommandInput"
+      SrcPort		      1
+      DstBlock		      "Demux1"
+      DstPort		      1
+    }
+    Line {
+      Name		      "yaw"
+      Labels		      [0, 0]
+      Points		      [505, 335]
+      DstBlock		      "HeadingCommandOutput"
+      DstPort		      1
+    }
+    Line {
+      Name		      "height"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "HeightCommandInput"
+      SrcPort		      1
+      Points		      [80, 0]
+    }
+    Line {
+      Name		      "v_z"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "ClimbrateCommandInput"
+      SrcPort		      1
+      Points		      [80, 0]
+    }
+    Line {
+      Name		      "v_x"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux2"
+      SrcPort		      2
+      Points		      [35, 0]
+    }
+    Line {
+      SrcBlock		      "Mux1"
+      SrcPort		      1
+      DstBlock		      "VelocityCommandOutput"
+      DstPort		      1
+    }
+    Line {
+      Name		      "system"
+      Labels		      [0, 0]
+      Points		      [500, 130]
+      DstBlock		      "Mux1"
+      DstPort		      1
+    }
+    Line {
+      Name		      "v_x"
+      Labels		      [0, 0]
+      Points		      [500, 150]
+      DstBlock		      "Mux1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "BiasedIMU"
+      SrcPort		      1
+      DstBlock		      "Demux3"
+      DstPort		      1
+    }
+    Line {
+      Name		      "a_x"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux3"
+      SrcPort		      1
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "a_y"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux3"
+      SrcPort		      2
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "a_z"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux3"
+      SrcPort		      3
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "N/C"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux3"
+      SrcPort		      4
+      DstBlock		      "Terminator6"
+      DstPort		      1
+    }
+    Line {
+      Name		      "p"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux3"
+      SrcPort		      5
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "q"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux3"
+      SrcPort		      6
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "r"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux3"
+      SrcPort		      7
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "N/C"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux3"
+      SrcPort		      8
+      DstBlock		      "Terminator"
+      DstPort		      1
+    }
+    Line {
+      Name		      "N/C"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux3"
+      SrcPort		      9
+      DstBlock		      "Terminator1"
+      DstPort		      1
+    }
+    Line {
+      Name		      "N/C"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux3"
+      SrcPort		      10
+      DstBlock		      "Terminator2"
+      DstPort		      1
+    }
+    Line {
+      Name		      "N/C"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux3"
+      SrcPort		      11
+      DstBlock		      "Terminator3"
+      DstPort		      1
+    }
+    Line {
+      Name		      "N/C"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux3"
+      SrcPort		      12
+      DstBlock		      "Terminator4"
+      DstPort		      1
+    }
+    Line {
+      Name		      "N/C"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux3"
+      SrcPort		      13
+      DstBlock		      "Terminator5"
+      DstPort		      1
+    }
+    Line {
+      Name		      "g"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux3"
+      SrcPort		      14
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "bias_a_x"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux3"
+      SrcPort		      15
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "bias_a_y"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux3"
+      SrcPort		      16
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "bias_a_z"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux3"
+      SrcPort		      17
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "bias_p"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux3"
+      SrcPort		      18
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "bias_q"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux3"
+      SrcPort		      19
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "bias_r"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux3"
+      SrcPort		      20
+      Points		      [35, 0]
+    }
+    Line {
+      SrcBlock		      "VelocityCommandInput"
+      SrcPort		      1
+      DstBlock		      "Demux2"
+      DstPort		      1
+    }
+    Line {
+      Name		      "v_y"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux2"
+      SrcPort		      3
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "system (0 = BODY, 1 = NAV)"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux2"
+      SrcPort		      1
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "v_y"
+      Labels		      [0, 0]
+      Points		      [500, 170]
+      DstBlock		      "Mux1"
+      DstPort		      3
+    }
+    Line {
+      Name		      "thrust [0,1]"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "ThrustCommandInput"
+      SrcPort		      1
+      Points		      [80, 0]
+    }
+    Line {
+      Name		      "height"
+      Labels		      [0, 0]
+      Points		      [505, 515]
+      DstBlock		      "HeightCommandOutput"
+      DstPort		      1
+    }
+    Line {
+      Name		      "v_z"
+      Labels		      [0, 0]
+      Points		      [505, 605]
+      DstBlock		      "ClimbrateCommandOutput"
+      DstPort		      1
+    }
+    Line {
+      Name		      "thrust [0,1]"
+      Labels		      [0, 0]
+      Points		      [505, 695]
+      DstBlock		      "ThrustCommandOutput"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Mux2"
+      SrcPort		      1
+      DstBlock		      "MotorCommandOutput"
+      DstPort		      1
+    }
+    Line {
+      Name		      "front"
+      Labels		      [0, 0]
+      Points		      [500, 855]
+      DstBlock		      "Mux2"
+      DstPort		      1
+    }
+    Line {
+      Name		      "right"
+      Labels		      [0, 0]
+      Points		      [500, 875]
+      DstBlock		      "Mux2"
+      DstPort		      2
+    }
+    Line {
+      Name		      "rear"
+      Labels		      [0, 0]
+      Points		      [500, 895]
+      DstBlock		      "Mux2"
+      DstPort		      3
+    }
+    Line {
+      Name		      "left"
+      Labels		      [0, 0]
+      Points		      [500, 915]
+      DstBlock		      "Mux2"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Mux3"
+      SrcPort		      1
+      DstBlock		      "ForcesCommandOutput"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "ForcesCommandInput"
+      SrcPort		      1
+      DstBlock		      "Demux4"
+      DstPort		      1
+    }
+    Line {
+      Name		      "F_z"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux4"
+      SrcPort		      1
+      Points		      [40, 0]
+    }
+    Line {
+      Name		      "L"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux4"
+      SrcPort		      2
+      Points		      [40, 0]
+    }
+    Line {
+      Name		      "M"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux4"
+      SrcPort		      3
+      Points		      [40, 0]
+    }
+    Line {
+      Name		      "N"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux4"
+      SrcPort		      4
+      Points		      [40, 0]
+    }
+    Line {
+      Name		      "F_z"
+      Labels		      [0, 0]
+      Points		      [500, 765]
+      DstBlock		      "Mux3"
+      DstPort		      1
+    }
+    Line {
+      Name		      "L"
+      Labels		      [0, 0]
+      Points		      [500, 780]
+      DstBlock		      "Mux3"
+      DstPort		      2
+    }
+    Line {
+      Name		      "M"
+      Labels		      [0, 0]
+      Points		      [500, 795]
+      DstBlock		      "Mux3"
+      DstPort		      3
+    }
+    Line {
+      Name		      "N"
+      Labels		      [0, 0]
+      Points		      [500, 810]
+      DstBlock		      "Mux3"
+      DstPort		      4
+    }
+    Line {
+      Name		      "controlSource"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux5"
+      SrcPort		      1
+      Points		      [40, 0]
+    }
+    Line {
+      Name		      "heightMode"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux5"
+      SrcPort		      3
+      Points		      [40, 0]
+    }
+    Line {
+      Name		      "controlMode"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux5"
+      SrcPort		      4
+      Points		      [40, 0]
+    }
+    Line {
+      SrcBlock		      "ControlState"
+      SrcPort		      1
+      DstBlock		      "Demux5"
+      DstPort		      1
+    }
+    Line {
+      Name		      "heightMode"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux6"
+      SrcPort		      1
+      Points		      [0, -5; 40, 0]
+    }
+    Line {
+      Name		      "height"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux6"
+      SrcPort		      2
+      Points		      [0, -5; 40, 0]
+    }
+    Line {
+      Name		      "elevation"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux6"
+      SrcPort		      3
+      Points		      [0, -5; 40, 0]
+    }
+    Line {
+      Name		      "v_down"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux6"
+      SrcPort		      4
+      Points		      [0, -5; 40, 0]
+    }
+    Line {
+      SrcBlock		      "ControlHeight"
+      SrcPort		      1
+      DstBlock		      "Demux6"
+      DstPort		      1
+    }
+    Line {
+      Name		      "dpsi"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "TurnrateCommandInput"
+      SrcPort		      1
+      Points		      [80, 0]
+    }
+    Line {
+      Name		      "dpsi"
+      Labels		      [0, 0]
+      Points		      [505, 425]
+      DstBlock		      "TurnrateCommandOutput"
+      DstPort		      1
+    }
+    Line {
+      Name		      "phi"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux7"
+      SrcPort		      2
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "time"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux7"
+      SrcPort		      1
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "theta"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux7"
+      SrcPort		      3
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "psi"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux7"
+      SrcPort		      4
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "dphi"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux7"
+      SrcPort		      5
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "dtheta"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux7"
+      SrcPort		      6
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "dpsi"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux7"
+      SrcPort		      7
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "latitude"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux7"
+      SrcPort		      8
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "longitude"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux7"
+      SrcPort		      9
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "altitude"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux7"
+      SrcPort		      10
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "v_north"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux7"
+      SrcPort		      11
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "v_east"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux7"
+      SrcPort		      12
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "v_down"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux7"
+      SrcPort		      13
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "a_north"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux7"
+      SrcPort		      14
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "a_east"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux7"
+      SrcPort		      15
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "a_down"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux7"
+      SrcPort		      16
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "sigma_xy"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux7"
+      SrcPort		      17
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "sigma_z"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux7"
+      SrcPort		      18
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "sigma_phitheta"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux7"
+      SrcPort		      19
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "sigma_psi"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux7"
+      SrcPort		      20
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "voltage"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux7"
+      SrcPort		      21
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "current"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux7"
+      SrcPort		      22
+      Points		      [35, 0]
+    }
+    Line {
+      Name		      "status"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux7"
+      SrcPort		      23
+      Points		      [35, 0]
+    }
+    Line {
+      SrcBlock		      "Solution"
+      SrcPort		      1
+      DstBlock		      "Demux7"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "MotorCommandInput"
+      SrcPort		      1
+      DstBlock		      "Demux8"
+      DstPort		      1
+    }
+    Line {
+      Name		      "front"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux8"
+      SrcPort		      1
+      Points		      [40, 0]
+    }
+    Line {
+      Name		      "right"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux8"
+      SrcPort		      2
+      Points		      [40, 0]
+    }
+    Line {
+      Name		      "rear"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux8"
+      SrcPort		      3
+      Points		      [40, 0]
+    }
+    Line {
+      Name		      "left"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux8"
+      SrcPort		      4
+      Points		      [40, 0]
+    }
+    Line {
+      SrcBlock		      "MotorState"
+      SrcPort		      1
+      DstBlock		      "Demux9"
+      DstPort		      1
+    }
+    Line {
+      Name		      "frequency1"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux9"
+      SrcPort		      1
+      Points		      [40, 0]
+    }
+    Line {
+      Name		      "frequency2"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux9"
+      SrcPort		      2
+      Points		      [40, 0]
+    }
+    Line {
+      Name		      "frequency3"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux9"
+      SrcPort		      3
+      Points		      [40, 0]
+    }
+    Line {
+      Name		      "frequency4"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux9"
+      SrcPort		      4
+      Points		      [40, 0]
+    }
+    Line {
+      Name		      "current1"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux9"
+      SrcPort		      5
+      Points		      [40, 0]
+    }
+    Line {
+      Name		      "current2"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux9"
+      SrcPort		      6
+      Points		      [40, 0]
+    }
+    Line {
+      Name		      "current3"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux9"
+      SrcPort		      7
+      Points		      [40, 0]
+    }
+    Line {
+      Name		      "current4"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux9"
+      SrcPort		      8
+      Points		      [40, 0]
+    }
+    Line {
+      SrcBlock		      "PositionCommandInput"
+      SrcPort		      1
+      DstBlock		      "Demux10"
+      DstPort		      1
+    }
+    Line {
+      Name		      "x"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux10"
+      SrcPort		      1
+      Points		      [40, 0]
+    }
+    Line {
+      Name		      "y"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux10"
+      SrcPort		      2
+      Points		      [40, 0]
+    }
+    Line {
+      SrcBlock		      "Mux4"
+      SrcPort		      1
+      DstBlock		      "PositionCommandOutput"
+      DstPort		      1
+    }
+    Line {
+      Name		      "x"
+      Labels		      [0, 0]
+      Points		      [500, 230]
+      DstBlock		      "Mux4"
+      DstPort		      1
+    }
+    Line {
+      Name		      "y"
+      Labels		      [0, 0]
+      Points		      [500, 250]
+      DstBlock		      "Mux4"
+      DstPort		      2
+    }
+    Line {
+      Name		      "command"
+      Labels		      [0, 0]
+      SrcBlock		      "AutonomyCommand"
+      SrcPort		      1
+      Points		      [80, 0]
+    }
+    Line {
+      Name		      "state"
+      Labels		      [0, 0]
+      Points		      [505, 1200]
+      DstBlock		      "AutonomyState"
+      DstPort		      1
+    }
+    Line {
+      Name		      "state"
+      Labels		      [0, 0; 0, 0]
+      SrcBlock		      "Demux5"
+      SrcPort		      2
+      Points		      [40, 0]
+    }
+    Line {
+      Name		      "ultrasound"
+      Labels		      [0, 0]
+      SrcBlock		      "Demux6"
+      SrcPort		      5
+      Points		      [0, -5; 40, 0]
+    }
+    Line {
+      Name		      "heightMode"
+      Labels		      [0, 0]
+      Points		      [500, 1080]
+      DstBlock		      "HeightMode"
+      DstPort		      1
+    }
+    Line {
+      Points		      [495, 990]
+      DstBlock		      "ControlMode"
+      DstPort		      1
+    }
+    Annotation {
+      Name		      "Alle Größen sind im\nNavigationskoordinatensystem angegeben!"
+      Position		      [1118, 268]
+    }
+    Annotation {
+      Name		      "Alle Größen sind im\nKörperkoordinatensystem angegeben!"
+      Position		      [1133, 783]
+    }
+    Annotation {
+      Name		      "Alle Größen sind im\nNavigationskoordinatensystem angegeben!"
+      Position		      [1578, 268]
+    }
+    Annotation {
+      Name		      "controlSource:\n  0 = R/C\n  1 = Joystick\n  2 = Autonomy\nstate:\n  bit 0: Motors running\n  bit 1"
+      ": Airborne\nheightMode:\n  bit 0: Automatic on/off\n  bit 1: Ultrasound\n  bit 2: Filtered (Baro)\ncontrolMode:\n"
+      "  bit 0: Motor on/off\n  bit 1: Attitude (always on!)\n  bit 2: Velocity\n  bit 3: Position\n  bit 4: Heading\n "
+      " bit 5: Height"
+      Position		      [302, 985]
+      HorizontalAlignment     "left"
+    }
+    Annotation {
+      Name		      "autonomy:\n  bit 0: takeoff\n  bit 1: landing\n  bit 2: waypoint flight\n  bit 7: emergency"
+      Position		      [305, 1202]
+      HorizontalAlignment     "left"
+    }
+    Annotation {
+      Name		      "controlMode"
+      Position		      [529, 996]
+    }
+  }
+}

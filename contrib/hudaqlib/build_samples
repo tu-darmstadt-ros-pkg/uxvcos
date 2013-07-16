@@ -1,0 +1,51 @@
+make
+
+mkdir -p bin/
+
+gcc samples/test.c -I./ hudaqlib.a -lrt -lm -o bin/Test.exe
+gcc samples/test.c -I./ -L. -lhudaqlib -lrt -lm -o bin/TestSo.exe
+
+gcc samples/AnalogIn/AIRead.c -I./ hudaqlib.a -lrt -lm -o bin/AIRead.exe
+gcc samples/AnalogIn/AIRead.c -I./ -L. -lhudaqlib -lrt -lm -o bin/AIReadSo.exe
+gcc samples/AnalogIn/AIReadMultiple.c -I./ hudaqlib.a -lrt -lm -o bin/AIReadMultiple.exe
+gcc samples/AnalogIn/AIReadMultiple.c -I./ -L. -lhudaqlib -lrt -lm -o bin/AIReadMultipleSo.exe
+
+gcc samples/AnalogOut/AOWrite.c -I./ hudaqlib.a -lrt -lm -o bin/AOWrite.exe
+gcc samples/AnalogOut/AOWrite.c -I./ -L. -lhudaqlib -lrt -lm -o bin/AOWriteSo.exe
+
+gcc samples/AnalogOut/AOWriteMultiple.c -I./ hudaqlib.a -lrt -lm -o bin/AOWriteMultiple.exe
+gcc samples/AnalogOut/AOWriteMultiple.c -I./ -L. -lhudaqlib -lrt -lm -o bin/AOWriteMultipleSo.exe
+
+gcc samples/CounterIn/CtrRead.c -I./ hudaqlib.a -lrt -lm -o bin/CtrRead.exe
+gcc samples/CounterIn/CtrRead.c -I./ -L. -lhudaqlib -lrt -lm -o bin/CtrReadSo.exe
+
+gcc samples/DigitalIn/DIRead.c -I./ hudaqlib.a -lrt -lm -o bin/DIRead.exe
+gcc samples/DigitalIn/DIRead.c -I./ -L. -lhudaqlib -lrt -lm -o bin/DIReadSo.exe
+
+gcc samples/DigitalIn/DIReadBit.c -I./ hudaqlib.a -lrt -lm -o bin/DIReadBit.exe
+gcc samples/DigitalIn/DIReadBit.c -I./ -L. -lhudaqlib -lrt -lm -o bin/DIReadBitSo.exe
+
+gcc samples/DigitalOUT/DOWrite.c -I./ hudaqlib.a -lrt -lm -o bin/DOWrite.exe
+gcc samples/DigitalOUT/DOWrite.c -I./ -L. -lhudaqlib -lrt -lm -o bin/DOWriteSo.exe
+gcc samples/DigitalOUT/DOWriteBit.c -I./ hudaqlib.a -lrt -lm -o bin/DOWriteBit.exe
+gcc samples/DigitalOUT/DOWriteBit.c -I./ -L. -lhudaqlib -lrt -lm -o bin/DOWriteBitSo.exe
+gcc samples/DigitalOUT/DOWriteMultipleBits.c -I./ hudaqlib.a -lrt -lm -o bin/DOWriteMultipleBits.exe
+gcc samples/DigitalOUT/DOWriteMultipleBits.c -I./ -L. -lhudaqlib -lrt -lm -o bin/DOWriteMultipleBitsSo.exe
+
+gcc samples/EncoderIn/EncRead.c -I./ hudaqlib.a -lrt -lm -o bin/EncRead.exe
+gcc samples/EncoderIn/EncRead.c -I./ -L. -lhudaqlib -lrt -lm -o bin/EncReadSo.exe
+gcc samples/EncoderIn/EncConfig.c -I./ hudaqlib.a -lrt -lm -o bin/EncConfig.exe
+gcc samples/EncoderIn/EncConfig.c -I./ -L. -lhudaqlib -lrt -lm -o bin/EncConfigSo.exe
+
+gcc samples/PWMOut/PWMWrite.c -I./ hudaqlib.a -lrt -lm -o bin/PWMWrite.exe
+gcc samples/PWMOut/PWMWrite.c -I./ -L. -lhudaqlib -lrt -lm -o bin/PWMWriteSo.exe
+
+gcc samples/special/ListDevices.c -I./ hudaqlib.a -lrt -lm -o bin/ListDevices.exe
+gcc samples/special/ListDevices.c -I./ -L. -lhudaqlib -lrt -lm -o bin/ListDevicesSo.exe
+gcc samples/special/ProbeDevices.c -I./ hudaqlib.a -lrt -lm -o bin/ProbeDevices.exe
+gcc samples/special/ProbeDevices.c -I./ -L. -lhudaqlib -lrt -lm -o bin/ProbeDevicesSo.exe
+
+
+gcc samples/DIRead.c -I./ hudaqlib.a -lrt -lm -o bin/T_.exe
+
+echo Build finished.

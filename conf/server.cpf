@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
+  <simple name="Type" type="string"><description>Server type (TCP,UDP)</description><value>UDP</value></simple>
+  <simple name="DestinationAddress" type="string"><description>Destination address (for UDP only)</description><value>255.255.255.255</value></simple>
+  <simple name="DestinationPort" type="ulong"><description>Destination port (for UDP only)</description><value>32255</value></simple>
+  <simple name="LocalPort" type="ulong"><description>Local port</description><value>32254</value></simple>
+</properties>

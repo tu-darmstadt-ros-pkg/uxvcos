@@ -1,0 +1,214 @@
+#
+#       The following defines can be used to modify the behavior of the
+#	build:
+#	  OPT_OPTS       - Optimization options. Default is -O. To enable
+#                          debugging specify as OPT_OPTS=-g.
+#                          Because of optimization problems in IBM_RS,
+#                          default is no-optimization.
+#	  OPTS           - User specific compile options.
+#	  CPP_OPTS       - C++ compiler options.
+#	  USER_SRCS      - Additional user sources, such as files needed by
+#			   S-functions.
+#	  USER_INCLUDES  - Additional include paths
+#			   (i.e. USER_INCLUDES="-Iwhere-ever -Iwhere-ever2")
+#
+# OROCOS-RTT Specific overrides:
+#
+#  MATLAB_ROOT   - Specify the path to the matlab directory on the Unix system. ( = /usr/local/matlab)
+#  OROCOS_TARGET - Specify your target OS (gnulinux,lxrt,xenomai). ( = gnulinux)
+#  OROPATH       - Specify the location of Orocos headers and libraries. ( = /usr/local)
+#
+
+MAKECMD         = make
+HOST=UNIX
+BUILD=yes
+SYS_TARGET_FILE = orocos.tlc
+
+MODEL           = |>MODEL_NAME<|
+MODULES         = |>MODEL_MODULES<|
+MAKEFILE        = |>MAKEFILE_NAME<|
+S_FUNCTIONS     = |>S_FUNCTIONS<|
+S_FUNCTIONS_LIB = |>S_FUNCTIONS_LIB<|
+SOLVER          = |>SOLVER<|
+NUMST           = |>NUMST<|
+TID01EQ         = |>TID01EQ<|
+NCSTATES        = |>NCSTATES<|
+COMPUTER        = GLNX86
+BUILDARGS       = |>BUILDARGS<|
+MULTITASKING    = |>MULTITASKING<|
+
+OROCOS_TARGET = gnulinux
+MATLAB_ROOT   = /usr/local/MATLAB/R2012a
+OROPATH       = /opt/orocos/fuerte/orocos_toolchain/install
+RTW_R      = $(MATLAB_ROOT)/rtw/c
+OROCOS_RTW = /opt/uxvcos/contrib/simulink/rtw/c/orocos
+NON_ANSI_TRIG_FCN = 1
+
+#--------------------------- Tool Specifications -------------------------------
+
+include $(MATLAB_ROOT)/rtw/c/tools/unixtools.mk
+CC  = gcc
+CXX = g++
+
+#------------------------------ Include Path -----------------------------------
+
+MATLAB_INCLUDES = \
+	-I$(MATLAB_ROOT)/simulink/include \
+        -I$(MATLAB_ROOT)/extern/include \
+	-I$(MATLAB_ROOT)/rtw/c/src \
+	-I$(MATLAB_ROOT)/rtw/c/libsrc \
+	-I$(OROCOS_RTW)/devices
+
+USER_INCLUDES = 
+
+# Additional file include paths. The "c:\matlab7" paths appear inhere... (GUI?)
+ADD_INCLUDES = \
+|>START_EXPAND_INCLUDES<|       -I|>EXPAND_DIR_NAME<| \
+|>END_EXPAND_INCLUDES<|
+
+INCLUDES = -I. -I.. $(MATLAB_INCLUDES) $(ADD_INCLUDES) $(USER_INCLUDES) \
+	$(INSTRUMENT_INCLUDES) \
+	-I$(OROCOS_RTW)/include
+
+#-------------------------------- C Flags --------------------------------------
+
+# Optimization Options
+OPT_OPTS = -O2 
+
+# General User Options
+OPTS =
+DEB_OPT = -DDBGPRT
+
+# Compiler options, etc:
+CC_OPTS = $(shell PKG_CONFIG_PATH=$(OROPATH)/lib/pkgconfig pkg-config orocos-rtt-$(OROCOS_TARGET) --cflags) \
+	-Wall -fPIC $(DEB_OPT) $(OPT_OPTS) $(OPTS) $(ANSI_OPTS) $(EXT_CC_OPTS) \
+	$(LOG_OPTS)
+
+CPP_REQ_DEFINES = -DMODEL=$(MODEL) -DRT -DNUMST=$(NUMST) \
+		  -DTID01EQ=$(TID01EQ) -DNCSTATES=$(NCSTATES) -DUNIX \
+		  -DRT_MALLOC -DMT=$(MULTITASKING) -DOCL_DLL_EXPORT
+
+CFLAGS = -DRT -DUSE_RTMODEL $(CC_OPTS) $(CPP_REQ_DEFINES) $(INCLUDES) $(NOVERSION) -ffast-math
+
+RT_MAIN_DEFINES = 
+LDFLAGS = $(shell PKG_CONFIG_PATH=$(OROPATH)/lib/pkgconfig pkg-config orocos-rtt-$(OROCOS_TARGET) --libs)
+
+#-------------------------- Additional Libraries ------------------------------
+
+SYSLIBS = $(EXT_LIB) -lpthread -lm
+
+LIBS = 
+
+|>START_PRECOMP_LIBRARIES<|
+ifeq ($(OPT_OPTS),$(DEFAULT_OPT_OPTS))
+LIBS += |>EXPAND_LIBRARY_LOCATION<|/|>EXPAND_LIBRARY_NAME<|_std.a
+else
+LIBS += |>EXPAND_LIBRARY_NAME<|.a
+endif
+|>END_PRECOMP_LIBRARIES<|
+
+|>START_EXPAND_LIBRARIES<|
+LIBS += |>EXPAND_LIBRARY_NAME<|.a
+|>END_EXPAND_LIBRARIES<|
+
+LIBS += $(S_FUNCTIONS_LIB) $(INSTRUMENT_LIBS)
+
+#----------------------------- Source Files ------------------------------------
+
+REQ_SRCS  = $(MODEL).c $(MODULES) rt_sim.c rt_nonfinite.c $(EXT_SRC)
+REQ_CPPSRCS = RTWComponent.cpp
+USER_SRCS =
+USER_OBJS = 
+LOCAL_USER_OBJS = $(notdir $(USER_OBJS))
+
+SRCS      = $(REQ_SRCS) $(S_FUNCTIONS) $(SOLVER)
+CSRCS     = $(SRCS:.cpp=.o) 
+OBJS      = $(CSRCS:.c=.o) $(USER_OBJS) $(REQ_CPPSRCS:.cpp=.o)
+LINK_OBJS = $(CSRCS:.c=.o) $(LOCAL_USER_OBJS) $(REQ_CPPSRCS:.cpp=.o)
+
+COMPONENT = ../RTW$(MODEL).so
+
+#--------------------------------- Rules ---------------------------------------
+
+all: $(COMPONENT)
+
+$(COMPONENT) : $(OBJS) $(LIBS)
+	${CC} -shared $(LDFLAGS) -o $@ $(LINK_OBJS) $(LIBS) $(SYSLIBS)
+	@echo "### Created shared library: $(COMPONENT) ###"
+
+%.o : %.c
+	${CC} -c  $(CFLAGS) $<
+
+%.o : %.cpp
+	${CXX} -c  $(CFLAGS) $<
+
+%.o : $(MATLAB_ROOT)/rtw/c/src/%.c
+	${CC} -c $(CFLAGS) $<
+
+RTWComponent.o : $(OROCOS_RTW)/RTWComponent.cpp $(OROCOS_RTW)/RTWComponent.hpp $(MODEL).c 
+	${CXX} -c $(CFLAGS) $(RT_MAIN_DEFINES) $(OROCOS_RTW)/RTWComponent.cpp
+
+%.o : $(OROCOS_RTW)/%.c
+	${CC} -c $(CFLAGS) $(RT_MAIN_DEFINES) $<
+
+%.o : $(OROCOS_RTW)/taskcontext/%.cpp
+	${CXX} -c $(CFLAGS) $<
+
+%.o : $(MATLAB_ROOT)/rtw/c/libsrc/%.c
+	${CC} -c $(CFLAGS) $<
+
+%.o : $(MATLAB_ROOT)/simulink/src/%.c
+	${CC} -c $(CFLAGS) $<
+
+#------------------------------- Libraries -------------------------------------
+
+|>START_EXPAND_LIBRARIES<|MODULES_|>EXPAND_LIBRARY_NAME<| = \
+|>START_EXPAND_MODULES<|    |>EXPAND_MODULE_NAME<|.o \
+|>END_EXPAND_MODULES<|
+
+|>EXPAND_LIBRARY_NAME<|.a : $(MAKEFILE) rtw_proj.tmw $(MODULES_|>EXPAND_LIBRARY_NAME<|)
+	@echo "### Creating $@ "
+	ar rs -o $@ $(MODULES_|>EXPAND_LIBRARY_NAME<|)
+
+|>END_EXPAND_LIBRARIES<|
+
+|>START_PRECOMP_LIBRARIES<|MODULES_|>EXPAND_LIBRARY_NAME<| = \
+|>START_EXPAND_MODULES<|    |>EXPAND_MODULE_NAME<|.o \
+|>END_EXPAND_MODULES<|
+
+|>EXPAND_LIBRARY_NAME<|.a : $(MAKEFILE) rtw_proj.tmw $(MODULES_|>EXPAND_LIBRARY_NAME<|)
+	@echo "### Creating $@ "
+	ar ruvs $@ $(MODULES_|>EXPAND_LIBRARY_NAME<|)
+
+|>END_PRECOMP_LIBRARIES<|
+
+#----------------------------- Dependencies ------------------------------------
+
+$(OBJS) : $(MAKEFILE) rtw_proj.tmw
+
+#--------- Miscellaneous rules to purge and clean ------------------------------
+
+purge : clean
+	@echo "### Deleting the generated source code for $(MODEL)"
+	@\rm -f $(MODEL).c $(MODEL).h $(MODEL).prm $(MODEL).reg $(MODEL).rtw \
+	        $(MODULES) rtw_proj.tmw $(MAKEFILE)
+
+clean :
+	@echo "### Deleting the intermediate objects."
+	@\rm -f $(MODULES_dsp_rt) $(MODULES_rtwlib)
+	@\rm -f $(LINK_OBJS)
+
+clean-all : clean
+	@echo "### Deleting the libraries."
+	@\rm -f $(COMPONENT) rtwlib.a
+
+help: 
+	@echo ""
+	@echo "Possible targets are:"
+	@echo "  all    - Build the component and rtw library."
+	@echo "  clean  - Remove intermediate build files (safe)."
+	@echo "  clean-all - Remove all build files, also the libraries."
+	@echo "  purge     - Remove all build files, libraries and generated sources."
+	@echo ""
+
+# EOF: orocos.tmf

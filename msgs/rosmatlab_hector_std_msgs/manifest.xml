@@ -1,0 +1,20 @@
+<package>
+  <description brief="rosmatlab_hector_std_msgs">
+
+     rosmatlab_hector_std_msgs
+
+  </description>
+  <author>Johannes Meyer</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/rosmatlab_hector_std_msgs</url>
+  <depend package="hector_std_msgs"/>
+  <depend package="rosmatlab"/>
+
+  <export>
+    <rosmatlab path="${prefix}/matlab"/>
+  </export>
+
+</package>
+
+

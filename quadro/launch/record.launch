@@ -1,0 +1,3 @@
+<launch>
+  <node name="rosbag_record" pkg="rosbag" type="record" args="-o $(optenv UXVCOS_LOG ~)/uxvcos /raw_imu /magnetic /altimeter /pressure_height /sonar_height /rc /supply /motor_status /fix /fix_velocity /scan /cmd_vel /motor_voltage /motor_pwm /force /imu /state /global /input/cmd_vel /input/attitude /input/height /input/heading /height /image_raw/compressed /ground_truth/state" output="screen"/>
+</launch>

@@ -1,0 +1,7 @@
+<launch>
+  <arg name="cmdline" default="" />
+  <node name="quadro" pkg="quadro" type="quadro" args="$(arg cmdline)" cwd="node" output="screen" required="true">
+  </node>
+
+  <include file="$(find quadro)/launch/tf.launch" />
+</launch>

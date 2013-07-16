@@ -1,0 +1,21 @@
+option(BUILD_SIMULINK "Use a Simulink model compiled with Orocos target as generic TaskContext" OFF)
+
+option(BUILD_SIMULINK_CONTROLLER "Use a Simulink model compiled with Orocos target as Controller" OFF)
+if(BUILD_SIMULINK_CONTROLLER)
+  set(BUILD_SIMULINK ON)
+endif()
+
+if(BUILD_SIMULINK)
+  #if(NOT TARGET simulink)
+  #  message(SEND_ERROR "You have to enable BUILD_SIMULINK_INTERFACE to add support for Simulink TaskContexts.")
+  #  unset(BUILD_SIMULINK_CONTROLLER)
+  #endif()
+
+  orocos_use_package(uxvcos-simulink)
+  if(NOT uxvcos-simulink_LIBRARIES)
+    message(SEND_ERROR "Did not find package uxvcos-simulink. Target simulink cannot be built.")
+  endif()
+  orocos_component(quadro-simulink Simulink.cpp Simulink.h)
+  #set_target_properties(simulink PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib/orocos${OROCOS_SUFFIX})
+  target_link_libraries(quadro-simulink ${UXVCOS_LIBRARIES})
+endif()

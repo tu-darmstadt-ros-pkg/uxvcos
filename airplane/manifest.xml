@@ -1,0 +1,20 @@
+<package>
+  <description brief="airplane">
+
+     The main package for driving the FSR airplane
+
+  </description>
+  <author>Johannes Meyer</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/airplane</url>
+
+  <depend package="uxvcos_rtt" />
+  <depend package="uxvcos_interface" />
+  <depend package="uxvcos_navigation" />
+  <depend package="uxvcos_ublox_gps" />
+
+  <depend package="tf" />
+
+  <depend package="message_to_tf" />
+</package>

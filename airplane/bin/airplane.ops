@@ -1,0 +1,49 @@
+# load components
+addTask(loadComponent("Interface", "EthernetInterface", 2))
+try import("uxvcos_ublox_gps");
+try addTask(loadComponent("GPS", "uxvcos::ublox_gps::GPS", 2))
+addTask(loadComponent("Navigation", "Navigation", 3))
+# addTask(loadComponent("Controller", "Controller", 4))
+
+# Watchdog
+loadComponent("Watchdog", "Watchdog", 0)
+try addPeer("Watchdog", "Interface")
+try addPeer("Watchdog", "GPS")
+try addPeer("Watchdog", "Navigation")
+try addPeer("Watchdog", "Controller")
+
+program configure {
+
+  # create ROS publishers/subscribers
+  publish("clock", ros.topic("clock"))
+  publish("raw_imu", ros.topic("raw_imu"))
+  publish("magnetic", ros.topic("magnetic"))
+  publish("altimeter", ros.topic("altimeter"))
+  publish("pressure_height", ros.topic("pressure_height"))
+  publish("supply", ros.topic("supply"))
+  publish("rc", ros.topic("rc"))
+  publish("motor_status", ros.topic("motor_status"))
+  publish("sonar_height", ros.topic("sonar_height"))
+  publish("fix", ros.topic("fix"))
+  publish("fix_velocity", ros.topic("fix_velocity"))
+  publish("temperature", ros.topic("temperature"))
+  publish("airspeed", ros.topic("airspeed"))
+
+  publish("state", ros.topic("state"))
+  publish("imu", ros.topic("imu"))
+  publish("global", ros.topic("global"))
+  publish("linear_acceleration_bias", ros.topic("linear_acceleration_bias"))
+  publish("angular_velocity_bias", ros.topic("angular_velocity_bias"))
+}
+
+program start {
+  Watchdog.start
+}
+
+program stop {
+  Watchdog.stop
+}
+
+program cleanup {
+
+}

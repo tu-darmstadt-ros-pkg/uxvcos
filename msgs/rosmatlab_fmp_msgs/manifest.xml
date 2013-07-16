@@ -1,0 +1,20 @@
+<package>
+  <description brief="rosmatlab_fmp_msgs">
+
+     rosmatlab_fmp_msgs
+
+  </description>
+  <author>Johannes Meyer</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/rosmatlab_fmp_msgs</url>
+  <depend package="fmp_msgs"/>
+  <depend package="rosmatlab"/>
+
+  <export>
+    <rosmatlab path="${prefix}/matlab"/>
+  </export>
+
+</package>
+
+

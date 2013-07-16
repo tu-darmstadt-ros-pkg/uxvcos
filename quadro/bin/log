@@ -1,0 +1,19 @@
+#!/bin/bash
+
+cd /opt/uxvcos/log
+
+case "$1" in
+start)
+	screen -dmS log rosbag record /raw_imu /state /fix /fix_velocity /magnetic /altimeter /imu /global /clock
+	exit 0
+	;;
+
+stop)
+	#screen -S log -X quit
+	killall -INT record 
+	exit 0
+	;;
+
+esac
+
+echo "Usage: $0 <start/stop>"

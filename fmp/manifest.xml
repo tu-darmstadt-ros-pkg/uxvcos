@@ -1,0 +1,25 @@
+<package>
+  <description brief="fmp">
+
+     The main package for the fmp application
+
+  </description>
+  <author>Johannes Meyer</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/fmp</url>
+
+  <depend package="uxvcos_rtt" />
+  <depend package="uxvcos_interface" />
+  <depend package="uxvcos_navigation" />
+  <depend package="uxvcos_ublox_gps" />
+
+  <depend package="rtt_fmp_msgs" />
+  <depend package="rtt_hector_uav_msgs" />
+
+  <depend package="rosbag" />
+
+  <export>
+    <rosmatlab path="${prefix}/matlab"/>
+  </export>
+</package>

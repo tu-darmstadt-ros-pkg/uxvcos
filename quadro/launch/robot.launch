@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<launch>
+ <include file="$(find quadro)/launch/quadro.launch" />
+
+ <include file="$(find quadro)/launch/drivers.launch" />
+
+ <include file="$(find quadro)/launch/tf.launch" />
+
+ <include file="$(find hector_mapping)/launch/mapping_default.launch" />
+</launch>
