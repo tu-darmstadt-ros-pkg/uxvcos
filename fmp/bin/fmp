@@ -6,10 +6,8 @@ fi
 
 export UXVCOS_CONFIGURATION=$UXVCOS_ROOT/fmp/conf
 export UXVCOS_SCRIPT_PATH=$UXVCOS_ROOT/fmp/bin
-FMP_OPTIONS="$FMP_OPTIONS $@"
 
-sudo setcap cap_net_raw,cap_sys_rawio+ep $UXVCOS_ROOT/core/bin/uxvcos
-$LAUNCH_PREFIX $UXVCOS_ROOT/core/bin/uxvcos --realm fmp --start fmp.ops $FMP_OPTIONS
+$LAUNCH_PREFIX `rospack find uxvcos_rtt`/bin/uxvcos --realm fmp --start fmp.ops $FMP_OPTIONS "$@"
 
 if [ $? -ne 0 ]; then
   read -p "Press any key to continue... " -n1 -s

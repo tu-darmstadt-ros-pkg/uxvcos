@@ -28,7 +28,7 @@
 
 #include "Heading.h"
 #include "Quadrotor.h"
-#include <controller/helper.h>
+#include <uxvcos/controller/helper.h>
 
 namespace uxvcos {
 namespace Controller {

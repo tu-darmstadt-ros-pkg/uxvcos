@@ -1,7 +1,7 @@
 #include "Airplane.h"
 
 #include <rtt/Logger.hpp>
-#include <controller/Limit.h>
+#include <uxvcos/controller/Limit.h>
 
 namespace uxvcos {
 namespace Controller {

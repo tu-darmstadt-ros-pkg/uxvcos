@@ -2,8 +2,8 @@
 #define UXVCOS_SENSORS_FMP_H
 
 #include <fmp_msgs/typekit/Types.h>
-#include <sensors/Sensor.h>
-#include <base/Transformation.h>
+#include <uxvcos/sensors/Sensor.h>
+#include <uxvcos/Transformation.h>
 
 #include <limits>
 

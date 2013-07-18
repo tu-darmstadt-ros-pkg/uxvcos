@@ -29,7 +29,7 @@
 #ifndef QUADRO_CONTROLLER_MOTOR_H
 #define QUADRO_CONTROLLER_MOTOR_H
 
-#include <controller/Controller.h>
+#include <uxvcos/controller/Controller.h>
 
 #include <hector_uav_msgs/typekit/MotorPWM.h>
 #include <hector_uav_msgs/typekit/MotorCommand.h>

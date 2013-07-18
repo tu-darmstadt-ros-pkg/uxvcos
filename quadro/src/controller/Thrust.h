@@ -29,8 +29,8 @@
 #ifndef QUADRO_CONTROLLER_THRUST_H
 #define QUADRO_CONTROLLER_THRUST_H
 
-#include <controller/Controller.h>
-#include <controller/RC.h>
+#include <uxvcos/controller/Controller.h>
+#include <uxvcos/controller/RC.h>
 
 #include <geometry_msgs/typekit/WrenchStamped.h>
 #include <hector_uav_msgs/typekit/ThrustCommand.h>

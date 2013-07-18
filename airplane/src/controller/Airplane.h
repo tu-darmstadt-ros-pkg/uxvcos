@@ -1,12 +1,12 @@
 #ifndef CONTROLLER_AIRPLANE_H
 #define CONTROLLER_AIRPLANE_H
 
-#include <controller/Controller.h>
-#include <controller/PID.h>
-#include <controller/RC.h>
-#include <controller/ControllerTask.h>
+#include <uxvcos/controller/Controller.h>
+#include <uxvcos/controller/PID.h>
+#include <uxvcos/controller/RC.h>
+#include <uxvcos/controller/ControllerTask.h>
 
-#include <base/Transformation.h>
+#include <uxvcos/Transformation.h>
 
 #include <hector_uav_msgs/typekit/ServoCommand.h>
 #include <hector_uav_msgs/typekit/RuddersCommand.h>

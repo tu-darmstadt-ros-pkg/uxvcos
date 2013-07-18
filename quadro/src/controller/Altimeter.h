@@ -29,13 +29,13 @@
 #ifndef CONTROLLER_ALTIMETER_H
 #define CONTROLLER_ALTIMETER_H
 
-#include <base/Module.h>
+#include <uxvcos/Module.h>
 #include <rtt/Port.hpp>
 #include <sensor_msgs/typekit/Range.h>
 #include <quadro_msgs/typekit/Height.h>
 
-#include <filter/OutlierElimination.h>
-#include <filter/PT1.h>
+#include <uxvcos/filter/OutlierElimination.h>
+#include <uxvcos/filter/PT1.h>
 
 #include <boost/array.hpp>
 

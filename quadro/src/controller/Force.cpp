@@ -28,8 +28,7 @@
 
 #include "Force.h"
 #include "Quadrotor.h"
-
-#include <controller/wrench_operations.h>
+#include "wrench_operations.h"
 
 namespace uxvcos {
 namespace Controller {

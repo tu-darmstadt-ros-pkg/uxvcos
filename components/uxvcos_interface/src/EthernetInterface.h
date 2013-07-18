@@ -8,15 +8,15 @@
 #include <rtt/Operation.hpp>
 #include <rtt/os/Mutex.hpp>
 
-#include <base/ModuleContainer.h>
+#include <uxvcos/ModuleContainer.h>
 
-#include <stream/Stream.h>
-#include <system/Socket.h>
-#include <system/EthernetAddress.h>
-#include <system/BaseSerialPort.h>
+#include <uxvcos/stream/Stream.h>
+#include <uxvcos/system/Socket.h>
+#include <uxvcos/system/EthernetAddress.h>
+#include <uxvcos/system/BaseSerialPort.h>
 
-#include <interface/BaseInterface.h>
-#include <interface/RateControl.h>
+#include <uxvcos/interface/BaseInterface.h>
+#include <uxvcos/interface/RateControl.h>
 #include "Motor.h"
 #include "Servos.h"
 #include "EthernetSerialPort.h"

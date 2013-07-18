@@ -1,8 +1,8 @@
 #ifndef UXVCOS_NAVIGATION_COMPASS_H
 #define UXVCOS_NAVIGATION_COMPASS_H
 
-#include <base/Transformation.h>
-#include <base/Module.h>
+#include <uxvcos/Transformation.h>
+#include <uxvcos/Module.h>
 
 #include <geometry_msgs/typekit/Vector3Stamped.h>
 

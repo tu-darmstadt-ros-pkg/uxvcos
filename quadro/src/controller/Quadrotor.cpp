@@ -21,7 +21,7 @@
 #include "Motor.h"
 #include "Test.h"
 
-#include <controller/wrench_operations.h>
+#include "wrench_operations.h"
 
 namespace uxvcos {
 namespace Controller {
@@ -96,7 +96,7 @@ bool Quadrotor::beforeExecuteHook() {
 
   // set timestamp and step time dt based on state timestamp
   this->setTimestamp(state.header.stamp);
-  RTT::log(RTT::RealTime) << "Updating quadrotor controller with state " << state.header.seq << " at t = " << getTimestamp() << RTT::endlog();
+  // RTT::log(RTT::RealTime) << "Updating quadrotor controller with state " << state.header.seq << " at t = " << getTimestamp() << RTT::endlog();
 
   static std_msgs::Header::_seq_type seq = state.header.seq - 1;
   while (state.header.seq > ++seq) {

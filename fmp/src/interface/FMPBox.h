@@ -1,9 +1,9 @@
 #ifndef INTERFACE_FMPBOX_H
 #define INTERFACE_FMPBOX_H
 
-#include <interface/SerialInterface.h>
+#include <uxvcos/interface/SerialInterface.h>
 
-#include <sensors/Baro.h>
+#include <uxvcos/sensors/Baro.h>
 #include <sensors/FMP.h>
 
 namespace uxvcos {

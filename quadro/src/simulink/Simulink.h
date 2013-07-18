@@ -1,7 +1,7 @@
 #ifndef QUADRO_SIMULINK_H
 #define QUADRO_SIMULINK_H
 
-#include <simulink/SimulinkInterface.h>
+#include <uxvcos/simulink/SimulinkInterface.h>
 
 #include <nav_msgs/typekit/Odometry.h>
 #include <sensor_msgs/typekit/Imu.h>

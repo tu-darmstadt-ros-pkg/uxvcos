@@ -1,8 +1,8 @@
 #ifndef INTERFACE_MOTOR_H
 #define INTERFACE_MOTOR_H
 
-#include <base/Module.h>
-#include <base/Trigger.h>
+#include <uxvcos/Module.h>
+#include <uxvcos/Trigger.h>
 #include <rtt/Logger.hpp>
 
 #include <hector_uav_msgs/typekit/MotorPWM.h>

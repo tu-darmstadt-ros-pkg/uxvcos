@@ -32,12 +32,14 @@ if(ROS_ROOT)
   #rosbuild_link_boost(${PROJECT_NAME} thread)
   #rosbuild_add_executable(example examples/example.cpp)
   #target_link_libraries(example ${PROJECT_NAME})
+
+  rosbuild_find_ros_package(uxvcos)
 endif(ROS_ROOT)
 
-find_package(uxvcos REQUIRED PATHS "../../cmake" NO_DEFAULT_PATH)
+find_package(uxvcos_rtt REQUIRED PATHS . NO_DEFAULT_PATH)
 include(ToolchainOptions)
-include(UseOROCOS-RTT)
 
-add_subdirectory(../src src)
+include_directories(include include/uxvcos)
+add_subdirectory(src)
 
 configure_file(uxvcos_rtt.pc.in ${PROJECT_SOURCE_DIR}/uxvcos_rtt-${OROCOS_TARGET}.pc @ONLY)

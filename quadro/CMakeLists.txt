@@ -17,9 +17,9 @@ if(ROS_ROOT)
   rosbuild_init()
 
   #set the default path for built executables to the "bin" directory
-  #set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
+  set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
   #set the default path for built libraries to the "lib" directory
-  #set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
+  set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 
   #uncomment if you have defined messages
   #rosbuild_genmsg()
@@ -35,11 +35,11 @@ if(ROS_ROOT)
   #target_link_libraries(example ${PROJECT_NAME})
 endif(ROS_ROOT)
 
-find_package(uxvcos REQUIRED PATHS "../cmake" NO_DEFAULT_PATH)
-include(ToolchainOptions)
-include(UseOROCOS-RTT)
+rosbuild_find_ros_package(uxvcos_rtt)
+find_package(uxvcos_rtt REQUIRED PATHS "${uxvcos_rtt_PACKAGE_PATH}" NO_DEFAULT_PATH)
 
+option(BUILD_TESTBED "Whether to build testbed support (reference attitude)" OFF)
 set(TARGET_NAME "quadro")
 add_subdirectory(src)
 
-orocos_generate_package(DEPENDS uxvcos_rtt)
+orocos_generate_package(DEPENDS ${UXVCOS_DEPENDS})

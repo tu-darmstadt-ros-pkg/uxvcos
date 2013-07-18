@@ -1,8 +1,8 @@
 #ifndef INTERFACE_SERVOS_H
 #define INTERFACE_SERVOS_H
 
-#include <base/Module.h>
-#include <base/Trigger.h>
+#include <uxvcos/Module.h>
+#include <uxvcos/Trigger.h>
 
 #include <rtt/Port.hpp>
 #include <rtt/Logger.hpp>

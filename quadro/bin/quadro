@@ -11,11 +11,7 @@ if [ -z "$QUADRO_LAUNCH_SCRIPT" ]; then
   QUADRO_LAUNCH_SCRIPT=quadro.ops
 fi
 
-cd $UXVCOS_ROOT/quadro/bin
-QUADRO_OPTIONS="$QUADRO_OPTIONS $@"
-sudo setcap cap_net_raw,cap_sys_rawio+ep `rospack find uxvcos`/bin/uxvcos
-
-$LAUNCH_PREFIX $UXVCOS_ROOT/core/bin/uxvcos --realm quadro --start $QUADRO_LAUNCH_SCRIPT --config $HOSTNAME $QUADRO_OPTIONS
+$LAUNCH_PREFIX `rospack find uxvcos_rtt`/bin/uxvcos --realm quadro --start $QUADRO_LAUNCH_SCRIPT --config $HOSTNAME $QUADRO_OPTIONS "$@"
 
 if [ $? -ne 0 ]; then
   read -p "Press any key to continue... " -n1 -s

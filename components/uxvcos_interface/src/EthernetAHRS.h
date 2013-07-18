@@ -1,7 +1,7 @@
 #ifndef INTERFACE_ETHERNETAHRS_H
 #define INTERFACE_ETHERNETAHRS_H
 
-#include <sensors/Sensor.h>
+#include <uxvcos/sensors/Sensor.h>
 #include "EthernetSensor.h"
 #include <sensor_msgs/typekit/Imu.h>
 

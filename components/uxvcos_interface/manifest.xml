@@ -10,6 +10,7 @@
   <url>http://ros.org/wiki/uxvcos_interface</url>
 
   <depend package="uxvcos_rtt"/>
+  <depend package="uxvcos_sensors"/>
 
   <depend package="rtt_geometry_msgs"/>
   <depend package="rtt_hector_std_msgs"/>

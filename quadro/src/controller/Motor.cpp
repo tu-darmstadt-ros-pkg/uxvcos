@@ -29,8 +29,8 @@
 #include "Motor.h"
 #include "Quadrotor.h"
 
-#include <controller/Limit.h>
-#include <controller/wrench_operations.h>
+#include <uxvcos/controller/Limit.h>
+#include "wrench_operations.h"
 
 namespace uxvcos {
 namespace Controller {

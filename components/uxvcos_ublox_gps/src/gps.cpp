@@ -33,7 +33,7 @@
 #include <rtt/Activity.hpp>
 #include <rtt/Component.hpp>
 
-#include <system/BaseSerialPort.h>
+#include <uxvcos/system/BaseSerialPort.h>
 
 #include <sensor_msgs/typekit/NavSatFix.h>
 #include <geometry_msgs/typekit/Vector3Stamped.h>

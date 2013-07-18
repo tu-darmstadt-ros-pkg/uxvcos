@@ -1,10 +1,10 @@
 #ifndef INTERFACE_ETHERNETSERIALPORT_H
 #define INTERFACE_ETHERNETSERIALPORT_H
 
-#include <base/Module.h>
-#include <system/BaseSerialPort.h>
+#include <uxvcos/Module.h>
+#include <uxvcos/system/BaseSerialPort.h>
 
-#include <stream/Buffer.h>
+#include <uxvcos/stream/Buffer.h>
 
 #include <rtt/Operation.hpp>
 #include <rtt/Logger.hpp>

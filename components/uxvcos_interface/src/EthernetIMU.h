@@ -1,7 +1,7 @@
 #ifndef INTERFACE_ETHERNETIMU_H
 #define INTERFACE_ETHERNETIMU_H
 
-#include <sensors/IMU.h>
+#include <uxvcos/sensors/IMU.h>
 #include "EthernetSensor.h"
 
 namespace uxvcos {

@@ -6,7 +6,7 @@
 #include <map>
 #include <set>
 
-#include <interface/RateControl.h>
+#include <uxvcos/interface/RateControl.h>
 #include "arm-interface.h"
 
 namespace uxvcos {

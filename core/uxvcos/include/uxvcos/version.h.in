@@ -1,0 +1,20 @@
+#ifndef VERSION_H
+#define VERSION_H
+
+#include <string>
+#include <uxvcos/uxvcos.h>
+
+#define PROJECT_NAME   UxVCoS
+#define UXVCOS_VERSION_MAJOR  @UXVCOS_VERSION_MAJOR@
+#define UXVCOS_VERSION_MINOR  @UXVCOS_VERSION_MINOR@
+#define UXVCOS_VERSION_PATCH  @UXVCOS_VERSION_PATCH@
+#define UXVCOS_VERSION        "@UXVCOS_VERSION@"
+
+extern const unsigned int SVN_REVISION_UINT;
+extern const char *SVN_REVISION_STRING;
+
+UXVCOS_API const char *getProjectName();
+UXVCOS_API unsigned int getRevision();
+UXVCOS_API const char *getVersionString();
+
+#endif // VERSION_H

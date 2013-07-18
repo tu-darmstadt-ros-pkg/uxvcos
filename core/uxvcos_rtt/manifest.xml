@@ -10,17 +10,14 @@
   <url>http://ros.org/wiki/uxvcos</url>
 
   <depend package="rosbuild"/>
-  <depend package="roscpp"/> <!-- for ros::Time -->
+  <depend package="uxvcos"/>
 
   <depend package="rtt_rosnode"/>
-  <depend package="rtt_sensor_msgs"/>
-  <depend package="rtt_geometry_msgs"/>
   <depend package="rtt_rosgraph_msgs"/>
-  <depend package="rtt_hector_std_msgs"/>
   <depend package="rtt_hector_uav_msgs"/>
 
   <export>
-    <rosbuild cmake_directory="${prefix}/../../cmake"/>
-    <cpp cflags="-I${prefix}/../../src" lflags="-Wl,-rpath=${prefix}/../lib -L${prefix}/../lib"/>
+    <rosbuild cmake_directory="${prefix}/cmake"/>
+    <cpp cflags="-I${prefix}/include" lflags="-Wl,-rpath=${prefix}/lib -L${prefix}/lib"/>
   </export>
 </package>

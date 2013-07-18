@@ -1,14 +1,14 @@
 #ifndef CONTROLLER_QUADROTOR_H
 #define CONTROLLER_QUADROTOR_H
 
-#include <controller/ControllerTask.h>
-#include <controller/Controller.h>
-#include <controller/RC.h>
-#include <controller/PID.h>
-#include <controller/Altimeter.h>
+#include <uxvcos/controller/ControllerTask.h>
+#include <uxvcos/controller/Controller.h>
+#include <uxvcos/controller/RC.h>
+#include <uxvcos/controller/PID.h>
+#include "Altimeter.h"
 
-#include <filter/PT1.h>
-#include <filter/OutlierElimination.h>
+#include <uxvcos/filter/PT1.h>
+#include <uxvcos/filter/OutlierElimination.h>
 
 #include <nav_msgs/typekit/Odometry.h>
 #include <sensor_msgs/typekit/Imu.h>

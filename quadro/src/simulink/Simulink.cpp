@@ -6,9 +6,9 @@
 #include <sys/stat.h>
 #include <unistd.h>
 
-#include <base/Application.h>
-#include <base/SetupFunction.h>
-#include <options/options.h>
+#include <uxvcos/Application.h>
+#include <uxvcos/SetupFunction.h>
+#include <uxvcos/options/options.h>
 
 #include <rtt/Component.hpp>
 

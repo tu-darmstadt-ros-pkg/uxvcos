@@ -1,14 +1,14 @@
 #include <string.h>
 
-#include <options/options.h>
-#include <base/SetupFunction.h>
+#include <uxvcos/options/options.h>
+#include <uxvcos/SetupFunction.h>
 
-#include <system/Socket.h>
-#include <system/SerialPort.h>
-#include <system/Error.h>
+#include <uxvcos/system/Socket.h>
+#include <uxvcos/system/SerialPort.h>
+#include <uxvcos/system/Error.h>
 
 #include "EthernetInterface.h"
-#include <interface/RateControl.h>
+#include <uxvcos/interface/RateControl.h>
 
 #include "ublox.h"
 

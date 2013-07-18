@@ -1,0 +1,18 @@
+<package>
+  <description brief="uxvcos_controllers">
+
+     uxvcos_controllers
+
+  </description>
+  <author>Johannes Meyer</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/uxvcos_controllers</url>
+
+  <depend package="uxvcos_rtt"/> <!-- should be uxvcos without RTT... -->
+
+  <depend package="rtt_hector_uav_msgs"/>
+
+</package>
+
+

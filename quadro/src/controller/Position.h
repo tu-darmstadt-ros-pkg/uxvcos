@@ -29,9 +29,9 @@
 #ifndef QUADRO_CONTROLLER_POSITION_H
 #define QUADRO_CONTROLLER_POSITION_H
 
-#include <controller/Controller.h>
-#include <controller/RC.h>
-#include <controller/PID.h>
+#include <uxvcos/controller/Controller.h>
+#include <uxvcos/controller/RC.h>
+#include <uxvcos/controller/PID.h>
 
 #include <hector_uav_msgs/typekit/VelocityXYCommand.h>
 #include <hector_uav_msgs/typekit/PositionXYCommand.h>

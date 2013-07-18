@@ -1,6 +1,6 @@
 #include "EthernetSerialPort.h"
-#include <system/Socket.h>
-#include <system/SystemCall.h>
+#include <uxvcos/system/Socket.h>
+#include <uxvcos/system/SystemCall.h>
 
 #include <rtt/Activity.hpp>
 #include <rtt/os/MutexLock.hpp>

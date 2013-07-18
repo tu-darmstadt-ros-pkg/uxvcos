@@ -29,9 +29,8 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 #rosbuild_add_executable(example examples/example.cpp)
 #target_link_libraries(example ${PROJECT_NAME})
 
-find_package(uxvcos REQUIRED PATHS "../../cmake" NO_DEFAULT_PATH)
-include(ToolchainOptions)
-include(UseOROCOS-RTT)
+rosbuild_find_ros_package(uxvcos_rtt)
+find_package(uxvcos_rtt REQUIRED PATHS "${uxvcos_rtt_PACKAGE_PATH}" NO_DEFAULT_PATH)
 
 add_subdirectory(src)
 

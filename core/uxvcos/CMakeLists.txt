@@ -34,9 +34,26 @@ if(ROS_ROOT)
   #target_link_libraries(example ${PROJECT_NAME})
 endif(ROS_ROOT)
 
-set(UXVCOS_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../..")
-set(CMAKE_MODULE_PATH  "${UXVCOS_PATH}/cmake" "${UXVCOS_PATH}/cmake/Modules" ${CMAKE_MODULE_PATH})
+set(UXVCOS_VERSION_MAJOR 0)
+set(UXVCOS_VERSION_MINOR 99)
+set(UXVCOS_VERSION_PATCH)
+set(UXVCOS_VERSION "${UXVCOS_VERSION_MAJOR}.${UXVCOS_VERSION_MINOR}")
+if (DEFINED UXVCOS_VERSION_PATCH)
+  set(UXVCOS_VERSION "${UXVCOS_VERSION_MAJOR}.${UXVCOS_VERSION_MINOR}.${UXVCOS_VERSION_PATCH}")
+else()
+  set(UXVCOS_VERSION "${UXVCOS_VERSION_MAJOR}.${UXVCOS_VERSION_MINOR}")
+endif()
+
+set(UXVCOS_PATH "${CMAKE_CURRENT_SOURCE_DIR}")
+set(CMAKE_MODULE_PATH  "${PROJECT_SOURCE_DIR}/cmake" "${PROJECT_SOURCE_DIR}/cmake/Modules" ${CMAKE_MODULE_PATH})
 include(ToolchainOptions)
 
 find_package(uxvcos REQUIRED PATHS "${UXVCOS_PATH}" NO_DEFAULT_PATH)
-add_subdirectory(../src src)
+
+configure_file(include/uxvcos/version.h.in ${CMAKE_CURRENT_SOURCE_DIR}/include/uxvcos/version.h @ONLY)
+
+include_directories(include include/uxvcos)
+add_subdirectory(src)
+
+configure_file(uxvcos.pc.in ${CMAKE_CURRENT_SOURCE_DIR}/uxvcos.pc @ONLY)
+

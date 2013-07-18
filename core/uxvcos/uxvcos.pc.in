@@ -1,0 +1,9 @@
+prefix=@PROJECT_SOURCE_DIR@
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: uxvcos
+Description: The uxvcos package
+Version: @UXVCOS_VERSION@
+Libs: -L${libdir} -luxvcos -lboost_program_options-mt
+Cflags: -I${includedir}

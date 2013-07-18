@@ -29,7 +29,7 @@
 #include "Test.h"
 #include "Quadrotor.h"
 
-#include <controller/Limit.h>
+#include <uxvcos/controller/Limit.h>
 #include <boost/random/variate_generator.hpp>
 #include <boost/random/normal_distribution.hpp>
 

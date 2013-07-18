@@ -36,7 +36,7 @@
 #include <rosgraph_msgs/Clock.h>
 #include <std_msgs/Header.h>
 
-#include <options/options.h>
+#include <uxvcos/options/options.h>
 #include <boost/date_time/posix_time/posix_time.hpp>
 
 #define ROS_LOG_THROTTLE_WALL(rate, level, name, ...) \

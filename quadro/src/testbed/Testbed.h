@@ -5,12 +5,12 @@
 #include <rtt/Port.hpp>
 #include <rtt/Operation.hpp>
 #include <sensor_msgs/typekit/Imu.h>
-#include <sensors/Sensor.h>
+#include <uxvcos/sensors/Sensor.h>
 
-#include <base/Transformation.h>
-#include <filter/PT1.h>
+#include <uxvcos/Transformation.h>
+#include <uxvcos/filter/PT1.h>
 
-#include <hudaqlib.h>
+#include "hudaqlib/hudaqlib.h"
 
 namespace uxvcos {
 

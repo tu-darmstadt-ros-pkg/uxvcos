@@ -1,7 +1,7 @@
 #define APPLICATION Quadro
-#include <base/Application.h>
-#include <base/Configuration.h>
-#include <base/DataPool.h>
+#include <uxvcos/Application.h>
+#include <uxvcos/Configuration.h>
+#include <uxvcos/DataPool.h>
 
 #include <rtt/TaskContext.hpp>
 #include <rtt/scripting/Scripting.hpp>
@@ -352,4 +352,4 @@ public:
   }
 };
 
-#include <base/main.inl>
+#include <uxvcos/main.inl>

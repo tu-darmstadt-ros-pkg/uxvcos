@@ -10,11 +10,10 @@
   <url>http://ros.org/wiki/uxvcos</url>
 
   <depend package="rosbuild"/>
-  <depend package="roscpp"/> <!-- for ros::Time -->
+  <depend package="rostime"/>
 
   <export>
-    <rosbuild cmake_directory="${prefix}/../../cmake"/>
-    <cpp cflags="-I${prefix}/../../src"  lflags="-Wl,-rpath=${prefix}/../lib -L${prefix}/../lib"/>
-    <matlab path="${prefix}/../../contrib/matlab"/>
+    <rosbuild cmake_directory="${prefix}/cmake"/>
+    <cpp cflags="-I${prefix}/include"  lflags="-Wl,-rpath=${prefix}/lib -L${prefix}/lib -luxvcos"/>
   </export>
 </package>

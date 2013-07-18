@@ -1,0 +1,15 @@
+/external/
+bin/
+build/
+lib/
+msg_gen/
+srv_gen/
+msgs/*/src/
+msgs/*/include/
+
+*.pc
+setup.*
+.rosinstall*
+ROS_NOBUILD
+*.user
+*.last

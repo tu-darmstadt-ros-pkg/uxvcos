@@ -2,8 +2,8 @@
 #define INTERFACE_ETHERNETSENSOR_H
 
 #include "EthernetSensorBase.h"
-#include <data/Key.h>
-#include <base/Module.h>
+#include <uxvcos/data/Key.h>
+#include <uxvcos/Module.h>
 
 namespace uxvcos {
 namespace Interface {

@@ -3,15 +3,15 @@
 #include "EthernetIMU.h"
 #include "EthernetAHRS.h"
 
-#include <interface/RC.h>
+#include <uxvcos/interface/RC.h>
 
-#include <sensors/Sensor.h>
-#include <sensors/Supply.h>
-#include <sensors/Magnetic.h>
-#include <sensors/Ultrasound.h>
-#include <sensors/Baro.h>
-#include <sensors/Temperature.h>
-#include <sensors/Airspeed.h>
+#include <uxvcos/sensors/Sensor.h>
+#include <uxvcos/sensors/Supply.h>
+#include <uxvcos/sensors/Magnetic.h>
+#include <uxvcos/sensors/Ultrasound.h>
+#include <uxvcos/sensors/Baro.h>
+#include <uxvcos/sensors/Temperature.h>
+#include <uxvcos/sensors/Airspeed.h>
 
 #include <hector_std_msgs/UInt16Array.h>
 #include <hector_std_msgs/UInt16.h>
