@@ -58,6 +58,7 @@ program configure {
 
   subscribe("poseupdate", ros.topic("poseupdate"))
   publish("state", ros.topic("state"))
+  publish("velocity", ros.topic("velocity"))
   publish("imu", ros.topic("imu"))
   publish("global", ros.topic("global"))
   publish("linear_acceleration_bias", ros.topic("linear_acceleration_bias"))
@@ -65,7 +66,6 @@ program configure {
 
   subscribe("command_velocity", ros.topic("cmd_vel"))
   publish("height", ros.topic("height"))
-  publish("force_simulator", ros.topic("force"))
   publish("motor_input", ros.topic("input/motor"))
   publish("motor_output", ros.topic("motor_pwm"))
   publish("attitude_input", ros.topic("input/attitude"))
