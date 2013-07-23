@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -n "$BASH_SOURCE" ]; then
-  UXVCOS_ROOT=$(cd `dirname $BASH_SOURCE`/..; pwd)
+  UXVCOS_ROOT=$(cd `dirname $BASH_SOURCE`/../../../..; pwd)
 fi
 
 if [ -d "$UXVCOS_ROOT/core/uxvcos" ]; then

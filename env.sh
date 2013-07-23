@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
-cmdline=("$@")
-if [ $# == 0 ]; then
-    cmdline=($SHELL -i)
+cmdline="$@"
+if [ $# -eq 0 ]; then
+    cmdline="$SHELL -i"
 fi
 
 UXVCOS_ROOT=$(cd `dirname $0`; pwd)
@@ -13,4 +13,4 @@ fi
 
 echo "Using UXVCOS_ROOT at $UXVCOS_ROOT" >/dev/stderr
 . $UXVCOS_ROOT/setup.sh
-exec "${cmdline[@]}"
+exec $cmdline
