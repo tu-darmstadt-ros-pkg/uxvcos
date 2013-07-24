@@ -92,7 +92,10 @@ bool EthernetIMU::sendConfiguration() {
   imuConfig.gyro[2].min     = Gyro2.limit ? static_cast<float>(Gyro2.minimum) : NaN;
   imuConfig.gyro[2].max     = Gyro2.limit ? static_cast<float>(Gyro2.maximum) : NaN;
 
-  return interface->send(&imuConfig, sizeof(imuConfig), ARM_INTERFACE_CLASS, ARM_CONFIG_IMU_ID);
+  bool result = interface->send(&imuConfig, sizeof(imuConfig), ARM_INTERFACE_CLASS, ARM_CONFIG_IMU_ID);
+
+  if (!result) RTT::log(RTT::Error) << "Could not send IMU configuration" << RTT::endlog();
+  return result;
 }
 
 bool EthernetIMU::setZeroCommandExecute(double seconds) {
@@ -101,6 +104,10 @@ bool EthernetIMU::setZeroCommandExecute(double seconds) {
     return false;
   }
   return Sensors::IMU::setZeroCommandExecute(seconds);
+}
+
+void EthernetIMU::setZeroCommandFinish() {
+  sendConfiguration();
 }
 
 void EthernetIMU::addTo(EthernetSensorContainer &sensors) {
@@ -145,9 +152,9 @@ bool EthernetIMU::decode(void *payload, size_t length, MessageId id) {
     data.linear_acceleration.x = ArmImu->accelX;
     data.linear_acceleration.y = ArmImu->accelY;
     data.linear_acceleration.z = ArmImu->accelZ;
-    data.angular_velocity.x    = ArmImu->gyroX;
-    data.angular_velocity.y    = ArmImu->gyroY;
-    data.angular_velocity.z    = ArmImu->gyroZ;
+    data.angular_velocity.x    = ArmImu->omegaX;
+    data.angular_velocity.y    = ArmImu->omegaY;
+    data.angular_velocity.z    = ArmImu->omegaZ;
 
     data.header.stamp = interface->getTimestamp();
 

@@ -39,6 +39,7 @@
 #include <uxvcos/interface/RateControl.h>
 
 #include "ublox.h"
+#include "DirectFeedback.h"
 
 #include <rtt/Component.hpp>
 
@@ -69,12 +70,8 @@ EthernetInterface::EthernetInterface(const std::string &name)
   , debugProperties("Debug", "Properties for debugging purposes")
   , rateDebug(&(debugProperties.value()), &rateControl)
 
-  , requestMethod("request", &EthernetInterface::request, this)
-
   , interfaceDelay("InterfaceDelay")
   , overallDelay("OverallDelay")
-  
-  , checkVersionMethod("checkVersion", &EthernetInterface::checkVersion, this)
 
   , socket(0), serialPort(0), stream(0)
   , sendTimestamp(0)
@@ -90,8 +87,8 @@ EthernetInterface::EthernetInterface(const std::string &name)
   this->addAttribute(overallDelay);
   this->addProperty(debugProperties);
 
-  this->addOperation( requestMethod ).doc("Requests a specific piece of information from the hardware interface.").arg("request", "ID of the request.");
-  this->addOperation( checkVersionMethod ).doc("Retrieves the version and hardware revision from the Interface Board");
+  this->addOperation("request", &EthernetInterface::request, this, RTT::OwnThread).doc("Requests a specific piece of information from the hardware interface.").arg("request", "ID of the request.");
+  this->addOperation("checkVersion", &EthernetInterface::checkVersion, this, RTT::OwnThread).doc("Retrieves the version and hardware revision from the Interface Board");
 
   setupSensors();
 
@@ -99,6 +96,9 @@ EthernetInterface::EthernetInterface(const std::string &name)
   addModule(servos);
   addModule(uart0);
   addModule(uart1);
+
+  addModule(new DirectFeedback(this));
+//  motor->setHandler(getModule<DirectFeedback>("DirectFeedback").get());
 
   theRequest[0] = 0;
   theRequest[1] = 0;
@@ -437,7 +437,7 @@ bool EthernetInterface::receiveAnswer(bool retry)
     buffer_in.clear();
   }
 
-  while(theRequest[0] != 0 || theRequest[1] != 0)
+  while(theRequest[0] != 0 || theRequest[1] != 0 || !receivedSomeData)
   {
     // check for timeout
     if (RTT::os::TimeService::Instance()->secondsSince(sendTimestamp) > recv_timeout.get() / 1000.0) {
@@ -530,7 +530,7 @@ bool EthernetInterface::receiveAnswer(bool retry)
           break;
 
         case ARM_BOARD_VERSION:
-          if (UBloxPayloadLength >= sizeof(ArmBoardVersion_t))
+          if (UBloxPayloadLength >= sizeof(struct ArmBoardVersion_t))
           {
             struct ArmBoardVersion_t *ArmBoardVersion = reinterpret_cast<struct ArmBoardVersion_t *>(UBloxPayload);
             log( Info ) << __FILE__ " compiled at " __DATE__ " " __TIME__ << nlog();
@@ -539,6 +539,14 @@ bool EthernetInterface::receiveAnswer(bool retry)
             log() << endlog();
           }
           break;
+
+        case ARM_CONFIG_DIRECT_FEEDBACK_ID:
+          if (UBloxPayloadLength >= sizeof(struct QuadroDirectFeedback_t))
+          {
+            struct QuadroDirectFeedback_t *response = reinterpret_cast<struct QuadroDirectFeedback_t *>(UBloxPayload);
+            boost::shared_ptr<DirectFeedback> feedback = getModule<DirectFeedback>("DirectFeedback");
+            if (feedback) feedback->receivedResponse(response);
+          }
     
         default:
           break;

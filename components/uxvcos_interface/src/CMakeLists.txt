@@ -17,6 +17,8 @@ set(INTERFACE_SOURCES_ETHERNET
   EthernetSensors.cpp
   Motor.h
   Servos.h
+  DirectFeedback.h
+  DirectFeedback.cpp
   arm-interface.h
   ublox.c
   ublox.h

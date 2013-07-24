@@ -42,6 +42,7 @@ public:
 
   virtual bool sendConfiguration();
   virtual bool setZeroCommandExecute(double seconds);
+  virtual void setZeroCommandFinish();
 
   virtual void addTo(EthernetSensorContainer &sensors);
   virtual void request(Request &request) const;

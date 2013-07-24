@@ -33,7 +33,6 @@
 #include <rtt/Port.hpp>
 #include <rtt/Property.hpp>
 #include <rtt/Attribute.hpp>
-#include <rtt/Operation.hpp>
 #include <rtt/os/Mutex.hpp>
 
 #include <uxvcos/ModuleContainer.h>
@@ -99,8 +98,6 @@ protected:
   RTT::Property<RTT::PropertyBag> debugProperties;
   RateControl rateDebug;
 
-  RTT::Operation<bool(unsigned int)> requestMethod;
-
   RTT::Attribute<double> interfaceDelay;
   RTT::Attribute<double> overallDelay;
 
@@ -110,7 +107,6 @@ public:
   RateControl::counter_t& getCounter();
   bool debugEnabled() const;
 
-protected:
   bool send(const char *buffer, int length);
   bool request(unsigned int request);
   bool sendPeriodicRequest();
@@ -122,7 +118,6 @@ protected:
   virtual int uartSend(EthernetSerialPort* port, const void* source, unsigned int length);
   virtual bool uartPoll(EthernetSerialPort* port);
 
-  RTT::Operation<bool(void)> checkVersionMethod;
   bool checkVersion();
  
 private:
