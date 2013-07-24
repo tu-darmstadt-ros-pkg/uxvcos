@@ -99,6 +99,9 @@ Quadrotor::Quadrotor(const std::string &name)
   this->addOperation("getControlMode", &Quadrotor::getControlMode, this, RTT::OwnThread).doc("Gets the current control mode");
   this->addOperation("getState", &Quadrotor::getState_private, this, RTT::OwnThread).doc("Gets the current state of the controller");
 
+  this->addOperation("engage", &Quadrotor::engage, this);
+  this->addOperation("shutdown", &Quadrotor::shutdown, this);
+
   setControlSource(CONTROL_AUTONOMOUS);
   setControlMode(hector_uav_msgs::ControllerState::ATTITUDE | hector_uav_msgs::ControllerState::HEADING | hector_uav_msgs::ControllerState::HEIGHT, true);
   requestedControlMode = getControlMode();
