@@ -107,6 +107,7 @@ bool EthernetIMU::setZeroCommandExecute(double seconds) {
 }
 
 void EthernetIMU::setZeroCommandFinish() {
+  Sensors::IMU::setZeroCommandFinish();
   sendConfiguration();
 }
 
