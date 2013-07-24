@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "cpf.dtd">
+<properties>
+  <simple name="ConnectionType" type="long"><description>Type of connection (0 = Ethernet, 1 = Serial)</description><value>0</value></simple>
+  <simple name="Device" type="string"><description>Network interface/serial port to use</description><value>eth0</value></simple>
+  <simple name="Destination" type="string"><description>Destination MAC address (default ff:ff:ff:ff:ff:ff)</description><value>ff:ff:ff:ff:ff:ff</value></simple>
+  <simple name="Protocol" type="ulong"><description>Ethernet Protocol</description><value>4660</value></simple>
+  <simple name="Baudrate" type="ulong"><description>Baudrate for serial connection mode</description><value>921600</value></simple>
+  <simple name="ReceiveTimeout" type="long"><description>Timeout for packet reception in milliseconds</description><value>100</value></simple>
+  <struct name="Debug" type="PropertyBag">
+     <description>Properties for debugging purposes</description>
+     <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>0</value></simple>
+     <simple name="offset" type="ulong"><description>Measurement offset in milliseconds</description><value>0</value></simple>
+  </struct>
+  <struct name="IMU" type="PropertyBag">
+     <description>Inertial Measurement Unit</description>
+     <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>1</value></simple>
+     <simple name="offset" type="ulong"><description>Measurement offset in milliseconds</description><value>0</value></simple>
+     <simple name="RawMode" type="boolean"><description>If true, raw values are requested from the ARM Interface</description><value>1</value></simple>
+     <simple name="frame_id" type="string"><description>The frame_id of the IMU sensor</description><value>/base_link</value></simple>
+  </struct>
+  <struct name="Magnetic" type="PropertyBag">
+     <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>50</value></simple>
+     <simple name="offset" type="ulong"><description>Measurement offset in milliseconds</description><value>0</value></simple>
+     <simple name="frame_id" type="string"><description>The frame_id of the Magnetic sensor</description><value>/base_link</value></simple>
+  </struct>
+  <struct name="Ethernet0" type="PropertyBag">
+     <description>Interface to the Serial Port on the Ethernet Board</description>
+     <simple name="Baudrate" type="ulong"><description>Baudrate of the serial port</description><value>115200</value></simple>
+  </struct>
+  <struct name="Ethernet1" type="PropertyBag">
+     <description>Interface to the Serial Port on the Ethernet Board</description>
+     <simple name="Baudrate" type="ulong"><description>Baudrate of the serial port</description><value>57600</value></simple>
+  </struct>
+  <struct name="Supply" type="PropertyBag">
+     <description>Supply</description>
+     <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>500</value></simple>
+     <simple name="offset" type="ulong"><description>Measurement offset in milliseconds</description><value>0</value></simple>
+     <simple name="frame_id" type="string"><description>The frame_id of the Supply sensor</description><value></value></simple>
+  </struct>
+  <struct name="AHRS" type="PropertyBag">
+     <description>Attitude and Heading Reference System</description>
+     <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>0</value></simple>
+     <simple name="offset" type="ulong"><description>Measurement offset in milliseconds</description><value>0</value></simple>
+     <simple name="frame_id" type="string"><description>The frame_id of the AHRS sensor</description><value>/base_link</value></simple>
+  </struct>
+  <struct name="Ultrasound" type="PropertyBag">
+     <description>Ultrasound Range Measurement Sensor</description>
+     <simple name="field_of_view" type="double"><description>the size of the arc that the distance reading is valid for [rad]</description><value>0</value></simple>
+     <simple name="min_range" type="double"><description>minimum range value [m]</description><value>0</value></simple>
+     <simple name="max_range" type="double"><description>maximum range value [m]</description><value>3</value></simple>
+     <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>100</value></simple>
+     <simple name="offset" type="ulong"><description>Measurement offset in milliseconds</description><value>10</value></simple>
+     <simple name="frame_id" type="string"><description>The frame_id of the Ultrasound sensor</description><value>/sonar_link</value></simple>
+  </struct>
+  <struct name="Baro" type="PropertyBag">
+     <description>Barometric Pressure</description>
+     <simple name="ReferencePressure" type="double"><description>The reference pressure to be used for altitude calculation</description><value>1013.25</value></simple>
+     <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>1</value></simple>
+     <simple name="offset" type="ulong"><description>Measurement offset in milliseconds</description><value>0</value></simple>
+     <simple name="frame_id" type="string"><description>The frame_id of the Baro sensor</description><value>/base_link</value></simple>
+  </struct>
+  <struct name="Temperature" type="PropertyBag">
+     <description>Temperature</description>
+     <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>500</value></simple>
+     <simple name="offset" type="ulong"><description>Measurement offset in milliseconds</description><value>0</value></simple>
+     <simple name="frame_id" type="string"><description>The frame_id of the Temperature sensor</description><value>/base_link</value></simple>
+  </struct>
+  <struct name="RC" type="PropertyBag">
+     <description>Radio Control Receiver</description>
+     <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>20</value></simple>
+     <simple name="offset" type="ulong"><description>Measurement offset in milliseconds</description><value>10</value></simple>
+  </struct>
+  <struct name="MotorStatus" type="PropertyBag">
+     <description>Frequency and current information</description>
+     <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>1</value></simple>
+     <simple name="offset" type="ulong"><description>Measurement offset in milliseconds</description><value>0</value></simple>
+  </struct>
+  <struct name="DirectFeedback" type="PropertyBag">
+     <description>Direct feedback of IMU measurements to the motors</description>
+     <simple name="enabled" type="boolean"><value>1</value></simple>
+     <struct name="Motor1" type="PropertyBag">
+        <simple name="OmegaY" type="double"><description>Gain for Motor1/OmegaY</description><value>20</value></simple>
+        <simple name="AccelX" type="double"><description>Gain for Motor1/AccelX</description><value>0</value></simple>
+        <simple name="AccelY" type="double"><description>Gain for Motor1/AccelY</description><value>0</value></simple>
+        <simple name="AccelZ" type="double"><description>Gain for Motor1/AccelZ</description><value>0</value></simple>
+        <simple name="OmegaX" type="double"><description>Gain for Motor1/OmegaX</description><value>0</value></simple>
+        <simple name="OmegaZ" type="double"><description>Gain for Motor1/OmegaZ</description><value>0</value></simple>
+     </struct>
+     <struct name="Motor2" type="PropertyBag">
+        <simple name="OmegaX" type="double"><description>Gain for Motor2/OmegaX</description><value>20</value></simple>
+        <simple name="AccelX" type="double"><description>Gain for Motor2/AccelX</description><value>0</value></simple>
+        <simple name="AccelY" type="double"><description>Gain for Motor2/AccelY</description><value>0</value></simple>
+        <simple name="AccelZ" type="double"><description>Gain for Motor2/AccelZ</description><value>0</value></simple>
+        <simple name="OmegaY" type="double"><description>Gain for Motor2/OmegaY</description><value>0</value></simple>
+        <simple name="OmegaZ" type="double"><description>Gain for Motor2/OmegaZ</description><value>0</value></simple>
+     </struct>
+     <struct name="Motor3" type="PropertyBag">
+        <simple name="OmegaY" type="double"><description>Gain for Motor3/OmegaY</description><value>-20</value></simple>
+        <simple name="AccelX" type="double"><description>Gain for Motor3/AccelX</description><value>0</value></simple>
+        <simple name="AccelY" type="double"><description>Gain for Motor3/AccelY</description><value>0</value></simple>
+        <simple name="AccelZ" type="double"><description>Gain for Motor3/AccelZ</description><value>0</value></simple>
+        <simple name="OmegaX" type="double"><description>Gain for Motor3/OmegaX</description><value>0</value></simple>
+        <simple name="OmegaZ" type="double"><description>Gain for Motor3/OmegaZ</description><value>0</value></simple>
+     </struct>
+     <struct name="Motor4" type="PropertyBag">
+        <simple name="OmegaX" type="double"><description>Gain for Motor4/OmegaX</description><value>-20</value></simple>
+        <simple name="AccelX" type="double"><description>Gain for Motor4/AccelX</description><value>0</value></simple>
+        <simple name="AccelY" type="double"><description>Gain for Motor4/AccelY</description><value>0</value></simple>
+        <simple name="AccelZ" type="double"><description>Gain for Motor4/AccelZ</description><value>0</value></simple>
+        <simple name="OmegaY" type="double"><description>Gain for Motor4/OmegaY</description><value>0</value></simple>
+        <simple name="OmegaZ" type="double"><description>Gain for Motor4/OmegaZ</description><value>0</value></simple>
+     </struct>
+     <struct name="Bias" type="PropertyBag">
+        <simple name="AccelX" type="double"><description>AccelX bias</description><value>0</value></simple>
+        <simple name="AccelY" type="double"><description>AccelY bias</description><value>0</value></simple>
+        <simple name="AccelZ" type="double"><description>AccelZ bias</description><value>0</value></simple>
+        <simple name="GyroX" type="double"><description>GyroX bias</description><value>0</value></simple>
+        <simple name="GyroY" type="double"><description>GyroY bias</description><value>0</value></simple>
+        <simple name="GyroZ" type="double"><description>GyroZ bias</description><value>0</value></simple>
+     </struct>
+  </struct>
+</properties>
