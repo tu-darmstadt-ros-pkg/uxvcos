@@ -9,54 +9,54 @@
      </struct>
      <struct name="MappingGyro" type="Mapping">
         <description>Mapping of the gyro sensors to the x,y,z axes</description>
-        <simple name="Mapping" type="string"><value>1,0,2</value></simple>
+        <simple name="Mapping" type="string"><value>0,1,2</value></simple>
      </struct>
      <struct name="Accel0" type="PropertyBag">
         <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
         <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
         <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
-        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>-32153</value></simple>
-        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>0.001502236457870999904867793</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>-32561</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>0.001496886999999999913815718</value></simple>
         <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
      </struct>
      <struct name="Accel1" type="PropertyBag">
         <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
         <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
         <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
-        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>-33231</value></simple>
-        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>0.001502236457870999904867793</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>-32710</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>0.001496886999999999913815718</value></simple>
         <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
      </struct>
      <struct name="Accel2" type="PropertyBag">
         <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
         <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
         <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
-        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>-25918</value></simple>
-        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>-0.001502236457870999904867793</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>-26500</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>-0.001496886999999999913815718</value></simple>
         <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>9.810000000000000497379915</value></simple>
      </struct>
      <struct name="Gyro0" type="PropertyBag">
         <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
         <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
         <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
-        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>-32335</value></simple>
-        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>0.0004394220000000000222149799</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>-24529</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>0.0002639168999999999803279804</value></simple>
         <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
      </struct>
      <struct name="Gyro1" type="PropertyBag">
         <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
         <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
         <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
-        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>-34913</value></simple>
-        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>-0.0004394220000000000222149799</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>-24513</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>-0.0002639168999999999803279804</value></simple>
         <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
      </struct>
      <struct name="Gyro2" type="PropertyBag">
         <simple name="limit" type="boolean"><description>If true, values are limited between limitMin and limitMax</description><value>0</value></simple>
         <simple name="min" type="double"><description>Lower limit for the output value</description><value>0</value></simple>
         <simple name="max" type="double"><description>Upper limit for the output value</description><value>0</value></simple>
-        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>-32746</value></simple>
-        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>0.0004394220000000000222149799</value></simple>
+        <simple name="offsetA" type="long"><description>This offset will be added before the multiplication</description><value>-24496</value></simple>
+        <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>-0.0002639168999999999803279804</value></simple>
         <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
      </struct>
      <struct name="AccelX" type="PropertyBag">
