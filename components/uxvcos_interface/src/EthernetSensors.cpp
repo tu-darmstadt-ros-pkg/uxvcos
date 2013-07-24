@@ -109,7 +109,7 @@ bool EthernetSensor<Sensors::Magnetic>::decode(void *payload, size_t length, Mes
   if (raw.channel[0] != 0.0 && raw.channel[1] != 0.0 && raw.channel[2] != 0.0) {
     updatedRaw(interface->getTimestamp());
   } else {
-    RTT::log(RTT::Error) << "Received illegal response from magnetometer: " << raw << RTT::endlog();
+    RTT::log(RTT::Warning) << "Received illegal response from magnetometer: [" << raw.channel[0] << "," << raw.channel[1] << "," << raw.channel[2] << "]" << RTT::endlog();
     return false;
   }
   return true;
