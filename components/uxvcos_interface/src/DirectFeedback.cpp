@@ -2,6 +2,8 @@
 #include "EthernetIMU.h"
 #include "DirectFeedback.h"
 
+#include <boost/lexical_cast.hpp>
+
 namespace uxvcos {
 namespace Interface {
 
@@ -9,8 +11,25 @@ DirectFeedback::DirectFeedback(EthernetInterface *interface, const std::string &
   : Module(interface, name, "Direct feedback of IMU measurements to the motors")
 {
   this->addProperty("enabled", enabled);
-  this->addProperty("gain", gain);
-  this->addProperty("bias", bias);
+
+  bias.ownProperty(new RTT::Property<double>("AccelX", "AccelX bias"));
+  bias.ownProperty(new RTT::Property<double>("AccelY", "AccelY bias"));
+  bias.ownProperty(new RTT::Property<double>("AccelZ", "AccelZ bias"));
+  bias.ownProperty(new RTT::Property<double>("GyroX", "GyroX bias"));
+  bias.ownProperty(new RTT::Property<double>("GyroY", "GyroY bias"));
+  bias.ownProperty(new RTT::Property<double>("GyroZ", "GyroZ bias"));
+  this->addProperty("Bias", bias);
+
+  for(size_t i = 0; i < ARMMOTOR_COUNT; ++i) {
+    std::string motor = "Motor" + boost::lexical_cast<std::string>(i+1);
+    gain[i].ownProperty(new RTT::Property<double>("AccelX", "Gain for " + motor + "/AccelX"));
+    gain[i].ownProperty(new RTT::Property<double>("AccelY", "Gain for " + motor + "/AccelY"));
+    gain[i].ownProperty(new RTT::Property<double>("AccelZ", "Gain for " + motor + "/AccelZ"));
+    gain[i].ownProperty(new RTT::Property<double>("OmegaX", "Gain for " + motor + "/OmegaX"));
+    gain[i].ownProperty(new RTT::Property<double>("OmegaY", "Gain for " + motor + "/OmegaY"));
+    gain[i].ownProperty(new RTT::Property<double>("OmegaZ", "Gain for " + motor + "/OmegaZ"));
+    this->addProperty(motor, gain[i]);
+  }
 
   this->addOperation("enable", &DirectFeedback::enable, this, RTT::OwnThread);
   this->addOperation("disable", &DirectFeedback::disable, this, RTT::OwnThread);
@@ -42,20 +61,20 @@ bool DirectFeedback::configure(bool enabled)
 {
   feedback.enabled = enabled;
 
-  feedback.bias.accelX = bias[0];
-  feedback.bias.accelY = bias[1];
-  feedback.bias.accelZ = bias[2];
-  feedback.bias.omegaX = bias[3];
-  feedback.bias.omegaY = bias[4];
-  feedback.bias.omegaZ = bias[5];
+  feedback.bias.accelX = bias.getPropertyType<double>("AccelX")->get();
+  feedback.bias.accelY = bias.getPropertyType<double>("AccelY")->get();
+  feedback.bias.accelZ = bias.getPropertyType<double>("AccelZ")->get();
+  feedback.bias.omegaX = bias.getPropertyType<double>("GyroX")->get();
+  feedback.bias.omegaY = bias.getPropertyType<double>("GyroY")->get();
+  feedback.bias.omegaZ = bias.getPropertyType<double>("GyroZ")->get();
 
   for(size_t i = 0; i < ARMMOTOR_COUNT; i++) {
-    feedback.gain[i].accelX = gain[i*6 + 0];
-    feedback.gain[i].accelY = gain[i*6 + 1];
-    feedback.gain[i].accelZ = gain[i*6 + 2];
-    feedback.gain[i].omegaX = gain[i*6 + 3];
-    feedback.gain[i].omegaY = gain[i*6 + 4];
-    feedback.gain[i].omegaZ = gain[i*6 + 5];
+    feedback.gain[i].accelX = gain[i].getPropertyType<double>("AccelX")->get();
+    feedback.gain[i].accelY = gain[i].getPropertyType<double>("AccelY")->get();
+    feedback.gain[i].accelZ = gain[i].getPropertyType<double>("AccelZ")->get();
+    feedback.gain[i].omegaX = gain[i].getPropertyType<double>("OmegaX")->get();
+    feedback.gain[i].omegaY = gain[i].getPropertyType<double>("OmegaY")->get();
+    feedback.gain[i].omegaZ = gain[i].getPropertyType<double>("OmegaZ")->get();
   }
 
   bool result = getInterface()->send(&feedback, sizeof(feedback), ARM_INTERFACE_CLASS, ARM_CONFIG_DIRECT_FEEDBACK_ID);

@@ -15,7 +15,7 @@ class EthernetInterface;
 class DirectFeedback : public Module /* , public Motor::Handler */
 {
 public:
-  DirectFeedback(EthernetInterface* parent, const std::string& name = "Direct Feedback");
+  DirectFeedback(EthernetInterface* parent, const std::string& name = "DirectFeedback");
   virtual ~DirectFeedback();
 
   EthernetInterface *getInterface() { return dynamic_cast<EthernetInterface *>(this->getOwner()); }
@@ -36,8 +36,8 @@ private:
   QuadroDirectFeedback_t feedback;
 
   bool enabled;
-  boost::array<double,6 * ARMMOTOR_COUNT> gain;
-  boost::array<double,6> bias;
+  RTT::PropertyBag gain[ARMMOTOR_COUNT];
+  RTT::PropertyBag bias;
 };
 
 } // namespace Interface
