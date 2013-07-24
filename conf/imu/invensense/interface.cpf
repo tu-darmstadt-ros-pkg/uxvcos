@@ -59,12 +59,6 @@
         <simple name="factorB" type="double"><description>The corrected value will be multiplied by this value</description><value>-0.0004394220000000000222149799</value></simple>
         <simple name="offsetC" type="double"><description>This offset will be added after the multiplication</description><value>0</value></simple>
      </struct>
-     <simple name="T_AccelX" type="double"><description>Time constant for the AccelX axis</description><value>0</value></simple>
-     <simple name="T_AccelY" type="double"><description>Time constant for the AccelY axis</description><value>0</value></simple>
-     <simple name="T_AccelZ" type="double"><description>Time constant for the AccelZ axis</description><value>0</value></simple>
-     <simple name="T_GyroX" type="double"><description>Time constant for the GyroX axis</description><value>0</value></simple>
-     <simple name="T_GyroY" type="double"><description>Time constant for the GyroY axis</description><value>0</value></simple>
-     <simple name="T_GyroZ" type="double"><description>Time constant for the GyroZ axis</description><value>0</value></simple>
      <struct name="AccelX" type="PropertyBag">
         <description>PTn Low-pass filter of n-th order</description>
         <simple name="T" type="double"><description>Time constant</description><value>0</value></simple>
