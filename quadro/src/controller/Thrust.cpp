@@ -55,9 +55,11 @@ namespace Controller {
     // RC input
     float rc_thrust;
     if (functionThrust.get(hector_uav_msgs::RC::THRUST, rc_thrust)) {
-      if (rc_thrust == 0.0) {
+      if (rc_thrust < 0.05) {
         controller->shutdown();
+        reset();
       }
+
       if (autoThrust.get() == true) {
         maxThrust = rc_thrust;
       } else if (controller->getControlSource() == CONTROL_REMOTE) {

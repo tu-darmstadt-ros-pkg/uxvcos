@@ -122,8 +122,12 @@ void Quadrotor::afterStop() {
 
 bool Quadrotor::beforeExecuteHook() {
   if (portState.readNewest(state, false) != RTT::NewData) return false;
-  portImu.readNewest(imu, false);
-  portMotorStatus.readNewest(motor_status, false);
+  if (portImu.readNewest(imu, false) != RTT::NewData) {
+    RTT::log(RTT::Warning) << "Received no new imu input" << RTT::endlog();
+  }
+  if (portMotorStatus.readNewest(motor_status, false) != RTT::NewData) {
+    RTT::log(RTT::Warning) << "Received no new motor status input" << RTT::endlog();
+  }
 
   // set timestamp and step time dt based on state timestamp
   this->setTimestamp(state.header.stamp);
