@@ -7,6 +7,7 @@ msg_gen/
 srv_gen/
 msgs/*/src/
 msgs/*/include/
+msgs/*/matlab/
 install/
 
 /CMakeLists.txt
