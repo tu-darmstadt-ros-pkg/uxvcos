@@ -1,9 +1,5 @@
 #!/bin/bash
 
-if [ -z "$UXVCOS_ROOT" ]; then
-  source /opt/uxvcos/setup.bash
-fi
-
 export UXVCOS_CONFIGURATION=$UXVCOS_ROOT/quadro/conf
 export UXVCOS_SCRIPT_PATH=$UXVCOS_ROOT/quadro/bin
 
