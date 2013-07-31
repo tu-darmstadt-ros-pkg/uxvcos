@@ -11,9 +11,10 @@
 
   <depend package="uxvcos_rtt" />
   <depend package="uxvcos_interface" />
-  <depend package="uxvcos_navigation" />
+  <!-- <depend package="uxvcos_navigation" /> -->
   <depend package="uxvcos_controllers" />
   <depend package="uxvcos_ublox_gps" />
+  <depend package="rtt_hector_pose_estimation" />
 
   <depend package="rtt_nav_msgs" />
   <depend package="rtt_sensor_msgs" />
