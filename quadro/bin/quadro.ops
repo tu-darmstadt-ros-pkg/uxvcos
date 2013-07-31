@@ -6,10 +6,10 @@ if (!simulation) then {
   try addTask(loadComponent("Testbed", "Testbed", 2))
 }
 
-addTask(loadComponent("Navigation", "Navigation", 3))
+#addTask(loadComponent("Navigation", "Navigation", 3))
 
-#try import("hector_pose_estimation_rtt");
-#addTask(loadComponent("Navigation", "hector_pose_estimation::PoseEstimationTaskContext", 3));
+import("rtt_hector_pose_estimation");
+addTask(loadComponent("Navigation", "hector_pose_estimation::PoseEstimationTaskContext", 3));
 
 addTask(loadComponent("Controller", "Controller", 4))
 #try addTask(loadComponent("SimulinkController", "Simulink", 4))
