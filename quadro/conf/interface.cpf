@@ -7,6 +7,8 @@
   <simple name="Protocol" type="ulong"><description>Ethernet Protocol</description><value>4660</value></simple>
   <simple name="Baudrate" type="ulong"><description>Baudrate for serial connection mode</description><value>921600</value></simple>
   <simple name="ReceiveTimeout" type="long"><description>Timeout for packet reception in milliseconds</description><value>100</value></simple>
+  <simple name="MinHardwareVersion" type="ulong"><description>Minimum required hardware version</description><value>0</value></simple>
+  <simple name="MinFirmwareVersion" type="ulong"><description>Minimum required firmware version</description><value>1628</value></simple>
   <struct name="Debug" type="PropertyBag">
      <description>Properties for debugging purposes</description>
      <simple name="rate" type="ulong"><description>Measurement rate in milliseconds</description><value>0</value></simple>

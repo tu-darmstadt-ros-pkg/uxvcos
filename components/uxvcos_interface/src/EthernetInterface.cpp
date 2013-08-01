@@ -86,6 +86,9 @@ EthernetInterface::EthernetInterface(const std::string &name)
   this->addProperty(baudrate);
   this->addProperty(recv_timeout);
 
+  this->addProperty(minHardwareVersion);
+  this->addProperty(minFirmwareVersion);
+
   this->addAttribute(interfaceDelay);
   this->addAttribute(overallDelay);
   this->addProperty(debugProperties);
@@ -208,6 +211,7 @@ bool EthernetInterface::configureHook()
     }
   }
 
+  if (!checkVersion()) return false;
   initializeModules();
 
   return true;
@@ -241,8 +245,6 @@ bool EthernetInterface::startHook()
   rateControl.counter() = 0;
   timeoutCounter = 0;
   buffer_in.clear();
-
-  checkVersion();
 
   // RTT::OperationCaller<bool(double, unsigned int)>(imu->getOperation("setZero")).send(5.0, 63);
   return true;
@@ -379,7 +381,7 @@ bool EthernetInterface::uartPoll(EthernetSerialPort* port) {
 
 bool EthernetInterface::checkVersion()
 {
-  return request(ARM_BOARD_VERSION);  
+  return request(ARM_BOARD_VERSION) && !inFatalError();
 }
 
 bool EthernetInterface::request(unsigned int request) {
@@ -543,7 +545,7 @@ bool EthernetInterface::receiveAnswer(bool retry)
 
             if (minHardwareVersion != 0 && ArmBoardVersion->hwVersionID < minHardwareVersion) {
               RTT::log(RTT::Fatal) << "Board has hardware version " << ArmBoardVersion->hwVersionID << ". Minimum required version is " << minHardwareVersion << endlog();
-              error();
+              fatal();
             }
           }
 
@@ -558,12 +560,12 @@ bool EthernetInterface::receiveAnswer(bool retry)
 
             if (minHardwareVersion != 0 && ArmBoardVersion->hwVersionID < minHardwareVersion) {
               RTT::log(RTT::Fatal) << "Interface board has hardware version " << ArmBoardVersion->hwVersionID << ". Minimum required version is " << minHardwareVersion << endlog();
-              error();
+              fatal();
             }
 
             if (minFirmwareVersion != 0 && ArmBoardVersion->swVersionID < minFirmwareVersion) {
               RTT::log(RTT::Fatal) << "Interface board has firmware version " << ArmBoardVersion->swVersionID << ". Minimum required version is " << minFirmwareVersion << endlog();
-              error();
+              fatal();
             }
           }
           break;
