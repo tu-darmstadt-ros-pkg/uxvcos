@@ -5,15 +5,15 @@
 
 // individual structure alignment (linux- gcc)
 #ifdef __GNUC__
- #ifndef GCC3X_PACK8
-  #define GCC3X_PACK8 __attribute__((__packed__))
- #endif
+#ifndef GCC3X_PACK8
+#define GCC3X_PACK8 __attribute__((__packed__))
+#endif
 #else
- #ifndef GCC3X_PACK8
-  // individual structure alignment (windows visual studio 2005)
-  #define GCC3X_PACK8
- #endif
- #pragma pack(push,1)
+#ifndef GCC3X_PACK8
+// individual structure alignment (windows visual studio 2005)
+#define GCC3X_PACK8
+#endif
+#pragma pack(push,1)
 #endif
 
 #define UBX_FSR_SYNC1         			0x37      //!< first protocol sync byte FSR
@@ -77,196 +77,203 @@ typedef uint32_t request_t;
 
 struct GCC3X_PACK8 ArmRequest_t
 {
-        request_t 	word[2];
+  request_t 	word[2];
 };
 
 struct GCC3X_PACK8 ArmAutoRequest_t
 {
-        uint32_t time;
-        uint16_t armXID;
-        uint32_t offset;
-        uint32_t multipleOfBasetime;
+  uint32_t time;
+  uint16_t armXID;
+  uint32_t offset;
+  uint32_t multipleOfBasetime;
 };
 
 struct GCC3X_PACK8 ArmBoardVersion_t
 {
-        uint32_t time;
-        uint32_t versionID;
-        uint8_t enc28j60_revision;
+  uint32_t time;
+  uint32_t hwVersionID;
+  uint8_t enc28j60_revision;
 };
 
+struct GCC3X_PACK8 ArmBoardVersion2_t
+{
+  uint32_t time;
+  uint32_t hwVersionID;
+  uint32_t swVersionID;
+  uint8_t enc28j60_revision;
+};
 
 //--> Sensor messages
 
 #define ARMMOTOR_COUNT 4
 struct GCC3X_PACK8 ArmMotor_t
 {
-        uint32_t	time;                        			//!< timestamp [ms]
-        uint8_t   enabled;
-        uint8_t	CommandMotorPWM[ARMMOTOR_COUNT];		//!< Commanded motor PWM	[0-255]
-        uint8_t	Current[ARMMOTOR_COUNT];				//!< Motor current		[-]
-	float 			Frequency[ARMMOTOR_COUNT];		    	//!< Motor frequency	[-]
+  uint32_t	time;                        			//!< timestamp [ms]
+  uint8_t   enabled;
+  uint8_t	CommandMotorPWM[ARMMOTOR_COUNT];		//!< Commanded motor PWM	[0-255]
+  uint8_t	Current[ARMMOTOR_COUNT];				//!< Motor current		[-]
+  float 			Frequency[ARMMOTOR_COUNT];		    	//!< Motor frequency	[-]
 };
 
 struct GCC3X_PACK8 ArmMotorCommand_t
 {
-        uint8_t	CommandMotorPWM[ARMMOTOR_COUNT];		//!< Commanded motor PWM	[0-255]
+  uint8_t	CommandMotorPWM[ARMMOTOR_COUNT];		//!< Commanded motor PWM	[0-255]
 };
 
 #define ARMRC_CHANNELS 10
 struct GCC3X_PACK8 ArmRC_t
 {
-        uint32_t	time;       			//!< timestamp [ms]
-        int8_t			status;
-        uint16_t value[ARMRC_CHANNELS];   			//!< value
+  uint32_t	time;       			//!< timestamp [ms]
+  int8_t			status;
+  uint16_t value[ARMRC_CHANNELS];   			//!< value
 };
 
 #define ARMSERVO_CHANNELS 6
 struct GCC3X_PACK8 ArmServo_t
 {
-        uint16_t value[ARMSERVO_CHANNELS];   			//!< value
+  uint16_t value[ARMSERVO_CHANNELS];   			//!< value
 };
 
 #define ARMUS_SENSORS 6
 struct GCC3X_PACK8 ArmUS_t
 {
-        uint32_t	time;       			//!< timestamp [ms]
-        uint16_t	value[ARMUS_SENSORS];  //!< value
+  uint32_t	time;       			//!< timestamp [ms]
+  uint16_t	value[ARMUS_SENSORS];  //!< value
 };
 
 struct GCC3X_PACK8 ArmAD16_t
 {
-        uint32_t	time;
-        uint16_t	value[8];
+  uint32_t	time;
+  uint16_t	value[8];
 };
 
 struct GCC3X_PACK8 ArmInternalAD16_t
 {
-        uint32_t	time;
-        uint16_t	value[3];
+  uint32_t	time;
+  uint16_t	value[3];
 };
 
 struct GCC3X_PACK8 ArmRawMag3D_t
 {
-        uint32_t	time;
-	float	value[3];
+  uint32_t	time;
+  float	value[3];
 };
 
 struct GCC3X_PACK8 ArmRawBaro_t
 {
-        uint32_t	time;
-        uint16_t	value;
+  uint32_t	time;
+  uint16_t	value;
 };
 
 struct GCC3X_PACK8 ArmRawBaroTemp_t
 {
-        uint32_t	time;
-        uint16_t	value;
+  uint32_t	time;
+  uint16_t	value;
 };
 
 struct GCC3X_PACK8 ArmRawIMU_t
 {
-        uint32_t time;
-        uint16_t	accel[3];
-        uint16_t	omega[3];
+  uint32_t time;
+  uint16_t	accel[3];
+  uint16_t	omega[3];
 };
 
 struct GCC3X_PACK8 ArmIMU_t
 {
-        uint32_t time;
-	float	accelX, accelY, accelZ;      
+  uint32_t time;
+  float	accelX, accelY, accelZ;
   float omegaX, omegaY, omegaZ;
 };
 
 struct GCC3X_PACK8 ArmRawADXL345_t
 {
-        uint32_t time;
-        uint16_t	accel[3];
+  uint32_t time;
+  uint16_t	accel[3];
 };
 
 struct GCC3X_PACK8 ArmRawITG3200_t
 {
-        uint32_t time;
-        uint16_t	temperature;
-        uint16_t	omega[3];
+  uint32_t time;
+  uint16_t	temperature;
+  uint16_t	omega[3];
 };
 
 struct GCC3X_PACK8 ArmRawHMC5843_t
 {
-        uint32_t time;
-        uint16_t	bField[3];
+  uint32_t time;
+  uint16_t	bField[3];
 };
 
 // UART Config messages
 
 struct GCC3X_PACK8 ArmUARTConfig_t
 {
-        uint32_t	baudrate;
-        uint8_t	mode;
-        uint8_t	fmode;
+  uint32_t	baudrate;
+  uint8_t	mode;
+  uint8_t	fmode;
 };
 
 // IMU Config messages
 
 struct GCC3X_PACK8 ArmAnalogChannelConfig_t
 {
-        int32_t offsetA;
-	float factorB;
-	float offsetC;
-	float min;
-	float max;
+  int32_t offsetA;
+  float factorB;
+  float offsetC;
+  float min;
+  float max;
 };
 
 struct GCC3X_PACK8 ArmIMUConfig_t
 {
-        uint8_t mappingAccel[3];
-	struct ArmAnalogChannelConfig_t accel[3];
-        uint8_t mappingGyro[3];
-	struct ArmAnalogChannelConfig_t gyro[3];
+  uint8_t mappingAccel[3];
+  struct ArmAnalogChannelConfig_t accel[3];
+  uint8_t mappingGyro[3];
+  struct ArmAnalogChannelConfig_t gyro[3];
 };
 
 // Magnetometer Config messages
 
 struct GCC3X_PACK8 ArmMagChannelConfig_t
 {
-        uint8_t channel;
-	float offsetA;
-	float factorB;
-	float offsetC;
-	float min;
-	float max;
+  uint8_t channel;
+  float offsetA;
+  float factorB;
+  float offsetC;
+  float min;
+  float max;
 };
 
 struct GCC3X_PACK8 ArmMag3DConfig_t
 {
-        uint8_t mappingMag3D[3];
-	struct ArmMagChannelConfig_t channel[3];
+  uint8_t mappingMag3D[3];
+  struct ArmMagChannelConfig_t channel[3];
 };
 
 // Attitude and Heading Reference System (AHRS) messages
 
 struct GCC3X_PACK8 ArmAttitude_t
 {
-	float roll;
-	float pitch;
-	float yaw;
+  float roll;
+  float pitch;
+  float yaw;
 };
 
 struct GCC3X_PACK8 ArmBias_t
 {
-	float accelX;
-	float accelY;
-	float accelZ;
-	float gyroX;
-	float gyroY;
-	float gyroZ;
+  float accelX;
+  float accelY;
+  float accelZ;
+  float gyroX;
+  float gyroY;
+  float gyroZ;
 };
 
 struct GCC3X_PACK8 ArmVelocity_t
 {
-	float x;
-	float y;
-	float z;
+  float x;
+  float y;
+  float z;
 };
 
 // Altitude and Height messages
@@ -274,63 +281,63 @@ struct GCC3X_PACK8 ArmVelocity_t
 enum ArmHeightMode_t { ULTRASOUND, BARO };
 struct GCC3X_PACK8 ArmHeight_t
 {
-	float height;
-        uint8_t mode;
+  float height;
+  uint8_t mode;
 };
 
 struct GCC3X_PACK8 ArmAltitude_t
 {
-	float altitude;
+  float altitude;
 };
 
 struct GCC3X_PACK8 ArmBaroConfig_t
 {
-	struct ArmAnalogChannelConfig_t baro;
+  struct ArmAnalogChannelConfig_t baro;
 };
 
 struct GCC3X_PACK8 ArmQNHConfig_t
 {
-	float qnh;
+  float qnh;
 };
 
 // Quadrotor control messages
 
 struct GCC3X_PACK8 QuadroControllerPID_t
 {
-	float T_in;
-    float KP;
-    float KI;
-    float KD;
-    float Kw;
-    float Kdw;
-    float min_P, max_P;
-    float min_I, max_I;
-    float min_D, max_D;
-    float min_w, max_w;
-    float min_dw, max_dw;
-    float min_u, max_u;
+  float T_in;
+  float KP;
+  float KI;
+  float KD;
+  float Kw;
+  float Kdw;
+  float min_P, max_P;
+  float min_I, max_I;
+  float min_D, max_D;
+  float min_w, max_w;
+  float min_dw, max_dw;
+  float min_u, max_u;
 };
 
 struct GCC3X_PACK8 QuadroControllerSet_t
 {
-	float roll;         // \in rad
-    float pitch;        // \in rad
-    float yaw;          // \in rad
-    float height;       // \in m
-	float throttle;		// \in [0,1]
+  float roll;         // \in rad
+  float pitch;        // \in rad
+  float yaw;          // \in rad
+  float height;       // \in m
+  float throttle;		// \in [0,1]
 };
 
 struct GCC3X_PACK8 QuadroControllerConfig_t
 {
-        uint8_t enabled;
+  uint8_t enabled;
 };
 
 enum QuadroControllerAxis_t { ROLL, PITCH, YAW, HEIGHT };
 struct GCC3X_PACK8 QuadroControllerAxisConfig_t
 {
-        uint8_t axis;
-        uint8_t enabled;
-	struct QuadroControllerPID_t pid;
+  uint8_t axis;
+  uint8_t enabled;
+  struct QuadroControllerPID_t pid;
 };
 
 struct GCC3X_PACK8 QuadroDirectFeedback_t
@@ -368,7 +375,7 @@ static inline bool IS_REQUESTED(unsigned bit, request_t request[]) {
 }
 
 #ifndef __GNUC__
-  #pragma pack(pop)
+#pragma pack(pop)
 #endif
 
 #endif // ARM_INTERFACE_H

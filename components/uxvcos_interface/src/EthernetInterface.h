@@ -93,6 +93,9 @@ protected:
   RTT::Property<unsigned int> baudrate;
   RTT::Property<int> recv_timeout;
 
+  RTT::Property<unsigned int> minHardwareVersion;
+  RTT::Property<unsigned int> minFirmwareVersion;
+
   unsigned long timeoutCounter;
 
   RTT::Property<RTT::PropertyBag> debugProperties;

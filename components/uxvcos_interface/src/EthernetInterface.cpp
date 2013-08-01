@@ -65,6 +65,9 @@ EthernetInterface::EthernetInterface(const std::string &name)
   , baudrate("Baudrate", "Baudrate for serial connection mode", 115200)
   , recv_timeout("ReceiveTimeout", "Timeout for packet reception in milliseconds", 20)
 
+  , minHardwareVersion("MinHardwareVersion", "Minimum required hardware version")
+  , minFirmwareVersion("MinFirmwareVersion", "Minimum required firmware version")
+
   , timeoutCounter(0)
 
   , debugProperties("Debug", "Properties for debugging purposes")
@@ -530,13 +533,38 @@ bool EthernetInterface::receiveAnswer(bool retry)
           break;
 
         case ARM_BOARD_VERSION:
-          if (UBloxPayloadLength >= sizeof(struct ArmBoardVersion_t))
+          if (UBloxPayloadLength == sizeof(struct ArmBoardVersion_t))
           {
             struct ArmBoardVersion_t *ArmBoardVersion = reinterpret_cast<struct ArmBoardVersion_t *>(UBloxPayload);
             log( Info ) << __FILE__ " compiled at " __DATE__ " " __TIME__ << nlog();
-            log() << "ArmBoardVersion:   " << ArmBoardVersion->versionID << nlog();
+            log() << "ArmBoardVersion:   " << ArmBoardVersion->hwVersionID << nlog();
             log() << "ENC28J60 Revision: " << (unsigned int) ArmBoardVersion->enc28j60_revision << nlog();
             log() << endlog();
+
+            if (minHardwareVersion != 0 && ArmBoardVersion->hwVersionID < minHardwareVersion) {
+              RTT::log(RTT::Fatal) << "Board has hardware version " << ArmBoardVersion->hwVersionID << ". Minimum required version is " << minHardwareVersion << endlog();
+              error();
+            }
+          }
+
+          if (UBloxPayloadLength == sizeof(struct ArmBoardVersion2_t))
+          {
+            struct ArmBoardVersion2_t *ArmBoardVersion = reinterpret_cast<struct ArmBoardVersion2_t *>(UBloxPayload);
+            log( Info ) << __FILE__ " compiled at " __DATE__ " " __TIME__ << nlog();
+            log() << "ArmBoardVersion:    " << ArmBoardVersion->hwVersionID << nlog();
+            log() << "ArmSoftwareVersion: " << ArmBoardVersion->swVersionID << nlog();
+            log() << "ENC28J60 Revision:  " << (unsigned int) ArmBoardVersion->enc28j60_revision << nlog();
+            log() << endlog();
+
+            if (minHardwareVersion != 0 && ArmBoardVersion->hwVersionID < minHardwareVersion) {
+              RTT::log(RTT::Fatal) << "Interface board has hardware version " << ArmBoardVersion->hwVersionID << ". Minimum required version is " << minHardwareVersion << endlog();
+              error();
+            }
+
+            if (minFirmwareVersion != 0 && ArmBoardVersion->swVersionID < minFirmwareVersion) {
+              RTT::log(RTT::Fatal) << "Interface board has firmware version " << ArmBoardVersion->swVersionID << ". Minimum required version is " << minFirmwareVersion << endlog();
+              error();
+            }
           }
           break;
 
